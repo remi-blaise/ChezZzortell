@@ -1,0 +1,46 @@
+/* MEDIA QUERIES */
+
+/* Si l'écran fait moins de deux colonnes */
+@media screen and (max-width: 1025px) {
+
+	section#author
+	{
+		position: static;
+		margin: auto;
+		margin-top: 20px;
+	}
+	
+	header, footer
+	{
+		padding-left: calc( 50% - 460px + 250px );
+	}
+	
+	nav h1
+	{
+		padding-left: calc( 50% - 460px + 250px );
+		
+		font-size: 3.7em;
+		font-weight: bold;
+	}
+	
+	.container_section.pair
+	{
+		padding-left: calc( 50% - 250px );
+		margin-right: calc( 50% - 250px );
+	}
+	.container_section.impair
+	{
+		margin-left: calc( 50% - 250px );
+		padding-right: calc( 50% - 250px );
+	}
+	
+	section.section_more
+	{
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+}

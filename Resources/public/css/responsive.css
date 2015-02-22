@@ -1,8 +1,8 @@
 /* MEDIA QUERIES */
 
 /* Si l'écran fait moins de deux colonnes */
-@media screen and (max-width: 1025px) {
-
+@media screen and (max-width: 1025px)
+{
 	section#author
 	{
 		position: static;

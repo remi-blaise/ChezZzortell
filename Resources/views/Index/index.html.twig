@@ -1,0 +1,345 @@
+{% extends '::base.html.twig' %}
+
+{% trans_default_domain 'ZzChezZzortellBundle' %}
+
+{% block title %}{{ 'title' |trans }}{% endblock %}
+{% block favicon %}{{ asset('bundles/zzchezzzortell/img/favicon.ico') }}{% endblock %}
+{% block headers %}<meta name="viewport" content="width=510" />{% endblock %}
+
+{% block stylesheets %}
+	{{ parent () }}
+	<link rel="stylesheet/less" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/style.less') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/responsive.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{ asset('bundles/zzchezzzortell/js/dynamic.js') }}" type="text/javascript" ></script>
+{% endblock %}
+
+
+{% block body %}
+{% autoescape false %}
+	<header>
+		<h1>
+			{{ 'header.welcome_at' |trans }} 
+			<br/><strong>{{ 'header.zzortell!' |trans }}</strong>
+		</h1>
+	</header>
+	
+	<section id="author" >
+		<h1>{{ 'author.title' |trans }}</h1>
+		<h2><button type="button" class="author_button" >{{ 'author.who.title' |trans }}</button></h2>
+		<div class="author_p_container" id="qui" >
+			<p>
+				{{ 'author.who.p1' |trans }}
+			</p>
+			<p>
+				{{ 'author.who.p2' |trans }}
+			</p>
+			<p>
+				{{ 'author.who.p3' |trans }}
+			</p>
+		</div>
+		<h2>
+			<button type="button" class="author_button" id="compet_button" >{{ 'author.skills.title' |trans }}</button>
+			<button type="button" class="arrow_button" id="previous" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_left_gold.png') }}" alt="{{ 'buttons.previous.alt' |trans }}" /></button>
+			<button type="button" class="arrow_button" id="next" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_gold.png') }}" alt="{{ 'buttons.next.alt' |trans }}" /></button>
+		</h2>
+		<div class="author_p_container" id="compet" style="display: none;" >
+			<p class="position1" >
+				{{ 'author.skills.p1' |trans }}
+			</p>
+			<p class="position1" >
+				{{ 'author.skills.p2' |trans }}
+			</p>
+			<p class="position2" style="display: none;" >
+				{{ 'author.skills.p3' |trans }}
+			</p>
+			<p class="position2" style="display: none;" >
+				{{ 'author.skills.p4' |trans }}
+			</p>
+			<p class="position3" style="display: none;" >
+				{{ 'author.skills.p5' |trans }}
+			</p>
+			<p class="position3" style="display: none;" >
+				{{ 'author.skills.p6' |trans }}
+			</p>
+		</div>
+		<h2>
+			<button type="button" class="author_button" id="capacites_button" >{{ 'author.abilities.title' |trans }}</button>
+			<button type="button" class="arrow_button arrow_button2" id="previous2" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_left_gold.png') }}" alt="{{ 'buttons.previous.alt' |trans }}" /></button>
+			<button type="button" class="arrow_button arrow_button2" id="next2" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_gold.png') }}" alt="{{ 'buttons.next.alt' |trans }}" /></button>
+		</h2>
+		<div class="author_p_container" id="capacites" style="display: none;" >
+			<p class="pos1" >
+				{{ 'author.abilities.p1' |trans }}
+			</p>
+			<p class="pos1" >
+				{{ 'author.abilities.p2' |trans }}
+			</p>
+			<p class="pos2" style="display: none;" >
+				{{ 'author.abilities.p3' |trans }}
+			</p>
+			<p class="pos2" style="display: none;" >
+				{{ 'author.abilities.p4' |trans }}
+			</p>
+			<p class="pos2" style="display: none;" >
+				{{ 'author.abilities.p5' |trans }}
+			</p>
+			<p class="pos3" style="display: none;" >
+				{{ 'author.abilities.p6' |trans }}
+			</p>
+			<p class="pos3" style="display: none;" >
+				{{ 'author.abilities.p7' |trans }}
+			</p>
+		</div>
+		<h2><button type="button" class="author_button" >{{ 'author.contact.title' |trans }}</button></h2>
+		<div class="author_p_container" id="contact" style="display: none;" >
+			<p>
+				{{ 'author.contact.p' |trans }}
+			</p>
+		</div>
+	</section>
+	
+	<nav>
+		<h1>{{ 'nav.title' |trans }}</h1>
+		<div class="container_section pair" >
+			<section>
+				<h1>{{ 'nav.sites.title' |trans }}</h1>
+				<ul>
+					<li>
+						<span class="link inlineblock" >
+							<a href="http://zzortell.perso.sfr.fr/" title="{{ 'nav.sites.chez_zz.tooltip' |trans }}" >{{ 'nav.sites.chez_zz.name' |trans }}</a>
+						</span>
+						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_blue.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
+					</li>
+					<li>
+						<span class="link inlineblock" >
+							<a href="http://sabrejunior-france2014.fr/" title="{{ 'nav.sites.sabrejunior.tooltip' |trans }}" target="_bank" >{{ 'nav.sites.sabrejunior.name' |trans }}</a>
+						</span>
+						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_blue.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="container_section impair" >
+			<section>
+				<h1>{{ 'nav.app.title' |trans }}</h1>
+				<ul>
+					<li>
+						<span class="link inlineblock" >
+							<a href="{{ asset('bundles/zzchezzzortell/tetris/index.php') }}" title="{{ 'nav.app.tetris.tooltip' |trans }}" target="_bank" >{{ 'nav.app.tetris.name' |trans }}</a>
+						</span>
+						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_brown.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="container_section pair" >
+			<section>
+				<h1>{{ 'nav.archives.title' |trans }}</h1>
+				<h2>{{ 'nav.archives.sub_title' |trans }}</h2>
+				<ul>
+					<li>
+						<span class="link inlineblock" title="{{ 'nav.archives.tpe.tooltip' |trans }}" >
+							<!--<a href="" title="{{ 'nav.archives.tpe.tooltip' |trans }}">-->{{ 'nav.archives.tpe.name' |trans }}<!--</a>-->
+						</span>
+						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_green.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
+					</li>
+					<li>
+						<span class="link inlineblock" >
+							<a href="{{ asset('bundles/zzchezzzortell/hammer1st!/index.php') }}" title="{{ 'nav.archives.hammer.tooltip' |trans }}" target="_bank" >{{ 'nav.archives.hammer.name' |trans }}</a>
+						</span>
+						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_green.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</nav>
+	
+	<section class="section_more blue" style="display: none;" >
+		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
+		<h1><a href="http://zzortell.perso.sfr.fr/" title="{{ 'nav.sites.chez_zz.tooltip' |trans }}" >{{ 'nav.sites.chez_zz.name' |trans }}</a></h1>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'chez_zz.presentation.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'chez_zz.versions.title' |trans }}</button></h2>
+		<div class="more_p_container" >
+			<p>
+				{{ 'chez_zz.presentation.p1' |trans }}
+			</p>
+			<p>
+				{{ 'chez_zz.presentation.p2' |trans }}
+			</p>
+			<p>
+				{{ 'chez_zz.presentation.p3' |trans }}
+			</p>
+			<p>
+				{{ 'chez_zz.presentation.p4' |trans }}
+			</p>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<p>
+				{{ 'chez_zz.versions.p1' |trans }}
+			</p>
+			<ul>
+				<li>{{ 'chez_zz.versions.ul.li1' |trans }}</li>
+				<li>{{ 'chez_zz.versions.ul.li2' |trans }}</li>
+			</ul>
+			<p>
+				{{ 'chez_zz.versions.p2' |trans }}
+			</p>
+		</div>
+	</section>
+	
+	<section class="section_more blue" style="display: none;" >
+		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
+		<h1><a href="http://sabrejunior-france2014.fr/" title="{{ 'nav.sites.sabrejunior.tooltip' |trans }}" target="_bank" >{{ 'nav.sites.sabrejunior.name' |trans }}</a></h1>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'sabrejunior.presentation.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'sabrejunior.features.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'sabrejunior.interest.title' |trans }}</button></h2>
+		<div class="more_p_container" >
+			<img id="affiche" src="{{ asset('bundles/zzchezzzortell/images/affiche.png') }}" alt="{{ 'sabrejunior.presentation.poster.alt' |trans }}" />
+			<p>
+				{{ 'sabrejunior.presentation.p1' |trans }}
+			</p>
+			<p>
+				{{ 'sabrejunior.presentation.p2' |trans }}
+			</p>
+			<p>
+				{{ 'sabrejunior.presentation.p3' |trans }}
+			</p>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<p>
+				{{ 'sabrejunior.features.p' |trans }}
+			</p>
+			<ul>
+				<li>{{ 'sabrejunior.features.ul.li1' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li2' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li3' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li4' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li5' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li6' |trans }}</li>
+				<li>{{ 'sabrejunior.features.ul.li7' |trans }}</li>
+			</ul>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<p class="posi1" >
+				{{ 'sabrejunior.interest.p1' |trans }}
+			</p>
+			<p class="posi1" >
+				{{ 'sabrejunior.interest.p2' |trans }}
+			</p>
+			<div class="arrow_button_container" >
+				<button type="button" class="arrow_button arrow_button3" id="next3" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_bottom_blue.png') }}" alt="{{ 'buttons.next.alt' |trans }}" /></button>
+				<button type="button" class="arrow_button arrow_button3" id="previous3" style="display: none;" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_top_blue.png') }}" alt="{{ 'buttons.previous.alt' |trans }}" /></button>
+			</div>
+			<p class="posi2" style="display: none;" >
+				{{ 'sabrejunior.interest.p3' |trans }}
+			</p>
+			<p class="posi2" style="display: none;" >
+				{{ 'sabrejunior.interest.p4' |trans }}
+			</p>
+		</div>
+	</section>
+	
+	<section class="section_more brown" style="display: none;" >
+		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
+		<h1><a href="{{ asset('bundles/zzchezzzortell/tetris/index.php') }}" title="{{ 'nav.app.tetris.tooltip' |trans }}" target="_bank" >{{ 'nav.app.tetris.name' |trans }}</a></h1>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'tetris.presentation.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'tetris.versions.title' |trans }}</button></h2>
+		<div class="more_p_container" >
+			<img id="tetris_logo" src="{{ asset('bundles/zzchezzzortell/images/tetris_logo.png') }}" alt="Tetris logo" />
+			<p>
+				{{ 'tetris.presentation.p1' |trans }}
+			</p>
+			<img id="tetris_capture" src="{{ asset('bundles/zzchezzzortell/images/tetris_capture.png') }}" alt="Tetris capture d'écran" />
+			<p>
+				{{ 'tetris.presentation.p2' |trans }}
+			</p>
+			<p>
+				{{ 'tetris.presentation.p3' |trans }}
+			</p>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<p>
+				{{ 'tetris.versions.p1' |trans }}
+			</p>
+			<ul>
+				<li>{{ 'tetris.versions.ul.li1' |trans }}</li>
+				<li>{{ 'tetris.versions.ul.li2' |trans }}</li>
+			</ul>
+			<p>
+				{{ 'tetris.versions.p2' |trans }}
+			</p>
+		</div>
+	</section>
+	
+	<section class="section_more green" style="display: none;" >
+		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
+		<h1 title="{{ 'nav.archives.tpe.tooltip' |trans }}" >{{ 'nav.archives.tpe.name2' |trans }}</h1>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'tpe.presentation.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'tpe.survey.title' |trans }}</button></h2>
+		<div class="more_p_container" >
+			<p>
+				{{ 'tpe.presentation.p1' |trans }}
+			</p>
+			<p>
+				{{ 'tpe.presentation.p2' |trans }}
+			</p>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<figure>
+				<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}" alt="{{ 'tpe.survey.alt' |trans }}" />
+				<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture2.png') }}" alt="{{ 'tpe.survey.alt' |trans }}" />
+			</figure>
+		</div>
+	</section>
+	
+	<section class="section_more green" style="display: none;" >
+		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
+		<h1><a href="{{ asset('bundles/zzchezzzortell/hammer1st!/index.php') }}" title="{{ 'nav.archives.hammer.tooltip' |trans }}" target="_bank" >{{ 'nav.archives.hammer.name' |trans }}</a></h1>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'hammer.presentation.title' |trans }}</button></h2>
+		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'hammer.becoming.title' |trans }}</button></h2>
+		<div class="more_p_container" >
+			<img id="hammer_logo" src="{{ asset('bundles/zzchezzzortell/images/hammer_logo.png') }}" alt="{{ 'hammer.presentation.alt' |trans }}" />
+			<p>
+				{{ 'hammer.presentation.p1' |trans }}
+			</p>
+			<p>
+				{{ 'hammer.presentation.p2' |trans }}
+			</p>
+		</div>
+		<div class="more_p_container" style="display: none;" >
+			<p>
+				{{ 'hammer.becoming.p1' |trans }}
+			</p>
+			<p>
+				{{ 'hammer.becoming.p2' |trans }}
+			</p>
+			<p>
+				{{ 'hammer.becoming.p3' |trans }}
+			</p>
+		</div>
+	</section>
+	
+	<footer>
+		<h1>{{ 'footer.historic.title' |trans }}</h1>
+		
+		<p>
+			{{ 'footer.historic.4' |trans }}
+		</p>
+		<p>
+			{{ 'footer.historic.3' |trans }}
+		</p>
+		<p>
+			{{ 'footer.historic.2' |trans }}
+		</p>
+		<p>
+			{{ 'footer.historic.1' |trans }}
+		</p>
+		<p>
+			{{ 'footer.historic.0' |trans }}
+		</p>
+	</footer>
+{% endautoescape %}
+{% endblock %}

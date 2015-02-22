@@ -1,0 +1,3 @@
+zz_chez_zzortell_index:
+    path:     /
+    defaults: { _controller: ZzChezZzortellBundle:Index:index }

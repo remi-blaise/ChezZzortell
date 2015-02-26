@@ -8,10 +8,16 @@
 
 {% block stylesheets %}
 	{{ parent () }}
-	<link rel="stylesheet/less" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/style.less') }}" />
-	{#<link rel="stylesheet" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/responsive.css') }}" />#}
+	{#<link rel="stylesheet/less" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/style.less') }}" />#}
+	{% stylesheets 'bundles/zzchezzzortell/css/style.less' filter='cssrewrite' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
 {% endblock %}
 
+{% block utils %}
+	{#<script src="{{ asset('js/less.min.js') }}" type="text/javascript" ></script>#}
+	{#<script src="{{ asset('js/jquery-1.11.2.js') }}" type="text/javascript" ></script>#}
+{% endblock %}
 {% block javascripts %}
 	<script src="{{ asset('bundles/zzchezzzortell/js/dynamic.js') }}" type="text/javascript" ></script>
 {% endblock %}
@@ -19,87 +25,99 @@
 
 {% block body %}
 {% autoescape false %}
-	<header>
-		<h1>
-			{{ 'header.welcome_at' |trans }} 
-			<br/><strong>{{ 'header.zzortell!' |trans }}</strong>
-		</h1>
-	</header>
-	
-	<section id="author" >
-		<h1>{{ 'author.title' |trans }}</h1>
-		<h2><button type="button" class="author_button" >{{ 'author.who.title' |trans }}</button></h2>
-		<div class="author_p_container" id="qui" >
-			<p>
-				{{ 'author.who.p1' |trans }}
-			</p>
-			<p>
-				{{ 'author.who.p2' |trans }}
-			</p>
-			<p>
-				{{ 'author.who.p3' |trans }}
-			</p>
-		</div>
-		<h2>
-			<button type="button" class="author_button" id="compet_button" >{{ 'author.skills.title' |trans }}</button>
-			<button type="button" class="arrow_button" id="previous" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_left_gold.png') }}" alt="{{ 'buttons.previous.alt' |trans }}" /></button>
-			<button type="button" class="arrow_button" id="next" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_gold.png') }}" alt="{{ 'buttons.next.alt' |trans }}" /></button>
-		</h2>
-		<div class="author_p_container" id="compet" style="display: none;" >
-			<p class="position1" >
-				{{ 'author.skills.p1' |trans }}
-			</p>
-			<p class="position1" >
-				{{ 'author.skills.p2' |trans }}
-			</p>
-			<p class="position2" style="display: none;" >
-				{{ 'author.skills.p3' |trans }}
-			</p>
-			<p class="position2" style="display: none;" >
-				{{ 'author.skills.p4' |trans }}
-			</p>
-			<p class="position3" style="display: none;" >
-				{{ 'author.skills.p5' |trans }}
-			</p>
-			<p class="position3" style="display: none;" >
-				{{ 'author.skills.p6' |trans }}
-			</p>
-		</div>
-		<h2>
-			<button type="button" class="author_button" id="capacites_button" >{{ 'author.abilities.title' |trans }}</button>
-			<button type="button" class="arrow_button arrow_button2" id="previous2" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_left_gold.png') }}" alt="{{ 'buttons.previous.alt' |trans }}" /></button>
-			<button type="button" class="arrow_button arrow_button2" id="next2" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_gold.png') }}" alt="{{ 'buttons.next.alt' |trans }}" /></button>
-		</h2>
-		<div class="author_p_container" id="capacites" style="display: none;" >
-			<p class="pos1" >
-				{{ 'author.abilities.p1' |trans }}
-			</p>
-			<p class="pos1" >
-				{{ 'author.abilities.p2' |trans }}
-			</p>
-			<p class="pos2" style="display: none;" >
-				{{ 'author.abilities.p3' |trans }}
-			</p>
-			<p class="pos2" style="display: none;" >
-				{{ 'author.abilities.p4' |trans }}
-			</p>
-			<p class="pos2" style="display: none;" >
-				{{ 'author.abilities.p5' |trans }}
-			</p>
-			<p class="pos3" style="display: none;" >
-				{{ 'author.abilities.p6' |trans }}
-			</p>
-			<p class="pos3" style="display: none;" >
-				{{ 'author.abilities.p7' |trans }}
-			</p>
-		</div>
-		<h2><button type="button" class="author_button" >{{ 'author.contact.title' |trans }}</button></h2>
-		<div class="author_p_container" id="contact" style="display: none;" >
-			<p>
-				{{ 'author.contact.p' |trans }}
-			</p>
-		</div>
-	</section>
+	<div class="intro_container" >
+		<header>
+			<h1>
+				{{ 'header.title.welcome_at' |trans }} 
+				<br/><strong>{{ 'header.title.zzortell!' |trans }}</strong>
+			</h1>
+			<nav>
+				<ul>
+					<a href="{{ path('zz_chez_zz_index') }}" >
+						<li class="selected" >{{ 'header.nav.chez_zz' |trans }}</li>
+					</a>
+					<a href="{{ path('zz_chez_zz_notebook') }}" ><li>{{ 'header.nav.notebook' |trans }}</li></a>
+					<a href="{{ path('zz_chez_zz_articles') }}" ><li>{{ 'header.nav.articles' |trans }}</li></a>
+				</ul>
+				<ul>
+					<a href="{{ asset('bundles/zzchezzzortell/tetris/index.php') }}" ><li>{{ 'header.nav.tetris' |trans }}</li></a>
+				</ul>
+			</nav>
+		</header><!--
+	@white-space : http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html
+	 --><section id="author" >
+			<div class="author_column" >
+				<h1>{{ 'author.title' |trans }}</h1>
+				<article>
+					<h2>{{ 'author.who.title' |trans }}</h2>
+					<p>
+						{{ 'author.who.p1' |trans }}
+					</p>
+					<p>
+						{{ 'author.who.p2' |trans }}
+					</p>
+					<p>
+						{{ 'author.who.p3' |trans }}
+					</p>
+				</article>
+				
+				<article>
+					<h2>{{ 'author.contact.title' |trans }}</h2>
+					<p>
+						{{ 'author.contact.p' |trans }}
+					</p>
+				</article>
+			</div><!--
+		@white-space
+		 --><div class="author_column" >
+				<article>
+					<h2>{{ 'author.skills.title' |trans }}</h2>
+					<p>
+						{{ 'author.skills.p1' |trans }}
+					</p>
+					<p>
+						{{ 'author.skills.p2' |trans }}
+					</p>
+					<p>
+						{{ 'author.skills.p3' |trans }}
+					</p>
+					<p>
+						{{ 'author.skills.p4' |trans }}
+					</p>
+					<p>
+						{{ 'author.skills.p5' |trans }}
+					</p>
+					<p>
+						{{ 'author.skills.p6' |trans }}
+					</p>
+				</article>
+				<article>
+					<h2>{{ 'author.abilities.title' |trans }}</h2>
+					<p>
+						{{ 'author.abilities.p1' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p2' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p3' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p4' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p5' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p6' |trans }}
+					</p>
+					<p>
+						{{ 'author.abilities.p7' |trans }}
+					</p>
+				</article>
+			</div>
+		</section>
+	</div>
 	
 	<nav>
 		<h1>{{ 'nav.title' |trans }}</h1>

@@ -1,8 +1,15 @@
 title:  Chez Zzortell !! Le site de Rémi Blaise, WebDeveloper.
 
 header:
-    welcome_at:     Bienvenue chez
-    zzortell!:      Zzortell !!
+    title:
+        welcome_at:     Bienvenue chez
+        zzortell!:      Zzortell !!
+    nav:
+        chez_zz:    Chez Zzortell
+        notebook:   Carnet
+        articles:   Articles
+        
+        tetris:     Tetris !
 
 buttons:
     previous.alt:   < Précédent

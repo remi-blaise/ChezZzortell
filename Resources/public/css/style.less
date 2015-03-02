@@ -49,6 +49,8 @@ h1, h2
 	@first_column: 496px;
 	@second_column: calc( (100% - 2*@margin_ext - @margin_int) ~" - " @first_column );
 	
+	@border_discreet: solid @header_discreet 1px;
+	
 	/* Tous */
 	header
 	{
@@ -177,20 +179,19 @@ h1, h2
 			&:last-of-type
 			{
 				margin-top: 10px;
-				border-top: solid @header_discreet 1px;
+				border-top: @border_discreet;
 			}
 		}
 	}
 	
 	/* 1 */
 	@media (min-width: @media_1) {
-		min-height: 100vh;
 		position: relative;
 		
 		> *
 		{
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
 		}
 		
 		.pseudo-background ( @width; @color ) {
@@ -218,6 +219,7 @@ h1, h2
 		header
 		{
 			width: @header_width;
+			min-height: 100vh;
 			
 			h1
 			{
@@ -240,7 +242,6 @@ h1, h2
 			
 			.author_column
 			{
-				vertical-align: middle;
 			}
 		}
 	}
@@ -259,7 +260,7 @@ h1, h2
 				&:last-of-type
 				{
 					margin-left: 10px;
-					border-left: solid @header_discreet 1px;
+					border-left: @border_discreet;
 				}
 				
 				a li

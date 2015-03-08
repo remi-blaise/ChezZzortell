@@ -25,7 +25,7 @@
 
 {% block body %}
 {% autoescape false %}
-	<div class="intro_container" >
+	<div id="intro_container" >
 		<header>
 			<h1>
 				{{ 'header.title.welcome_at' |trans }} 
@@ -101,26 +101,44 @@
 		</section>
 	</div>
 	
-	<nav>
-		<h1>{{ 'nav.title' |trans }}</h1>
-		<div class="container_section pair" >
-			<section>
-				<h1>{{ 'nav.sites.title' |trans }}</h1>
+	<section id="projects" >
+		<h1>{{ 'projects.title' |trans }}</h1>
+		
+		{% macro foo ( project, nb_traits ) %}
+		{% autoescape false %}
+			<div class="description_container" >
+				<h1>
+					<a href="" title="{{ ( 'projects.' ~ project ~ '.tooltip' ) |trans }}" >
+						{{ ( 'projects.' ~ project ~ '.name' ) |trans }}
+					</a>
+				</h1>
+				<p>{{ ( 'projects.' ~ project ~ '.description' ) |trans }}</p>
 				<ul>
-					<li>
-						<span class="link inlineblock" >
-							<a href="http://zzortell.perso.sfr.fr/" title="{{ 'nav.sites.chez_zz.tooltip' |trans }}" >{{ 'nav.sites.chez_zz.name' |trans }}</a>
-						</span>
-						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_blue.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
-					</li>
-					<li>
-						<span class="link inlineblock" >
-							<a href="http://sabrejunior-france2014.fr/" title="{{ 'nav.sites.sabrejunior.tooltip' |trans }}" target="_bank" >{{ 'nav.sites.sabrejunior.name' |trans }}</a>
-						</span>
-						<button type="button" class="more" title="{{ 'buttons.more.tooltip' |trans }}" ><img src="{{ asset('bundles/zzchezzzortell/images/arrow_right_blue.png') }}" alt="{{ 'buttons.more.alt' |trans }}" /></button>
-					</li>
+					{% for i in 1..nb_traits %}
+					<li>{{ ( 'projects.' ~ project ~ '.trait' ~ loop.index ) |trans }}</li>
+					{% endfor %}
 				</ul>
+			</div>
+		{% endautoescape %}
+		{% endmacro %}
+		{% import _self as bar %}
+		
+		<div id="main_projects" >
+			<section>
+				{{ bar.foo ('chez_zz', 3) }}
 			</section>
+			<section>
+				{{ bar.foo ('sabrejunior', 3) }}
+				<figure>
+					<img src="{{ asset('bundles/zzchezzzortell/images/affiche.png') }}" alt="{{ 'projects.sabrejunior.poster.alt' |trans }}" ></img>
+				</figure>
+			</section>
+		</div>
+	</section>
+	
+	{#
+	<nav>
+		<div class="container_section pair" >
 		</div>
 		<div class="container_section impair" >
 			<section>
@@ -156,39 +174,7 @@
 			</section>
 		</div>
 	</nav>
-	
-	<section class="section_more blue" style="display: none;" >
-		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>
-		<h1><a href="http://zzortell.perso.sfr.fr/" title="{{ 'nav.sites.chez_zz.tooltip' |trans }}" >{{ 'nav.sites.chez_zz.name' |trans }}</a></h1>
-		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'chez_zz.presentation.title' |trans }}</button></h2>
-		<h2 class="inlineblock" ><button type="button" class="more_button" >{{ 'chez_zz.versions.title' |trans }}</button></h2>
-		<div class="more_p_container" >
-			<p>
-				{{ 'chez_zz.presentation.p1' |trans }}
-			</p>
-			<p>
-				{{ 'chez_zz.presentation.p2' |trans }}
-			</p>
-			<p>
-				{{ 'chez_zz.presentation.p3' |trans }}
-			</p>
-			<p>
-				{{ 'chez_zz.presentation.p4' |trans }}
-			</p>
-		</div>
-		<div class="more_p_container" style="display: none;" >
-			<p>
-				{{ 'chez_zz.versions.p1' |trans }}
-			</p>
-			<ul>
-				<li>{{ 'chez_zz.versions.ul.li1' |trans }}</li>
-				<li>{{ 'chez_zz.versions.ul.li2' |trans }}</li>
-			</ul>
-			<p>
-				{{ 'chez_zz.versions.p2' |trans }}
-			</p>
-		</div>
-	</section>
+	#}
 	
 	<section class="section_more blue" style="display: none;" >
 		<button type="button" class="close" title="{{ 'buttons.close.tooltip' |trans }}" >X</button>

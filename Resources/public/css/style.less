@@ -1,9 +1,7 @@
 @import "polices.less";
 @import "basics.less";
+@import "mixins.less";
 @import "palette.less";
-
-// Polyfills
-@import "polyfills/vh-ios7.less";
 
 /* STYLES DU CORPS */
 
@@ -39,7 +37,7 @@ h1, h2
 	.open-sans;
 }
 
-.intro_container
+#intro_container
 {
 	@header_width: 25%;
 	@author_width: 100% - @header_width;
@@ -54,6 +52,8 @@ h1, h2
 	/* Tous */
 	header
 	{
+		.open-sans;
+		
 		h1
 		{
 			color: @header_title;
@@ -66,29 +66,24 @@ h1, h2
 			}
 		}
 		
-		nav
+		nav ul
 		{
-			.open-sans;
+			a
+			{
+				color: @header_main;
+				text-decoration: none;
+				
+				li
+				{
+					padding: 10px;
+				}
+			}
 			
-			ul
+			&:last-of-type
 			{
 				a
 				{
-					color: @header_main;
-					text-decoration: none;
-					
-					li
-					{
-						padding: 10px;
-					}
-				}
-				
-				&:last-of-type
-				{
-					a
-					{
-						color: @header_discreet;
-					}
+					color: @header_discreet;
 				}
 			}
 		}
@@ -358,55 +353,108 @@ h1, h2
 	}
 }
 
-nav
+#projects
 {
-	margin-top: 20px;
+	background-color: @projects;
 	
 	> h1
 	{
-		padding-left: calc( ~" 50% - 460px " );
-		
+		color: @projects_title;
+		text-align: center;
 		font-size: 3.7em;
-		font-weight: bold;
-	}
-}
-
-.container_section
-{
-	margin-bottom: 15px;
-	
-	&:nth-child(2) { background-color: @blue_section;	li { background-color: @blue_tab; } }
-	&:nth-child(3) { background-color: @brown_section;	li { background-color: @brown_tab; } }
-	&:nth-child(4) { background-color: @green_section;	li { background-color: @green_tab; } }
-	
-	&.pair
-	{
-		padding-left: calc( ~" 50% - 500px " );
-		margin-right: calc( ~" 50% - 0px " );
-		border-radius: 0 15px 15px 0;
+		margin: 20px 0;
 	}
 	
-	&.impair
+	#main_projects
 	{
-		margin-left: calc( ~" 50% - 500px " );
-		padding-right: calc( ~" 50% - 0px " );
-		border-radius: 15px 0 0 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
 	}
 	
 	section
 	{
-		position: relative;
-		padding: 20px 40px;
+		margin: 15px 5px;
+		padding: 10px 20px;
+		.border-radius (15px);
+		border: dashed @author_section 2px;
+		// background-color: @author_section;
+		
+		display: flex;
+		flex-wrap: no-wrap;
+		align-items: center;
+		
+		.description_container
+		{
+			max-width: 700px;
+			padding: 10px 20px;
+		}
 		
 		h1
 		{
-			padding-bottom: 20px;
-			
-			font-size: 3em;
+			font-size: 2em;
 			font-weight: normal;
+			text-align: center;
+			
+			a
+			{
+				color: black;
+				text-decoration: none;
+			}
 		}
 		
-		h2
+		p
+		{
+			margin: 10px 0;
+		}
+		
+		p, li
+		{
+			text-align: justify;
+			
+			em
+			{
+				font-style: italic;
+			}
+		}
+		
+		ul
+		{
+			padding-left: 30px;
+			// list-style-type: circle;
+			
+			li
+			{
+				position: relative;
+			}
+			
+			li:before
+			{
+				content: "-";
+				position: absolute;
+				left: -20px;
+			}
+		}
+		
+		div, figure
+		{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		figure
+		{
+			// float: right;
+			
+			img
+			{
+				.border-radius (10px);
+				max-width: 100%;
+			}
+		}
+		
+		/*h2
 		{
 			position: absolute;
 			top: 60px;
@@ -414,32 +462,7 @@ nav
 			
 			font-size: 1.5em;
 			font-weight: normal;
-		}
-		
-		li
-		{
-			position: relative;
-			margin: 10px;
-			
-			border-radius: 15px;
-			
-			.link
-			{
-				padding: 15px;
-				margin: auto 0;
-			}
-			
-			button.more img
-			{
-				position: absolute;
-				right: 15px;
-				top: 4px;
-				top: calc( ~" 50% - 20px " );
-				
-				height: 40px;
-				width: 20px;
-			}
-		}
+		}*/
 	}
 }
 
@@ -458,17 +481,17 @@ section.section_more
 	z-index: 2;
 	
 	&.blue {
-		background-color: @blue_section;
+		// background-color: @blue_section;
 		h2 button.more_button 	{ background-color: @blue_title_button; }
 		button.close 			{ background-color: @blue_close_button; }
 	}
 	&.brown {
-		background-color: @brown_section;
+		// background-color: @brown_section;
 		h2 button.more_button 	{ background-color: @brown_title_button; }
 		button.close 			{ background-color: @brown_close_button; }
 	}
 	&.green {
-		background-color: @green_section;
+		// background-color: @green_section;
 		h2 button.more_button 	{ background-color: @green_title_button; }
 		button.close 			{ background-color: @green_close_button; }
 	}
@@ -586,7 +609,7 @@ section.section_more
 footer
 {
 	padding-left: calc( ~" 50% - 460px " );
-	background-color: @header_section;
+	background-color: @author_section;
 	
 	margin-top: 20px;
 	padding-top: 20px;
@@ -595,7 +618,6 @@ footer
 	h1
 	{
 		font-size: 3em;
-		font-weight: bold;
 	}
 	
 	p

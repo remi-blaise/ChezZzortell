@@ -111,6 +111,7 @@
 		<section>
 			{{ project.description ('chez_zz', null, 4) }}
 		</section>
+		<br/>
 		<section>
 			{{ project.description ('sabrejunior', "http://sabrejunior-france2014.fr/", 3) }}<!-- @white-space
 		 --><figure>
@@ -120,43 +121,47 @@
 			</figure>
 		</section>
 		
-		<div class="projects_column" >
-			<h2>{{ 'projects.past.title' |trans }}</h2>
-			<section>
-				{{ project.description (
-					'past.tetris', asset('bundles/zzchezzzortell/tetris/index.php')
-				) }}
-			</section>
-			
-			<div>
-				<h3>
-					{{ 'projects.past.archives.title' |trans }}
-				</h3>
-				<h4>
-					<div>{{ 'projects.past.archives.sub_title' |trans }}</div>
-				</h4>
+		<div class="projects_column_container" >
+			<div class="projects_column" class="past" >
+				<h2>{{ 'projects.past.title' |trans }}</h2>
 				<section>
 					{{ project.description (
-						'past.archives.tpe'
-					) }}<!-- @white-space
-				 --><figure>
-						<figcaption>Aperçu</figcaption>
-						<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}" 
-							 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
-							 class="half" />
-						<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture2.png') }}" 
-							 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
-							 class="half" />
-					</figure>
-				</section>
-				<section>
-					{{ project.description (
-						'past.archives.hammer', asset('bundles/zzchezzzortell/hammer1st!/index.php')
+						'past.tetris', asset('bundles/zzchezzzortell/tetris/index.php')
 					) }}
 				</section>
+				
+				<div>
+					<h3>
+						{{ 'projects.past.archives.title' |trans }}
+					</h3>
+					<h4>
+						<div>{{ 'projects.past.archives.sub_title' |trans }}</div>
+					</h4>
+					<section>
+						{{ project.description (
+							'past.archives.tpe'
+						) }}<!-- @white-space
+					 --><figure>
+							<figcaption>Aperçu</figcaption>
+							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}" 
+								 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
+								 class="half" />
+							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture2.png') }}" 
+								 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
+								 class="half" />
+						</figure>
+					</section>
+					<section>
+						{{ project.description (
+							'past.archives.hammer', asset('bundles/zzchezzzortell/hammer1st!/index.php')
+						) |replace({ '%hammer1st!/niveaux%': asset('bundles/zzchezzzortell/hammer1st!/niveaux/index.php') }) }}
+					</section>
+				</div>
+			</div><!-- @white-space
+		 --><div class="projects_column" >
+				<h2>{{ 'projects.present.title' |trans }}</h2>
+				<h2>{{ 'projects.future.title' |trans }}</h2>
 			</div>
-		</div>
-		<div class="projects_column" >
 		</div>
 	</section>
 	

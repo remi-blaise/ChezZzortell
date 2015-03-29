@@ -465,9 +465,23 @@ h1, h2, h3, h4, figcaption
 		}
 	}
 	
-	.projects_column
+	.projects_column_container .projects_column
 	{
 		margin-top: 40px;
+		display: inline-block;
+		max-width: 740px;
+		vertical-align: top;
+		
+		&:first-of-type
+		{
+			border-right: solid @header_discreet 4px;
+			padding-right: 5px;
+		}
+		&:last-of-type
+		{
+			padding-left: 30px;
+			text-align: left;
+		}
 		
 		h2
 		{

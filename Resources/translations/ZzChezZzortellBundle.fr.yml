@@ -64,7 +64,7 @@ projects:
         trait4: |
             Réalisé avec <a href="http://symfony.com" >Symfony2</a>.
     sabrejunior:
-        name:       Championnats de France de sabre junior 2014
+        name:       Championnats de France de Sabre junior 2014
         tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
         description: |
             Conçu à l'occasion de cette grande manifestation sportive accueillie par le club de 
@@ -99,7 +99,7 @@ projects:
             tpe:
                 name:       TPE&nbsp;: Une ville sous-marine autonome
                 description: |
-                    Réalisée à l'occasion de mon <i>TPE</i> de 1<sup>ère</sup>S en mars 2014, 
+                    Réalisée à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014, 
                     ce fut ma première réalisation en <em>Javascript</em>. 
                     Elle avait pour but d'illustrer notre TPE, dont la problématique était : 
                     &laquo;&nbsp;Comment fonder une ville sous-marine entièrement 
@@ -125,46 +125,16 @@ projects:
                     <br />
                     Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier 
                     projet sur le web. Le projet est resté à l'état d'ébauche.
+                    <br />
+                    J'ajoute part ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des 
+                    niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
 
-tpe:
-    presentation:
-        title:  Présentation
-        p1: |
-            Réalisée à l'occasion de mon TPE de 1<sup>ère</sup> S en Mars 2014, ce fut ma première réalisation en <em>Javascript</em>, qui marqua la fin de mon apprentissage de ce langage. 
-            Elle avait pour but d'illustrer notre TPE, dont la problématique était : &laquo;&nbsp;Comment fonder une ville sous-marine entièrement autonome ?&nbsp;&raquo;. 
-            L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de la cité imaginée, et rendre cliquables de nombreux d'éléments de façon à ce que des explications scientifiques puissent s'afficher sur chacun d'entre eux. 
-            Il faisait partie intégrante de la notation et donc du TPE.
-        p2: |
-            Ce projet a été réalisé en une seule semaine dans des conditions de stress important. 
-            J'y ai consacré tout le temps libre de ma semaine, du lundi à 14h au dimanche à minuit, étant donné que l'échéance tombait le lundi suivant. 
-            Certains aspects ont été sacrifiés mais le rendu est assez proche de ce qu'on voulait. 
-            Le point négatif restait la compatibilité navigateur, que je n'ai pas du tout eu le temps de travailler.
-    survey:
-        title:  Aperçu
-        alt:    Capture d'écran : mon TPE
+    present:
+        title:  Projects en cours
+    future:
+        title:  Projects futurs (à l'état d'idée)
 
-hammer:
-    presentation:
-        title:  Présentation
-        alt:    Logo d'Hammer 1st !
-        p1: |
-            Sortant tout juste de mon apprentissage du html, ce fut mon tout premier projet sur le web. 
-            Je jouait très régulièrement avec un ami à Hammerfest, un jeu développé par la Motion Twin (qui a fait par ailleurs beaucoup d'autres jeux dont je vous recommande SkyWar et Hordes), et, toujours en quête de terres nouvelles, nous parcourions la toile à la recherche de sites d'astuces susceptibles de nous aider. 
-            Malheureusement, malgré tout la volonté de bénévoles fans d'Hammerfest, aucun ne nous a vraiment satisfait. 
-        p2: |
-            C'est alors que nous avons imaginé ce guide, complet, astucieux et ergonomique, qui devait rassembler les plans de l'ensemble des Cavernes d'Hammerfest, recensant tous les bonus et passages secrets du jeu. 
-            Le guide devait accompagner le joueur durant tout son parcours, quel que soit son niveau et le chemin qu'il prend, l'aidant dans son ascension de la pyramide des scores, symbole de la hiérarchie des joueurs d'Hammerfest.
-    becoming:
-        title:  Devenir
-        p1: |
-            Si nous avons pas eu ni le temps, ni la patience, ni le skill nécessaire à la réussite d'une telle entreprise (car en fin de compte, nous n'étions pas de vrais gamers acharnés), 
-            le site lui a été réalisé (ainsi qu'une quarantaine de niveaux, ce qui représente un tiers du jeu, et des dizaines et des dizaines d'heures de gaming intensif), 
-            et, malgré le fait que je débutais tout juste en programmation web, je suis aujourd'hui assez fier de ce que j'ai pu faire avec aussi peu de connaissances.
-        p2: |
-            Évidemment, le contenu réel n'y est pas (je n'ai d'ailleurs pas mis en ligne les niveaux faits), le design et le site en lui-même sont bels et bien là, je considère donc mon travail comme abouti, étant avant tout programmeur et non joueur, et mon objectif de réaliser un site web original et bien pensé atteint. 
-            Ce qui est présenté n'est donc qu'une ébauche de ce qu'aurait été le site s'il avait été terminé et mis en ligne.
-        p3: |
-            J'ajoute part ailleurs <a href="hammer1st!/niveaux" target="_bank"  >les captures des niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
+
 
 footer:
     historic:

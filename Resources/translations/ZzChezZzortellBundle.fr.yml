@@ -23,56 +23,28 @@ author:
     title:  Rémi Blaise
     who:
         title:  Qui suis-je ?
-        p1: |
+        p0: |
             Je suis <u>Rémi Blaise</u>, alias <u>Zzortell</u>, <u>WebDeveloper</u>.
-            <br/>Ma passion&nbsp;: développer et coder des sites et applications Web.
+        p1: |
+            Ma passion&nbsp;: concevoir et développer des sites et applications web.
         p2: |
-            Mon site, récemment créé en 2014, présente mes créations et réalisations sur le Web. 
-            Ce n'est pour l'instant qu'une maigre collection, mais qui va se remplir petit à petit.
+            Mon site présente mes créations et réalisations sur le web. 
+            C'est une collection qui va être amené à se remplir petit à petit.
         p3: |
-            Vous avez donc sous les yeux un concentré de mon parcours sur le Web et un avant-goût de mes compétences. 
+            Vous avez donc sous les yeux un concentré de mon parcours sur le web et un avant-goût de mes compétences. 
             Si vous souhaitez attaquer le plat principal, n'hésitez pas à me contacter !
     skills:
         title:  Mes compétences
-        p1: |
-            Je maîtrise parfaitement toutes les technologies Web indispensables à la réalisation d'un site Web,  
-            dont les langages incontournables <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Javascript</strong> et <strong>PHP</strong>.
-        p2: |
-            De plus, je sais faire communiquer différentes applications entre elles grâce à la manipulation de toutes sortes de types de données&nbsp;: 
-            je sais traiter dynamiquement des fichiers simples contenant des données formatées, utiliser du <strong>XML</strong>, du <strong>JSON</strong>, 
-            et bien sûr me servir de bases de données telles que <strong>MySQL</strong> et les modifier dynamiquement grâce au <strong>SQL</strong>.
-        p3: |
-            Mes capacités sont en constante évolution et je me forme continuellement à toutes les nouvelles technologies. Je sais ainsi utiliser des technologies complémentaires 
-            comme <strong>AJAX</strong> ou <strong>Canvas</strong>, et manipuler des <strong>arbres XML</strong> à travers le <strong>DOM</strong> ou encore des données dynamiques grâce aux expressions régulières (<strong>RegEx</strong>).
-        p4: |
-            Je sais mener un projet Web d'un bout à l'autre, de la conception à la réalisation, et travailler en équipe, notamment avec un designer.
-        p5: |
-            Je suis rigoureux et volontaire, et exigent sur la qualité de mon travail. J'ai pris l'habitude de toujours coder de façon lisible, d'indenter et de commenter mon code correctement. 
-            Je sais coder l'ensemble d'un projet en programmation orientée objet (<strong>POO</strong>).
-            J'ai également appris à établir une architecture claire et à définir de façon perspicace des chemins ergonomiques, grâce à l'utilisation d'un 'routeur' ou simplement de <strong>.htaccess</strong>.
-        p6: |
-            Bref, vous l'avez compris&nbsp;: je sais tout faire sur un site web.
+        
     abilities:
         title:  Concrètement, je sais faire
-        p1: |
-            Concrètement, je sais mettre en place un site en suivant un <strong>design</strong>, le maintenir et l'améliorer dans le respect de celui-ci. 
-        p2: |
-            Je sais également créer une dynamique côté serveur, générer des pages muables dans le temps, recueillir et stocker des informations dans une base de données, pour la création d'une application type blog, chat ou forum par exemple, la gestion d'un espace membre, la sauvegarde de préférances des visiteurs ou la collecte statistique. 
-        p3: |
-            Je sais faire la liaison entre différentes applications, afin de pouvoir par exemple publier des résultats en temps réel. 
-        p4: |
-            Je sais créer un <strong>responsive design</strong>, c'est-à-dire un <strong>design</strong> qui s'adapte à la page à la résolution et au périphérique du visiteur, notamment pour les appareils mobiles. 
-        p5: |
-            Côté client, je sais créer une dynamique visuelle, faire apparaître et disparaître des élements, changer le contenu et soliciter une ressource du serveur au sein d'une page sans rechargement complet nécessaire.
-        p6: |
-            Enfin, je sais développer un site de façon à ce qu'il puisse être facilement repris par la suite, et sais mettre en place des espaces administrateurs propres afin de permettre aux personnes autorisées de pouvoir modifier le contenu et mettre à jour leur site de façon autonome.
-        p7: |
-            Cette fois pas de doute&nbsp;: je sais tout faire sur un site web.
     contact:
         title:  Me contacter
         p: |
-            Vous pouvez me contacter facilement à cette adresse&nbsp;: <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
-            <br/><i>N'hésitez pas à me faire part de vos impressions et de vos commentaires ! ;)</i>
+            Vous pouvez me contacter facilement à cette adresse&nbsp;: 
+            <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
+            <br/>
+            <i>N'hésitez pas à me faire part de vos impressions et de vos commentaires ! ;)</i>
 
 projects:
     title:  Mes créations web
@@ -80,153 +52,85 @@ projects:
         name:       Mon site&nbsp;: Chez Zzortell !!
         tooltip:    Chez Zzortell !! Le site de Rémi Blaise, WebDeveloper.
         description: |
-            Un endroit idéal pour accueillir mes réalisations, présenter mon parcours sur le web et vous exposer ma passion.
+            Un endroit idéal pour accueillir mes réalisations, présenter mon parcours sur le web 
+            et vous exposer ma passion.
         trait1: |
             Un design dynamique et moderne, d'un orangé délicieusement exquis. 
             Le tout entièrement <em>responsive</em>.
         trait2: |
-            Un système de publication en Markdown facile à utiliser.
+            Internationalisé et traduit en anglais.
         trait3: |
+            Un système de publication en Markdown facile à utiliser.
+        trait4: |
             Réalisé avec <a href="http://symfony.com" >Symfony2</a>.
     sabrejunior:
-        tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
         name:       Championnats de France de sabre junior 2014
+        tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
         description: |
-            Conçu à l'occasion de cette grande manifestation sportive accueillie par le club de sabre de Chatou, 
-            en étroite collaboration avec mon designer <a href="http://www.f-berrube.fr/" >François Berrubé</a>.
+            Conçu à l'occasion de cette grande manifestation sportive accueillie par le club de 
+            sabre de Chatou, en étroite collaboration avec mon designer 
+            <a href="http://www.f-berrube.fr/" >François Berrubé</a>.
         poster.alt: Affiche de l'évènement
         trait1: |
             Un site dynamique conçu pour une utilisation mobile.
         trait2: |
-            Une mise en ligne des résultats en direct grâce à la mise en place d'une liaison 
-            avec les logiciels de gestion de compétition Lames et Engarde, 
-            ce qui a constitué l'atout majeur du site.
+            Une mise en ligne des résultats en direct grâce à 
+            la mise en place d'une liaison avec les logiciels de 
+            gestion de compétition Lames et Engarde, ce qui a constitué l'atout majeur du site.
         trait3: |
             Une publication des listes des tireurs et des arbitres, ainsi que de témoignages, 
             et <i>a posteriori</i> des photos de la compétition.
-        
-    
-    sites:
-        title:  Sites
-        sabrejunior:
-    app:
-        title:  Applications
+    past:
+        title:      Autres réalisations
         tetris:
-            tooltip:  Tetris ! Par Zzortell.
             name:   Tetris !
-    archives:
-        title:      Archives
-        sub_title:  Mes premiers pas ...
-        tpe:
-            # tooltip:  Cité sous-marine - TPE
-            tooltip:  Temporairement inaccessible
-            name:   TPE&nbsp;: Une ville sous-marine autonome
-            name2:   tpe&nbsp;: Une ville sous-marine autonome
-        hammer:
-            tooltip:  Hammer 1st ! Le guide du jeu Hammerfest. Par Zzortell.
-            name:   Hammer 1st !
-
-chez_zz:
-    presentation:
-        title:  Présentation
-        p1: |
-            <u>Hey ! Le site de Rémi Blaise !</u>
-        p2: |
-            J'ai créé ce site, je pense que vous l'avez remarqué, afin d'accueillir mes réalisations sur le web, de me présenter et de vous exposer ma passion.
-        p3: |
-            Ce site a été fait en <strong>responsive design</strong>, c'est à dire qu'il a été conçu par s'adapter à votre résolution, particulièrement si vous êtes sur votre mobile. 
-            Si vous êtes sur PC, vous pouvez voir le résultat par vous-même en faisant varier manuellement la taille de la fenêtre de votre navigateur. 
-        p4: |
-            Le <strong>design</strong>, très simple, a été imaginé par moi-même. J'ai tout fait pour rendre mon site chaleureux et accueillant. Si vous avez des remarques à son propos, faites-moi en part !
-    versions:
-        title:  Versions
-        p1: |
-            Historique des versions&nbsp;:
-        ul:
-            li1: |
-                0 (23/02/14)&nbsp;: Ouverture du site à l'adresse <a href="http://zzortell.perso.sfr.fr/" >zzortell.perso.sfr.fr</a>.
-            li2: |
-                1.0 (//14)&nbsp;: Le site est statique, avec présentation dynamique de l'auteur et des projets.
-        p2: |
-            <i>Des évolutions du site sont prévues et le site est destiné à s'enrichir !</i>
-
-sabrejunior:
-    presentation:
-        title:      Présentation
-        poster.alt: Affiche de l'évènement
-        p1: |
-            Ce site a été conçu à la demande du club de sabre de Chatou, à l'occasion d'une grande manifestation sportive accueillie par le club&nbsp;: les Championnats de France de Sabre Juniors 2014.
-        p2: |
-            Il a été conçu en travail étroit avec <a href="http://www.f-berrube.fr/" target="_blank">François Berrubé</a>, le designer de l'équipe. Le projet a débuté vers Noël 2013 et c'est achevé en Mai à la suite de la compétition, après plusieurs mois de travail, dont le dernier a été particulièrement intensif.
-        p3: |
-            Le site a eu un succès incroyable bien au-delà de nos espérances, avec des chiffres gargantuesques&nbsp;: 
-            25&nbsp;000 visiteurs provenant de toute la France et même de l'étranger ont visité le site, ayant effectué près de 30&nbsp;000 visites et totalisant sur l'ensemble du site le chiffre faramineux de 100&nbsp;000 vues !!!
-    features:
-        title:  Caractéristiques
-        p: |
-            Ce site contient quelques particularités, dont&nbsp;:
-        ul:
-            li1: |
-                La mise en ligne des résultats de la compétition en direct grâce à la mise en place d'une liaison avec les logiciels de gestion de compétition Lames et Engarde, ce qui a constitué l'atout majeur du site et a grandement contribué à son succès (représente 70% des vues).
-            li2: |
-                La mise en ligne préalable des listes des tireurs et des arbitres.
-            li3: |
-                La mise en ligne de photos prises durant la compétition, consultables directement sur le site.
-            li4: |
-                Une publication de témoignages recueillis avant, durant et après la compétition, dont un aperçu est visible sur la page d'accueil.
-            li5: |
-                L'intégration d'un plan d'accès Google Maps Engine et la publication de la carte de la buvette.
-            li6: |
-                La collecte de statistiques permettant de suivre le traffic sur le serveur.
-            li7: |
-                La mise en place d'une page de redirection en cas d'erreur 404.
-    interest:
-        title:  Intérêt
-        p1: |
-            La réalisation de ce site, qui c'est faite de manière très étroite avec mon designer <a href="http://www.f-berrube.fr/" target="_blank">François</a>, a constitué ma première véritable expérience dans le monde extérieur&nbsp;: 
-            c'était en effet le premier travail que je n'effectuais pas pour moi-même, et la première fois que je voyais tous les aspects de la réalisation d'un site, de la conception à l'apposition de la touche finale, 
-            en passant par la réalisation de maquettes, l'implémentation d'applications et la maintenance, la mise à jour et la réaction immédiate à des situations imprévues.
-        p2: |
-            Ce fut également la première fois que je travaillais avec un véritable designer. L'échange avec François fut très aisé et fluide, nous fûmes très réactifs et particulièrement efficaces, et chacun proposant des idées pertinentes, prenant des initiatives et apportant un travail de qualité. 
-            Le travail en équipe, que ce soit avec François ou avec les autres membres (tous bénévoles) de l'organisation, fut donc un aspect très important pour moi de l'expérience.
-        p3: |
-            Le site a été conçu dès le départ pour une utilisation mobile, la compatibilité et un design adapté a donc été une de nos priorités.
-            De plus, un accent particulier a été mis sur le dynamisme au sein des pages&nbsp;: vous pouvez notamment voir notre en-tête accrocheur et dynamique. 
-            Une cohérence visuelle a été adoptée et mise en place sur l'ensemble du site, avec l'identité de la compétition qui se retrouve sur chaque page mais également une identité propre à chaque section du site à travers l'affectation d'une couleur à chacune. 
-            Une utilisation de toutes les technologies principales a été faite, afin de réaliser un site complet doté d'un dynamisme client et serveur.
-        p4: |
-            Un travail assidu et de qualité a été effectué tout au long de cette merveilleuse aventure, et, vous l'aurez sans doute compris, je suis personellement assez fier de notre &oelig;uvre. 
-            Je remercie tout particulièrement François Berrubé, ainsi que Béline Boulay et Alexandre Maldera.
-
-tetris:
-    presentation:
-        title:  Présentation
-        p1: |
-            Tetris est un ancien jeu vidéo, conçu en 1984 par l'ingénieur russe Alexei Pajitnov sur un micro-ordinateur soviétique, à partir d'un jeu de puzzle traditionnel russe. 
-            Il fit rapidement succès, à telle point que toute les institutions moscovites disposant d'ordinateurs y jouèrent bientôt durant leurs heures de travail. 
-            Repris par des grands producteurs, il a fait l'objet d'une guerre de droit internationale. Il est à présent considéré comme un grand classique du jeu vidéo, au même titre que Pong.
-        p2: |
-            Ayant achevé mon apprentissage du <strong>Javascript</strong>, j'ai réalisé ce jeu en Février 2014. Il est donc entièrement réalisé en <strong>Javascript</strong>. C'est grâce à cette exercice que je maîtrise aujourd'hui parfaitement le langage.
-            J'y ai mis beaucoup de c&oelig;ur et d'amour, profitez-en !
-        p3: |
-            Étant donné que la compatibilité n'était pas un objectif, son fonctionnement correct n'est assuré que sur la dernière version de Google Chrome.
-    versions:
-        title:  Versions
-        p1: |
-            Historique des versions&nbsp;:
-        ul:
-            li1: |
-                β-1.0 (24/02/14)&nbsp;: Version bêta-test, pas encore très au point, beaucoup de fonctionnalités manquantes.
-            li2: |
-                1.0 (28/02/14)&nbsp;: L'application fonctionne, toutes les fonctionnalités basiques sont installées : à part quelques aspects qui restent en suspens, mon Tetris équivaut n'importe quel Tetris sur la toile.
-        p2: |
-            <i>Les versions 2 et 3 sont déjà prévues, à plus ou moins long terme.</i>
+            tooltip:  Tetris ! Par Zzortell.
+            survey.alt: Aperçu
+            description: |
+                Le jeu de puzzle traditionnel russe réalisé en <em>Javascript</em>. 
+                Toutes les fonctionnalités basiques sont développées : à part quelques aspects 
+                qui restent en suspens, mon Tetris équivaut n'importe quel Tetris sur la toile.
+                J'y ai mis du c&oelig;ur et de l'amour, profitez-en !
+                <br /><i>Les versions 2 et 3 sont déjà prévues, à plus ou moins long terme.</i>
+        
+        archives:
+            title:      Archives
+            sub_title:  Mes premiers pas ...
+            tpe:
+                name:       TPE&nbsp;: Une ville sous-marine autonome
+                description: |
+                    Réalisée à l'occasion de mon <i>TPE</i> de 1<sup>ère</sup>S en mars 2014, 
+                    ce fut ma première réalisation en <em>Javascript</em>. 
+                    Elle avait pour but d'illustrer notre TPE, dont la problématique était : 
+                    &laquo;&nbsp;Comment fonder une ville sous-marine entièrement 
+                    autonome&nbsp;?&nbsp;&raquo;. 
+                    L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de 
+                    la cité imaginée, et rendre cliquables de nombreux d'éléments de façon à ce 
+                    que des explications scientifiques puissent s'afficher sur chacun d'entre 
+                    eux. 
+                    Il faisait partie intégrante de la notation et donc du TPE.
+                    Ce projet a été réalisé en une seule semaine dans des conditions de stress 
+                    important. 
+            hammer:
+                name:       Hammer 1st !
+                tooltip:    Hammer 1st ! Le guide du jeu Hammerfest. Par Zzortell.
+                description: |
+                    Guide du jeu <i>Hammerfest</i>, développé par Motion Twin.
+                    Complet, astucieux et ergonomique, il devait rassembler les plans de 
+                    l'ensemble des Cavernes d'Hammerfest, recensant tous les bonus et passages 
+                    secrets du jeu. 
+                    Il devait accompagner le joueur durant tout son parcours, quel que soit son 
+                    niveau et le chemin qu'il prend, l'aidant dans son ascension de la pyramide 
+                    des scores, symbole de la hiérarchie des joueurs d'Hammerfest.
+                    <br />
+                    Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier 
+                    projet sur le web. Le projet est resté à l'état d'ébauche.
 
 tpe:
     presentation:
         title:  Présentation
         p1: |
-            Réalisée à l'occasion de mon TPE de 1<sup>ère</sup> S en Mars 2014, ce fut ma première réalisation en <strong>Javascript</strong>, qui marqua la fin de mon apprentissage de ce langage. 
+            Réalisée à l'occasion de mon TPE de 1<sup>ère</sup> S en Mars 2014, ce fut ma première réalisation en <em>Javascript</em>, qui marqua la fin de mon apprentissage de ce langage. 
             Elle avait pour but d'illustrer notre TPE, dont la problématique était : &laquo;&nbsp;Comment fonder une ville sous-marine entièrement autonome ?&nbsp;&raquo;. 
             L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de la cité imaginée, et rendre cliquables de nombreux d'éléments de façon à ce que des explications scientifiques puissent s'afficher sur chacun d'entre eux. 
             Il faisait partie intégrante de la notation et donc du TPE.

@@ -2,8 +2,10 @@ zz_chez_zz_index:
     path:     /
     defaults: { _controller: ZzChezZzortellBundle:Index:index }
 zz_chez_zz_notebook:
-    path:     /notebook
+    # path:     /notebook
+    path:     /
     defaults: { _controller: ZzChezZzortellBundle:Notebook:index }
 zz_chez_zz_articles:
-    path:     /articles
+    # path:     /articles
+    path:     /
     defaults: { _controller: ZzChezZzortellBundle:Articles:index }

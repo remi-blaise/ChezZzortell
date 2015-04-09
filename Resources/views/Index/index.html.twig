@@ -1,15 +1,12 @@
-{% extends '::base.html.twig' %}
+{% extends 'ZzChezZzortellBundle::layout.html.twig' %}
 
-{% trans_default_domain 'ZzChezZzortellBundle' %}
+{% trans_default_domain 'ZzChezZzortellBundle_index' %}
 
-{% block title %}{{ 'title' |trans }}{% endblock %}
-{% block favicon %}{{ asset('bundles/zzchezzzortell/images/favicon.ico') }}{% endblock %}
 {% block headers %}<meta name="viewport" content="width=552" />{% endblock %}
 
 {% block stylesheets %}
 	{{ parent () }}
-	{#<link rel="stylesheet/less" type="text/css" href="{{ asset('bundles/zzchezzzortell/css/style.less') }}" />#}
-	{% stylesheets 'bundles/zzchezzzortell/css/style.less' filter='cssrewrite' %}
+	{% stylesheets 'bundles/zzchezzzortell/css/index.less' filter='cssrewrite' %}
 		<link rel="stylesheet" href="{{ asset_url }}" />
 	{% endstylesheets %}
 {% endblock %}
@@ -26,24 +23,7 @@
 {% block body %}
 {% autoescape false %}
 	<div id="intro_container" >
-		<header>
-			<h1>
-				{{ 'header.title.welcome_at' |trans }} 
-				<br/><strong>{{ 'header.title.zzortell!' |trans }}</strong>
-			</h1>
-			<nav>
-				<ul>
-					<a href="{{ path('zz_chez_zz_index') }}" >
-						<li class="selected" >{{ 'header.nav.chez_zz' |trans }}</li>
-					</a>
-					<a href="{{ path('zz_chez_zz_notebook') }}" ><li>{{ 'header.nav.notebook' |trans }}</li></a>
-					<a href="{{ path('zz_chez_zz_articles') }}" ><li>{{ 'header.nav.articles' |trans }}</li></a>
-				</ul>
-				<ul>
-					<a href="{{ asset('bundles/zzchezzzortell/tetris/index.php') }}" ><li>{{ 'header.nav.tetris' |trans }}</li></a>
-				</ul>
-			</nav>
-		</header><!--
+		{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!--
 	@white-space : http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html
 	 --><section id="author" >
 			<div class="author_column" >

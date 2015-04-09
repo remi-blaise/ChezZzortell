@@ -1,0 +1,18 @@
+{% extends 'ZzChezZzortellBundle::layout.html.twig' %}
+
+{% trans_default_domain 'ZzChezZzortellBundle_notebook' %}
+
+{% block title %}{{ 'header.nav.notebook' |trans({}, 'ZzChezZzortellBundle') }} - {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+	{{ parent () }}
+	{% stylesheets 'bundles/zzchezzzortell/css/notebook.less' filter='cssrewrite' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+{% autoescape false %}
+	{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+{% endautoescape %}
+{% endblock %}

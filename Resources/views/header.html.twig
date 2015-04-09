@@ -1,0 +1,20 @@
+{% trans_default_domain 'ZzChezZzortellBundle' %}
+
+<header>
+	<h1>
+		{{ 'header.title.welcome_at' |trans }} 
+		<br/><strong>{{ 'header.title.zzortell!' |trans }}</strong>
+	</h1>
+	<nav>
+		<ul>
+			<a href="{{ path('zz_chez_zz_index') }}" >
+				<li class="selected" >{{ 'header.nav.chez_zz' |trans }}</li>
+			</a>
+			<a href="{{ path('zz_chez_zz_notebook') }}" ><li>{{ 'header.nav.notebook' |trans }}</li></a>
+			<a href="{{ path('zz_chez_zz_articles') }}" ><li>{{ 'header.nav.articles' |trans }}</li></a>
+		</ul>
+		<ul>
+			<a href="{{ asset('bundles/zzchezzzortell/tetris/index.php') }}" ><li>{{ 'header.nav.tetris' |trans }}</li></a>
+		</ul>
+	</nav>
+</header>

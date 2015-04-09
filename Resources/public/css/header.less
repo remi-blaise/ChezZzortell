@@ -1,0 +1,206 @@
+.generate_header () {
+	@header_width: 25%;
+	
+	/* Tous */
+	.generate_header_style;
+	
+	/* 1 & 5 &- */
+	@media (min-width: @media_1), (max-width: (@media_4 - 1)) {
+		.generate_header_vertical_nav_style;
+	}
+	
+	/* 1 */
+	@media (min-width: @media_1) {
+		.generate_header_full_screen_style;
+	}
+	
+	/* 2 .. 4 */
+	@media (max-width: (@media_1 - 1)) and (min-width: @media_4) {
+		.generate_header_horizontal_nav_style;
+	}
+	
+	/* 2 &- */
+	@media (max-width: (@media_1 - 1)) {
+		.generate_header_top_screen_style;
+	}
+	
+	/* 5 &- */
+	@media (max-width: (@media_4 - 1)) {
+		.generate_header_little_style;
+	}
+}
+
+.generate_header_style () {
+	header
+	{
+		.open-sans;
+		background-color: @color_header;
+		
+		h1
+		{
+			color: @color_header_font;
+			
+			strong
+			{
+				font-weight: inherit;
+				padding-left: 20%;
+				font-size: 2.2em;
+			}
+		}
+		
+		nav ul
+		{
+			a
+			{
+				color: @color_header_font;
+				text-decoration: none;
+				
+				li
+				{
+					padding: 10px;
+				}
+			}
+			
+			&:last-of-type
+			{
+				a
+				{
+					color: @color_header_discreet;
+				}
+			}
+		}
+	}
+}
+
+.last ( @side ) {
+	margin-@{side}: 10px;
+	border-@{side}: solid @color_header_discreet 1px;
+}
+
+.border_li ( @side ) {
+	.border ( @color ) {
+		border-@{side}: solid @color;
+		
+		& when (@side = right) {
+			border-width: 4px;
+		}
+		& when (default()) {
+			border-width: 2px;
+		}
+	}
+	
+	&.selected
+	{
+		.border (@color_header_discreet);
+	}
+	
+	&:hover, &:active, &:focus
+	{
+		.border (@color_header_font);
+	}
+}
+	
+.generate_header_vertical_nav_style () {
+	header nav ul
+	{
+		a li
+		{
+			font-size: 2.5vw;
+			
+			.border_li(right);
+		}
+		
+		&:last-of-type
+		{
+			.last(top);
+		}
+	}
+}
+
+.generate_header_horizontal_nav_style () {
+	header nav
+	{
+		text-align: center;
+		
+		ul
+		{
+			display: inline-block;
+			margin-bottom: 10px;
+			
+			&:last-of-type
+			{
+				.last(left);
+			}
+			
+			a li
+			{
+				display: inline-block;
+				padding-top: 0;
+				padding-bottom: 0;
+				
+				.border ( @color ) {
+					border-bottom: solid @color 2px;
+				}
+				
+				&.selected
+				{
+					.border (@color_header_discreet);
+				}
+				
+				&:hover, &:active, &:focus
+				{
+					.border (@color_header_font);
+				}
+			}
+		}
+	}
+}
+
+.generate_header_full_screen_style () {
+	header
+	{
+		width: @header_width;
+		min-height: 100vh;
+		
+		h1
+		{
+			font-size: 2vw; // /!\ Compat : http://caniuse.com/#feat=viewport-units
+			margin-top: 50px;
+			padding: 3%;
+		}
+		
+		nav
+		{
+			margin-top: 100px;
+			margin-left: 2vw;
+			margin-right: 4vw;
+		}
+	}
+}
+
+.generate_header_top_screen_style () {
+	header
+	{
+		> *
+		{
+			margin: auto;
+		}
+		
+		h1
+		{
+			width: 450px;
+		}
+		
+		nav ul a li
+		{
+			font-size: 2em;
+		}
+	}
+}
+
+.generate_header_little_style () {
+	header nav
+	{
+		width: 80%;
+	}
+}

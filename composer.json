@@ -17,9 +17,7 @@
 		"oyejorge/less.php": "v1.7.0.2"
     },
 	
-	"require-dev": {
-        "doctrine/common": "~2.4",
-		
+	"suggest": {
 		"coresphere/console-bundle": "dev-master"
     },
 	

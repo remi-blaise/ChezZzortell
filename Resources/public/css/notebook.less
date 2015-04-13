@@ -1,1 +1,24 @@
 @import "layout.less";
+
+body
+{
+	.generate_header;
+	
+	#notebook
+	{
+		vertical-align: top;
+		width: 100% - @header_width;
+		
+		h1
+		{
+			font-size: 5em;
+			color: @color_title;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+		h2
+		{
+			text-align: center;
+		}
+	}
+}

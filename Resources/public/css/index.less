@@ -15,14 +15,12 @@
 	/* Tous */
 	#author
 	{
-		color: @color_author_font;
-		
 		.author_column
 		{
 			h1
 			{
 				font-size: 5em;
-				color: @color_author_title;
+				color: @color_title;
 				text-align: center;
 				padding-bottom: 10px;
 			}
@@ -82,12 +80,6 @@
 	@media (min-width: @media_1) {
 		position: relative;
 		
-		> *
-		{
-			display: inline-block;
-			vertical-align: middle;
-		}
-
 		&:after
 		{
 			content: "";
@@ -97,7 +89,7 @@
 			top: 0;
 			bottom: 0;
 			z-index: -1;
-			background-color: @color_author;
+			background-color: @color_section;
 			right: 0;
 		}
 		
@@ -111,7 +103,7 @@
 	@media (max-width: (@media_1 - 1)) {
 		#author
 		{
-			background-color: @color_author;
+			background-color: @color_section;
 			
 			.author_column
 			{
@@ -153,12 +145,11 @@
 
 #projects
 {
-	background-color: @color_projects;
 	text-align: center;
 	
 	> h1
 	{
-		color: @color_projects_title;
+		color: @color_title;
 		text-align: center;
 		font-size: 3.7em;
 		margin: 20px 0;
@@ -170,7 +161,7 @@
 		margin: 15px 5px;
 		padding: 10px 20px;
 		.border-radius (15px);
-		border: dashed @color_author 2px;
+		border: dashed @color_section 2px;
 		
 		.description_container
 		{
@@ -268,7 +259,7 @@
 		
 		&:first-of-type
 		{
-			border-right: solid @color_projects_borders 4px;
+			border-right: solid @color_discreet 4px;
 			padding-right: 5px;
 		}
 		&:last-of-type
@@ -308,150 +299,10 @@
 	}
 }
 
-section.section_more
-{
-	border-radius: 15px;
-	padding: 20px;
-	
-	position: absolute;
-	top: 625px;
-	right: calc( ~" 45% - 450px " );
-	width: 450px;
-	
-	border-radius: 15px;
-	
-	z-index: 2;
-	
-	&.blue {
-		// background-color: @blue_section;
-		h2 button.more_button 	{ background-color: @blue_title_button; }
-		button.close 			{ background-color: @blue_close_button; }
-	}
-	&.brown {
-		// background-color: @brown_section;
-		h2 button.more_button 	{ background-color: @brown_title_button; }
-		button.close 			{ background-color: @brown_close_button; }
-	}
-	&.green {
-		// background-color: @green_section;
-		h2 button.more_button 	{ background-color: @green_title_button; }
-		button.close 			{ background-color: @green_close_button; }
-	}
-	
-	button.close
-	{
-		position: absolute;
-		top: 7px;
-		right: 8px;
-		
-		font-family: 'Tangerine';
-		font-size: 1em;
-		
-		padding-top: 2px;
-		padding-right: 5px;
-		padding-left: 1px;
-	}
-	
-	h1
-	{
-		font-size: 3em;
-		
-		a
-		{
-			text-decoration: none;
-		}
-	}
-	
-	h2
-	{
-		button.more_button
-		{
-			margin-top: 5px;
-			padding-top: 3px;
-			padding-bottom: 3px;
-			padding-left: 5px;
-			padding-right: 15px;
-			
-			font-family: 'Tangerine';
-			font-size: 1.8em;
-			border-radius: 15px;
-		}
-	}
-	
-	p
-	{
-		margin-top: 5px; 
-		text-align: justify;
-		text-indent: 30px;
-	}
-	
-	img#affiche
-	{
-		margin-top: 10px;
-		margin-right: 10px;
-		margin-bottom: 5px;
-		border-radius: 10px;
-		float: left;
-	}
-	
-	ul li
-	{
-		list-style-type: circle;
-		margin-left: 15px;
-		text-align: justify;
-	}
-	
-	.arrow_button_container
-	{
-		margin-top: 10px;
-		text-align: center;
-		
-		button img
-		{
-			height: 25px;
-			width: 80px;
-		}
-	}
-	
-	u
-	{
-		font-family: 'Tangerine';
-		font-size: 2.3em;
-		text-decoration: none;
-	}
-	
-	strong
-	{
-		font-style: italic;
-	}
-	
-	img#tetris_logo, img#hammer_logo
-	{
-		float: left;
-		width: 117px;
-		margin-top: 5px;
-		margin-right: 10px;
-		margin-bottom: 5px;
-	}
-	
-	img#tetris_capture
-	{
-		float: right;
-		width: 120px;
-		margin-left: 10px;
-	}
-	
-	figure img
-	{
-		width: 450px;
-		margin-top: 5px;
-	}
-}
-
 footer
 {
 	padding-left: calc( ~" 50% - 460px " );
-	background-color: @color_author;
+	background-color: @color_section;
 	
 	margin-top: 20px;
 	padding-top: 20px;

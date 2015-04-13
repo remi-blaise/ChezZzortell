@@ -13,6 +13,10 @@
 
 {% block body %}
 {% autoescape false %}
-	{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+	{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!-- @whitespace
+	--><section id="notebook" >
+		<h1>{{ 'title' |trans }}</h1>
+		<h2>{{ 'sub_title' |trans }}</h2>
+	</section>
 {% endautoescape %}
 {% endblock %}

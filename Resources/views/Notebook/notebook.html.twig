@@ -14,9 +14,26 @@
 {% block body %}
 {% autoescape false %}
 	{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!-- @whitespace
-	--><section id="notebook" >
+ --><section id="notebook" >
 		<h1>{{ 'title' |trans }}</h1>
 		<h2>{{ 'sub_title' |trans }}</h2>
+		
+		{% for article in articles %}
+			<article>
+				<h1>{{ article.title }}</h1>
+				<div class="keywords" >
+					{% for keyword in article.keywords %}
+						<a>{{ keyword }}</a>
+					{% endfor %}
+				</div>
+				<time datetime="{{ article.creation_date |date(constant('DateTime::W3C')) }}" >
+					Le {{ article.creation_date |date('d/m/y') }}
+				</time>
+				<p>
+					{{ article.content }}
+				</p>
+			</article>
+		{% endfor %}
 	</section>
 {% endautoescape %}
 {% endblock %}

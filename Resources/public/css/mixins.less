@@ -1,5 +1,5 @@
 // From https://github.com/dmitryf/elements/blob/master/elements.less
-.border-radius ( @topleft, @topright, @bottomright, @bottomleft ) {
+.border_radius ( @topleft, @topright, @bottomright, @bottomleft ) {
 	-webkit-border-top-right-radius: @topright;
 	-webkit-border-bottom-right-radius: @bottomright;
 	-webkit-border-bottom-left-radius: @bottomleft;
@@ -17,6 +17,6 @@
 	background-clip: padding-box;
 }
 
-.border-radius ( @radius: 0 ) {
-	.border-radius (@radius, @radius, @radius, @radius);
+.border_radius ( @radius: 0 ) {
+	.border_radius (@radius, @radius, @radius, @radius);
 }

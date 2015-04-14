@@ -29,7 +29,7 @@ class NotebookController extends Controller
 					'title' => 'Redirection',
 					'keywords' => [ 'server' ],
 					'creation_date' => new \DateTime('14-02-2012'),
-					'modif_date' => new \DateTime,
+					'modif_date' => null,
 					'content' => 'Cf index de zzortell.perso.sfr.fr'
 				)
 			)

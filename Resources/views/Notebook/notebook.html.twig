@@ -21,14 +21,33 @@
 		{% for article in articles %}
 			<article>
 				<h1>{{ article.title }}</h1>
-				<div class="keywords" >
-					{% for keyword in article.keywords %}
-						<a>{{ keyword }}</a>
-					{% endfor %}
+				<div class="article_metadata" >
+					<div class="keywords" >
+						{% for keyword in article.keywords %}
+							<a>{{ keyword }}</a>
+						{% endfor %}
+					</div>
+					<div>
+						{% macro date ( name, date ) %}
+						{% autoescape false %}
+							{% set date_tag -%}
+							<time datetime="{{ date |date(constant('DateTime::W3C')) }}" >
+								{{- date |date('d/m/y') -}}
+							</time>
+							{%- endset %}
+							
+							{{ ('article.'~name) |trans({ 
+								'%date_tag%': date_tag
+							}) }}
+						{% endautoescape %}{% endmacro %}
+						{% import _self as macros %}
+						
+						{{ macros.date ( 'creation_date', article.creation_date ) }}
+						{% if article.modif_date %}
+							{{ macros.date ( 'modif_date', article.modif_date ) }}
+						{% endif %}
+					</div>
 				</div>
-				<time datetime="{{ article.creation_date |date(constant('DateTime::W3C')) }}" >
-					Le {{ article.creation_date |date('d/m/y') }}
-				</time>
 				<p>
 					{{ article.content }}
 				</p>

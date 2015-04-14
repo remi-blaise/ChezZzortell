@@ -6,10 +6,7 @@ body
 	
 	#notebook
 	{
-		vertical-align: top;
-		width: 100% - @header_width;
-		
-		h1
+		> h1
 		{
 			font-size: 5em;
 			color: @color_title;
@@ -19,6 +16,39 @@ body
 		h2
 		{
 			text-align: center;
+		}
+		
+		article
+		{
+			background-color: @color_section;
+			.border_radius (15px);
+			
+			margin: 20px 5%;
+			padding: 10px 30px;
+			
+			h1
+			{
+				font-size: 2em;
+			}
+			
+			.keywords
+			{
+				a
+				{
+					display: inline-block;
+					padding: 5px;
+					background-color: @color_serious;
+					.border_radius (10px);
+					color: @color_serious_font;
+					text-decoration: none;
+				}
+			}
+		}
+		
+		@media (min-width: @media_1) {
+			vertical-align: top;
+			width: 100% - @header_width;
+			
 		}
 	}
 }

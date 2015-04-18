@@ -26,22 +26,46 @@ body
 			margin: 20px 5%;
 			padding: 10px 30px;
 			
-			h1
+			.article_metadata
 			{
-				font-size: 2em;
+				float: right;
+				// width: 200px;
+				text-align: right;
+				color: @color_title;
+				
+				.keywords
+				{
+					a
+					{
+						margin: 5px 0;
+						display: inline-block;
+						padding: 5px;
+						background-color: @color_serious;
+						.border_radius (4px);
+						color: @color_discreet;
+						text-decoration: none;
+						text-transform: uppercase;
+					}
+				}
+				
+				.date
+				{
+					font-size: 0.9em;
+					margin-left: 10px;
+				}
 			}
 			
-			.keywords
+			h1
 			{
-				a
-				{
-					display: inline-block;
-					padding: 5px;
-					background-color: @color_serious;
-					.border_radius (10px);
-					color: @color_serious_font;
-					text-decoration: none;
-				}
+				font-size: 1.8em;
+				line-height: 1.2em;
+				margin-bottom: 5px;
+			}
+			
+			p
+			{
+				font-size: 1em;
+				line-height: 1.4em;
 			}
 		}
 		

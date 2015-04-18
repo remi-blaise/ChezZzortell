@@ -20,7 +20,6 @@
 		
 		{% for article in articles %}
 			<article>
-				<h1>{{ article.title }}</h1>
 				<div class="article_metadata" >
 					<div class="keywords" >
 						{% for keyword in article.keywords %}
@@ -42,15 +41,13 @@
 						{% endautoescape %}{% endmacro %}
 						{% import _self as macros %}
 						
-						{{ macros.date ( 'creation_date', article.creation_date ) }}
-						{% if article.modif_date %}
-							{{ macros.date ( 'modif_date', article.modif_date ) }}
+						<p class="date" >{{ macros.date ( 'creation_date', article.creationDate ) }}</p>
+						{% if article.modifDate %}
+							<p class="date" >{{ macros.date ( 'modif_date', article.modifDate ) }}</p>
 						{% endif %}
 					</div>
 				</div>
-				<p>
-					{{ article.content }}
-				</p>
+				{{ article.content }}
 			</article>
 		{% endfor %}
 	</section>

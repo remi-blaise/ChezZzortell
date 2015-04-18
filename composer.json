@@ -14,7 +14,8 @@
 	"require": {
         "php": ">=5.3.3",
 		
-		"oyejorge/less.php": "v1.7.0.2"
+		"oyejorge/less.php": "v1.7.0.2",
+		"erusev/parsedown": "*"
     },
 	
 	"suggest": {

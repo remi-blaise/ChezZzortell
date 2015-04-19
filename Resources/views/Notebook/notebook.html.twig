@@ -18,11 +18,11 @@
 		<h1>{{ 'title' |trans }}</h1>
 		<h2>{{ 'sub_title' |trans }}</h2>
 		
-		{% for article in articles %}
+		{% for note in notes %}
 			<article>
-				<div class="article_metadata" >
+				<div class="note_metadata" >
 					<div class="keywords" >
-						{% for keyword in article.keywords %}
+						{% for keyword in note.keywords %}
 							<a>{{ keyword }}</a>
 						{% endfor %}
 					</div>
@@ -35,19 +35,19 @@
 							</time>
 							{%- endset %}
 							
-							{{ ('article.'~name) |trans({ 
+							{{ ('note.'~name) |trans({ 
 								'%date_tag%': date_tag
 							}) }}
 						{% endautoescape %}{% endmacro %}
 						{% import _self as macros %}
 						
-						<p class="date" >{{ macros.date ( 'creation_date', article.creationDate ) }}</p>
-						{% if article.modifDate %}
-							<p class="date" >{{ macros.date ( 'modif_date', article.modifDate ) }}</p>
+						<p class="date" >{{ macros.date ( 'creation_date', note.creationDate ) }}</p>
+						{% if note.modifDate %}
+							<p class="date" >{{ macros.date ( 'modif_date', note.modifDate ) }}</p>
 						{% endif %}
 					</div>
 				</div>
-				{{ article.content }}
+				{{ note.content }}
 			</article>
 		{% endfor %}
 	</section>

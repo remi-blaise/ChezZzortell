@@ -26,22 +26,22 @@ class NoteFactory
 		}
 		
 		$cachePath = $this->kernel->getCacheDir() . '/zz_chez_zzortell/notes/' . $id . '.php';
-		$cache = new Config\ConfigCache($cachePath, true); //$this->kernel->isDebug()
+		$cache = new Config\ConfigCache($cachePath, $this->kernel->isDebug()); 
 		
 		if ( !$cache->isFresh() ) {
-			$datas = $this->getDatas($id);
-			$note = new Note ($datas);
+			$content = $this->getResourcesContent($id);
+			$note = new Note ($content['datas']);
 			
 			$errors = $this->validator->validate($note);
 			if ( count($errors) > 0 ) {
 				throw new \LogicException (
 					'La note '.$id.' n\'est pas valide.'.PHP_EOL.
-					'Erreur sur la propriété $'.$errors[0]->getPropertyPath().' = '.$errors[0]->getInvalidValue().
-					' :'.PHP_EOL.$errors[0]->getMessage()
+					'Erreur sur la propriété $'.$errors[0]->getPropertyPath().' = '.
+					$errors[0]->getInvalidValue().' :'.PHP_EOL.$errors[0]->getMessage()
 				);
 			}
 			
-			$this->cacheNote($note, $cache);
+			$this->cacheNote($note, $cache, $content['resources']);
 			
 			return $note;
 		}
@@ -49,12 +49,14 @@ class NoteFactory
 		return require $cache;
 	}
 	
-	protected function getDatas ( $id ) {
+	protected function getResourcesContent ( $id ) {
 		//Get files' content
 		$pathWithoutExt = __DIR__ . '/../Resources/notes/' . $id;
+		$resources = [];
 		
 		if ( file_exists($pathWithoutExt . '.yml+md') ) {
 			$ymlAndMd = file_get_contents($pathWithoutExt . '.yml+md');
+			$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.yml+md');
 			
 			$matches = preg_split('#\n\n#', $ymlAndMd, 2);
 			if ( count($matches) < 2 ) {
@@ -66,9 +68,11 @@ class NoteFactory
 			$mdToParse = $matches[1];
 		} elseif ( file_exists($pathWithoutExt . '.yml') ) {
 			$ymlToParse = file_get_contents($pathWithoutExt . '.yml');
+			$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.yml');
 			
 			if ( file_exists($pathWithoutExt . '.md') ) {
 				$mdToParse = file_get_contents($pathWithoutExt . '.md');
+				$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.md');
 			}
 		} else {
 			throw new \InvalidArgumentException ('The note ' . $id . ' doesn\'t exist.');
@@ -84,10 +88,10 @@ class NoteFactory
 		
 		$datas['id'] = $id;
 		
-		return $datas;
+		return [ 'datas' => $datas, 'resources' => $resources ];
 	}
 	
-	protected function cacheNote ( Note $note, Config\ConfigCache $cache ) {
+	protected function cacheNote ( Note $note, Config\ConfigCache $cache, array $resources ) {
 		$datas = $note->getDatas();
 		$content = sprintf(<<<EOF
 <?php
@@ -100,6 +104,6 @@ EOF
             var_export($datas, true)
         );
 		
-		$cache->write($content);
+		$cache->write($content, $resources);
 	}
 }

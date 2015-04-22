@@ -1,6 +1,6 @@
 <?php
 
-namespace Zz\ChezZzortellBundle\Notebook;
+namespace Zz\ChezZzortellBundle\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -32,12 +32,12 @@ class Note
 	 */
 	protected $content;
 	
-	public function __construct ( array $prop ) {
-		$this->hydratate($prop);
+	public function __construct ( array $datas ) {
+		$this->hydrate($datas);
 	}
 	
-	protected function hydratate ( array $properties ) {
-		foreach ( $properties as $property => $value ) {
+	protected function hydrate ( array $datas ) {
+		foreach ( $datas as $property => $value ) {
 			if ( property_exists($this, $property) ) {
 				$this->$property = $value;
 			} else {

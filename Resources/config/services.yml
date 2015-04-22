@@ -1,4 +1,8 @@
 services:
-   zz_chez_zzortell.notebook.factory:
-       class: Zz\ChezZzortellBundle\Notebook\NoteFactory
-       arguments: [@kernel, @validator]
+    yaml:
+        class: Symfony\Component\Yaml\Parser
+    markdown:
+        class: Parsedown
+    zz_chez_zzortell.notebook.manager:
+        class: Zz\ChezZzortellBundle\Entity\NoteManager
+        arguments: [@kernel, @validator, @yaml, @markdown]

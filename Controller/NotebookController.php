@@ -8,7 +8,7 @@ class NotebookController extends Controller
 {
     public function notebookAction()
     {
-        $factory = $this->get('zz_chez_zzortell.notebook.factory');
+        $factory = $this->get('zz_chez_zzortell.notebook.manager');
 		
 		return $this->render('ZzChezZzortellBundle:Notebook:notebook.html.twig', [
 			'notes' => array(

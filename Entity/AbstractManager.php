@@ -61,12 +61,6 @@ abstract class AbstractManager
 		
 		if ( file_exists($pathWithoutExt . '.yml+md') ) {
 			$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.yml+md');
-		} elseif ( file_exists($pathWithoutExt . '.yml') ) {
-			$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.yml');
-			
-			if ( file_exists($pathWithoutExt . '.md') ) {
-				$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.md');
-			}
 		} else {
 			throw new \InvalidArgumentException (
 				'The '.strtolower($this->getEntityName()).' ' . $id . ' doesn\'t exist. ' .$pathWithoutExt
@@ -79,26 +73,18 @@ abstract class AbstractManager
 	protected function getResourcesDatas ( array $resources ) {
 		foreach ( $resources as $resource ) {
 			$content = file_get_contents($resource);
-			switch ( pathinfo($resource, PATHINFO_EXTENSION) ) {
-				case 'yml+md' :
-					$matches = preg_split('#\n\n#', $content, 2);
-					if ( count($matches) < 2 ) {
-						throw new \LogicException (
-							'YAML and Markdown should be separated by two LF in'.PHP_EOL.
-							$pathWithoutExt.'.yml+md'
-						);
-					}
-					$datas = $this->ymlParser->parse($matches[0]);
-					$datas['content'] = $this->mdParser->text($matches[1]);
-				break;
-				case 'yml' :
-					$datas = $this->ymlParser->parse($content);
-				break;
-				case 'md':
-					$datas['content'] = $this->mdParser->text($content);
-				break;
-				default:
-					throw new \LogicalException;
+			if ( pathinfo($resource, PATHINFO_EXTENSION) === 'yml+md' ) {
+				$matches = preg_split('#\n\n#', $content, 2);
+				if ( count($matches) < 2 ) {
+					throw new \LogicException (
+						'YAML and Markdown should be separated by two LF in'.PHP_EOL.
+						$pathWithoutExt.'.yml+md'
+					);
+				}
+				$datas = $this->ymlParser->parse($matches[0]);
+				$datas['content'] = $this->mdParser->text($matches[1]);
+			} else {
+				throw new \LogicalException;
 			}
 		}
 		

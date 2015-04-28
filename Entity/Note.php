@@ -17,7 +17,7 @@ class Note
 	 * 		@Assert\Type("string")
 	 * })
 	 */
-	protected $keywords;
+	protected $tags;
 	/**
 	 * @Assert\NotBlank
 	 * @Assert\Date
@@ -49,7 +49,7 @@ class Note
 	public function getDatas () {
 		$prop = array();
 		$prop['id'] = $this->getId();
-		$prop['keywords'] = $this->getKeywords();
+		$prop['tags'] = $this->getTags();
 		$prop['creationDate'] = $this->getCreationDate();
 		$prop['modifDate'] = $this->getModifDate();
 		$prop['content'] = $this->getContent();
@@ -59,8 +59,8 @@ class Note
 	public function getId () {
 		return $this->id;
 	}
-	public function getKeywords () {
-		return $this->keywords;
+	public function getTags () {
+		return $this->tags;
 	}
 	public function getCreationDate () {
 		return $this->creationDate;

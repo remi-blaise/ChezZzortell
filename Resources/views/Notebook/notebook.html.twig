@@ -21,9 +21,9 @@
 		{% for note in notes %}
 			<article>
 				<div class="note_metadata" >
-					<div class="keywords" >
-						{% for keyword in note.keywords %}
-							<a>{{ keyword }}</a>
+					<div class="tags" >
+						{% for tag in note.tags %}
+							<a>{{ tag }}</a>
 						{% endfor %}
 					</div>
 					<div>

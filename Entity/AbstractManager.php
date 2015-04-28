@@ -47,7 +47,7 @@ abstract class AbstractManager
 				);
 			}
 			
-			$this->writeCache($entity, $cache, $resources);
+			$this->cacheEntity($entity, $cache, $resources);
 			
 			return $entity;
 		}
@@ -91,7 +91,7 @@ abstract class AbstractManager
 		return $datas;
 	}
 	
-	protected function writeCache ( $entity, Config\ConfigCache $cache, array $resources ) {
+	protected function cacheEntity ( $entity, Config\ConfigCache $cache, array $resources ) {
 		$content = sprintf(<<<EOF
 <?php
 \$entity = new \\%s( %s );

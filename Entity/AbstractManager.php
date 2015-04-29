@@ -55,9 +55,27 @@ abstract class AbstractManager
 		return require $cache;
 	}
 	
-	public function getLast ( $nb = 10 ) {
+	public function getEntities ( $limit = null, $offset = 0, array $tags = null ) {
+		if ( !is_int($limit) && !is_null($limit) ) {
+			throw new \InvalidArgumentException ('The $limit argument must be an int or null.');
+		}
+		if ( !is_int($offset) ) {
+			throw new \InvalidArgumentException ('The $offset argument must be an int or null.');
+		}
+		
 		$index = array_reverse($this->getIndex(), true);
-		$index = array_slice($index, 0, $nb, true);
+		
+		if ( $tags ) {
+			foreach ( $tags as $tag ) {
+				foreach ( $index as $id => $tags ) {
+					if ( !in_array($tag, $tags) ) {
+						unset($index[$id]);
+					}
+				}
+			}
+		}
+		
+		$index = array_slice($index, $offset, $limit, true);
 		
 		$entities = [];
 		foreach ( $index as $id => $tags ) {

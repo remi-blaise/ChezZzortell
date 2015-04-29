@@ -11,7 +11,7 @@ class NotebookController extends Controller
         $manager = $this->get('zz_chez_zzortell.notebook.manager');
 		
 		return $this->render('ZzChezZzortellBundle:Notebook:notebook.html.twig', [
-			'notes' => $manager->getLast()
+			'notes' => $manager->getEntities(10)
 		]);
     }
 }

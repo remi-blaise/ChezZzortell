@@ -136,11 +136,11 @@ abstract class AbstractManager
 	}
 	
 	protected function cacheEntity ( $entity, Config\ConfigCache $cache, array $resources ) {
-		$content = sprintf(<<<EOF
+		$content = sprintf(<<<'EOF'
 <?php
-\$entity = new \\%s( %s );
+$entity = new \%s( %s );
 
-return \$entity;
+return $entity;
 EOF
             ,
 			get_class($entity),

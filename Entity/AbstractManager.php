@@ -67,25 +67,36 @@ abstract class AbstractManager
 	}
 	
 	protected function getIndex () {
-		$index = [];
+		$cachePath = $this->getCacheDir().'/index.php';
+		$cache = new Config\ConfigCache($cachePath, $this->kernel->isDebug());
 		
-		$dir = $this->getResourcesDir();
-		if ( ! $list = scandir($dir) ) {
-			throw new \LogicalException ('Fail to list '.$dir);
-		}
-		
-		foreach ( $list as $filename ) {
-			$matches = [];
-			if (
-				is_file($dir.'/'.$filename)
-				&& preg_match('#^(\d+)\.yml\+md$#i', $filename, $matches)
-			) {
-				$id = (int) $matches[1];
-				$index[$id] = $this->get($id)->getTags();
+		if ( !$cache->isFresh() ) {
+			$index = [];
+			
+			$dir = $this->getResourcesDir();
+			if ( ! $list = scandir($dir) ) {
+				throw new \LogicalException ('Fail to list '.$dir);
 			}
+			
+			foreach ( $list as $filename ) {
+				$matches = [];
+				if (
+					is_file($dir.'/'.$filename)
+					&& preg_match('#^(\d+)\.yml\+md$#i', $filename, $matches)
+				) {
+					$id = (int) $matches[1];
+					$index[$id] = $this->get($id)->getTags();
+				}
+			}
+			
+			$content = '<?php return ' . var_export($index, true) . ';';
+			$resources = [ new Config\Resource\DirectoryResource ($this->getResourcesDir()) ];
+			$cache->write($content, $resources);
+			
+			return $index;
 		}
 		
-		return $index;
+		return require $cache;
 	}
 	
 	protected function getResources ( $id ) {

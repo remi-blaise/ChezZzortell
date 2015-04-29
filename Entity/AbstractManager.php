@@ -55,6 +55,39 @@ abstract class AbstractManager
 		return require $cache;
 	}
 	
+	public function getLast ( $nb = 10 ) {
+		$index = array_reverse($this->getIndex(), true);
+		$index = array_slice($index, 0, $nb, true);
+		
+		$entities = [];
+		foreach ( $index as $id => $tags ) {
+			$entities[] = $this->get($id);
+		}
+		return $entities;
+	}
+	
+	protected function getIndex () {
+		$index = [];
+		
+		$dir = $this->getResourcesDir();
+		if ( ! $list = scandir($dir) ) {
+			throw new \LogicalException ('Fail to list '.$dir);
+		}
+		
+		foreach ( $list as $filename ) {
+			$matches = [];
+			if (
+				is_file($dir.'/'.$filename)
+				&& preg_match('#^(\d+)\.yml\+md$#i', $filename, $matches)
+			) {
+				$id = (int) $matches[1];
+				$index[$id] = $this->get($id)->getTags();
+			}
+		}
+		
+		return $index;
+	}
+	
 	protected function getResources ( $id ) {
 		$pathWithoutExt = $this->getResourcesDir() .DIRECTORY_SEPARATOR. $id;
 		$resources = [];

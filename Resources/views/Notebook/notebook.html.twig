@@ -23,7 +23,7 @@
 				<div class="note_metadata" >
 					<div class="tags" >
 						{% for tag in note.tags %}
-							<a>{{ tag }}</a>
+							<a href="{{ path('zz_chez_zz_notebook_tag', {'tag': tag}) }}" >{{ tag }}</a>
 						{% endfor %}
 					</div>
 					<div>
@@ -50,6 +50,18 @@
 				{{ note.content }}
 			</article>
 		{% endfor %}
+		<ul class="pagination" >
+			{% for p in 1..nbPages %}
+				<li {% if p == page %}class="active"{% endif %} >
+					<a href="{{ path(
+						app.request.get('_route'),
+						{'page': p, 'tag': app.request.get('tag')}
+					) }}">
+						{{ p }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
 {% endautoescape %}
 {% endblock %}

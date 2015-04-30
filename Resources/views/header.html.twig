@@ -13,7 +13,7 @@
 				</li>
 			</a>
 			<a href="{{ path('zz_chez_zz_notebook') }}" >
-				<li {% if app.request.get('_route') == 'zz_chez_zz_notebook' %} class="selected" {% endif %} >
+				<li {% if 'zz_chez_zz_notebook' in app.request.get('_route') %} class="selected" {% endif %} >
 					{{ 'header.nav.notebook' |trans }}
 				</li>
 			</a>

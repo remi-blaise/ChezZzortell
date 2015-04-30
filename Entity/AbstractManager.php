@@ -3,6 +3,7 @@
 namespace Zz\ChezZzortellBundle\Entity;
 
 use Symfony\Component\Config as Config;
+use Zz\ChezZzortellBundle\Tool\Paginator;
 
 abstract class AbstractManager
 {
@@ -75,13 +76,15 @@ abstract class AbstractManager
 			}
 		}
 		
+		$nbEntities = count($index);
+		
 		$index = array_slice($index, $offset, $limit, true);
 		
 		$entities = [];
 		foreach ( $index as $id => $tags ) {
 			$entities[] = $this->get($id);
 		}
-		return $entities;
+		return new Paginator ($entities, $nbEntities);
 	}
 	
 	protected function getIndex () {

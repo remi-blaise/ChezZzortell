@@ -6,6 +6,12 @@ body
 	
 	#notebook
 	{
+		@media (min-width: @media_1) {
+			vertical-align: top;
+			width: 100% - @header_width;
+			
+		}
+		
 		> h1
 		{
 			font-size: 5em;
@@ -18,12 +24,16 @@ body
 			text-align: center;
 		}
 		
+		article, ul.pagination
+		{
+			margin: 20px 5%;
+		}
+		
 		article
 		{
 			background-color: @color_section;
 			.border_radius (15px);
 			
-			margin: 20px 5%;
 			padding: 10px 30px;
 			
 			.note_metadata
@@ -69,10 +79,35 @@ body
 			}
 		}
 		
-		@media (min-width: @media_1) {
-			vertical-align: top;
-			width: 100% - @header_width;
+		ul.pagination
+		{
+			text-align: center;
 			
+			li
+			{
+				display: inline-block;
+				
+				a
+				{
+					display: inline-block;
+					padding: 10px;
+					text-decoration: none;
+					color: @color_section;
+					border: dashed @color_section 2px;
+					.border_radius (4px);
+					font-size: 1.4em;
+				}
+				
+				&.active, &:hover, &:active
+				{
+					a
+					{
+						color: @color_discreet;
+						background-color: @color_serious;
+						border: solid @color_serious 2px;
+					}
+				}
+			}
 		}
 	}
 }

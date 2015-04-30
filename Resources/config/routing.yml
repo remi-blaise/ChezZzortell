@@ -2,9 +2,15 @@ zz_chez_zz_index:
     path:     /
     defaults: { _controller: ZzChezZzortellBundle:Index:index }
 zz_chez_zz_notebook:
-    path:     /notebook
-    # path:     /
-    defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook }
+    path:     /notebook/{page}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }
+    requirements:
+        page: \d+
+zz_chez_zz_notebook_tag:
+    path:     /notebook/{tag}/{page}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }
+    requirements:
+        page: \d+
 zz_chez_zz_articles:
     # path:     /articles
     path:     /

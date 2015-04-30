@@ -78,19 +78,14 @@
 	
 	/* 1 */
 	@media (min-width: @media_1) {
-		position: relative;
+		header
+		{
+			min-height: 100vh;
+		}
 		
 		&:after
 		{
-			content: "";
-			width: @author_width;
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			z-index: -1;
-			background-color: @color_section;
-			right: 0;
+			.pseudo_background(@author_width, @color_section, right);
 		}
 		
 		#author

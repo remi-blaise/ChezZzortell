@@ -1,10 +1,16 @@
 .generate_header () {
 	@header_width: 25%;
 	
-	header, header + section
-	{
-		/* 1 */
-		@media (min-width: @media_1) {
+	/* 1 */
+	@media (min-width: @media_1) {
+		position: relative;
+		
+		&:before
+		{
+			.pseudo_background(@header_width, @color_serious);
+		}
+		header, header + section
+		{
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -167,7 +173,6 @@
 
 .generate_header_full_screen_style () {
 	width: @header_width;
-	min-height: 100vh;
 	
 	h1
 	{

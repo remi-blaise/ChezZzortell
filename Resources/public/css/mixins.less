@@ -20,3 +20,15 @@
 .border_radius ( @radius: 0 ) {
 	.border_radius (@radius, @radius, @radius, @radius);
 }
+
+.pseudo_background ( @width, @color, @side: left ) {
+	content: "";
+	width: @width;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: @color;
+	@{side}: 0;
+}

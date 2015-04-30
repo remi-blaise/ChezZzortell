@@ -7,6 +7,7 @@ Hauteur de 100% du *viewport*
 
 [Technique 1](http://www.alsacreations.com/astuce/lire/51-hauteur-100-element.html) :
 ---
+
 ```css
 html, body {
 	height: 100%;
@@ -18,6 +19,7 @@ du `body`.
 
 Technique 2 :
 ---
+
 ```css
 div {
 	min-height: 100vh;
@@ -28,4 +30,5 @@ div {
 - IE 9+
 - [Polyfill chiant pour iOS Safari 7](https://gist.github.com/pburtchaell/e702f441ba9b3f76f587),
   [exemple pratique](https://github.com/Zzortell/ChezZzortell/blob/6a58147f012f2dfa0b37fd5b2d7756dbfe329f38/Resources/public/css/polyfills/vh-ios7.less)
+
 Autrement dit : utilisable.

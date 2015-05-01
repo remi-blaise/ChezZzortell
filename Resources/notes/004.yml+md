@@ -14,10 +14,10 @@ html, body {
 }
 ```
 
-La hauteur du `body` fait ainsi 100% du *viewport*, on peut ainsi appliquer `min-height: 100%;` aux éléments
+La hauteur du `body` fait ainsi 100% du *viewport*, on peut ainsi appliquer `min-height: 100%` aux éléments
 du `body`.
 
-Technique 2 :
+Technique 2 (recommandée) :
 ---
 
 ```css
@@ -30,5 +30,3 @@ div {
 - IE 9+
 - [Polyfill chiant pour iOS Safari 7](https://gist.github.com/pburtchaell/e702f441ba9b3f76f587),
   [exemple pratique](https://github.com/Zzortell/ChezZzortell/blob/6a58147f012f2dfa0b37fd5b2d7756dbfe329f38/Resources/public/css/polyfills/vh-ios7.less)
-
-Autrement dit : utilisable.

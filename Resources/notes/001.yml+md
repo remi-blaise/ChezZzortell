@@ -1,0 +1,14 @@
+tags:           [ typo ]
+creationDate:   '2015-05-01'
+modifDate:      ~
+
+Espace insécables
+===
+
+Universellement compris : `&nbsp;`.
+
+Certains semblerait préconiser le caractère Unicode, mais compatibilité navigateur à vérifier.
+Moins sauvage mais également moins visible. Le mieux est évidemment le rajout automatique (filtre Twig ?).
+
+Point de langue :
+- [Pour des espaces insécables impeccables](https://www.druide.com/enquetes/pour-des-espaces-ins%C3%A9cables-impeccables)

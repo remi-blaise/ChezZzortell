@@ -1,0 +1,15 @@
+tags:           [ css ]
+creationDate:   '2015-05-01'
+modifDate:      ~
+
+Problème des espaces indésirables de `display: inline-block`
+===
+
+Solution :
+```html
+	<div class="inline_block" ></div><!--
+@white-space
+ --><div class="inline_block" ></div>
+```
+
+Alsacréations : [display: inline-block et les espaces indésirables](http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html)

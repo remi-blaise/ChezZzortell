@@ -46,7 +46,9 @@
 						{% endautoescape %}{% endmacro %}
 						{% import _self as macros %}
 						
-						<p class="date" >{{ macros.date ( 'creation_date', note.creationDate ) }}</p>
+						{% if note.creationDate %}
+							<p class="date" >{{ macros.date ( 'creation_date', note.creationDate ) }}</p>
+						{% endif %}
 						{% if note.modifDate %}
 							<p class="date" >{{ macros.date ( 'modif_date', note.modifDate ) }}</p>
 						{% endif %}

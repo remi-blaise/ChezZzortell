@@ -1,8 +1,8 @@
 tags:           [ css ]
-creationDate:   '2015-05-01'
+creationDate:   ~
 modifDate:      ~
 
-Problème des espaces indésirables de `display: inline-block`
+Problème des espaces indésirables de <br/>`display: inline-block`
 ===
 
 Solution :

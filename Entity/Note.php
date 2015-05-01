@@ -19,7 +19,6 @@ class Note
 	 */
 	protected $tags;
 	/**
-	 * @Assert\NotBlank
 	 * @Assert\Date
 	 */
 	protected $creationDate;

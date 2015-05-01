@@ -7,6 +7,8 @@ use Zz\ChezZzortellBundle\Tool\Paginator;
 
 abstract class AbstractManager
 {
+	const ID_LENGTH_IN_FILENAME = 3;
+	
 	protected $kernel;
 	protected $validator;
 	protected $ymlParser;
@@ -121,18 +123,32 @@ abstract class AbstractManager
 	}
 	
 	protected function getResources ( $id ) {
-		$pathWithoutExt = $this->getResourcesDir() .DIRECTORY_SEPARATOR. $id;
+		$path = $this->getResourcesDir() .DIRECTORY_SEPARATOR. $this->formatIdForFilename($id) . '.yml+md';
 		$resources = [];
 		
-		if ( file_exists($pathWithoutExt . '.yml+md') ) {
-			$resources[] = new Config\Resource\FileResource ($pathWithoutExt . '.yml+md');
+		if ( file_exists($path) ) {
+			$resources[] = new Config\Resource\FileResource ($path);
 		} else {
 			throw new \InvalidArgumentException (
-				'The '.strtolower($this->getEntityName()).' ' . $id . ' doesn\'t exist. ' .$pathWithoutExt
+				'The '.strtolower($this->getEntityName()).' ' . $id . ' doesn\'t exist. ' . $path
 			);
 		}
 		
 		return $resources;
+	}
+	
+	protected function formatIdForFilename ( $id ) {
+		$id = (string) $id;
+		if ( strlen($id) > self::ID_LENGTH_IN_FILENAME ) {
+			throw new \InvalidArgumentException (
+				'The max length for ' . strtolower($this->getEntityName()) . '\'id is ' .
+				self::ID_LENGTH_IN_FILENAME .', $id given: ' . $id
+			);
+		}
+		while ( strlen($id) < self::ID_LENGTH_IN_FILENAME ) {
+			$id = '0' . $id;
+		}
+		return $id;
 	}
 	
 	protected function getResourcesDatas ( array $resources ) {
@@ -142,8 +158,7 @@ abstract class AbstractManager
 				$matches = preg_split('#\n\n#', $content, 2);
 				if ( count($matches) < 2 ) {
 					throw new \LogicException (
-						'YAML and Markdown should be separated by two LF in'.PHP_EOL.
-						$pathWithoutExt.'.yml+md'
+						'YAML and Markdown should be separated by two LF in' . PHP_EOL . $resource
 					);
 				}
 				$datas = $this->ymlParser->parse($matches[0]);

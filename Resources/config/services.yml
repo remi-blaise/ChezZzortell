@@ -6,3 +6,10 @@ services:
     zz_chez_zzortell.notebook.manager:
         class: Zz\ChezZzortellBundle\Entity\NoteManager
         arguments: [@kernel, @validator, @yaml, @markdown]
+    zz_chez_zzortell.cache.clearer:
+        class: Zz\ChezZzortellBundle\Cache\CacheClearer
+        tags: [{ name: kernel.cache_clearer }]
+    zz_chez_zzortell.cache.warmer:
+        class: Zz\ChezZzortellBundle\Cache\CacheWarmer
+        arguments: [@zz_chez_zzortell.notebook.manager]
+        tags: [{ name: kernel.cache_warmer }]

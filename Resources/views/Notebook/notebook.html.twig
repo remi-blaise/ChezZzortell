@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div class="content" >
-					{{ note.content }}
+					{{ note.content|replace({'%base_url%': path('zz_chez_zz_index')}) }}
 				</div>
 			</article>
 		{% endfor %}

@@ -1,0 +1,15 @@
+tags:           [ html ]
+creationDate:   ~
+modifDate:      ~
+
+Utilisation des `#id` pour appliquer les styles
+===
+
+L'utilisation de `#id` pour le CSS n'est pas à bannir mais à utiliser avec grande parcimonie.
+
+En effet, l'élément doit non seulement être unique, sur la page mais également dans tout le site,
+mais également *spécial*, c'est-à-dire qu'il doit être assuré de garder son unicité avec le temps.
+
+Même pour les images, à ne pas utiliser.
+Ne pourrait-on pas envisager une autre image ayant les mêmes propriétés ?
+Puisque tel est le cas, les images doivent être stylisées avec des `.class`.

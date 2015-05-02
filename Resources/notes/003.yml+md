@@ -2,7 +2,7 @@ tags:           [ css ]
 creationDate:   ~
 modifDate:      ~
 
-Problème des espaces indésirables de <br/>`display: inline-block`
+Problème des espaces indésirables de `display: inline-block`
 ===
 
 Solution :

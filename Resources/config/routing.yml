@@ -6,6 +6,11 @@ zz_chez_zz_notebook:
     defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }
     requirements:
         page: \d+
+zz_chez_zz_notebook_note:
+    path:     /notebook/note/{id}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:note }
+    requirements:
+        id:   \d+
 zz_chez_zz_notebook_tag:
     path:     /notebook/{tag}/{page}
     defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }

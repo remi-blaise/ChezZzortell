@@ -8,9 +8,10 @@ class NotebookController extends Controller
 {
     const NB_PER_PAGE = 10;
 	
-	public function notebookAction($tag, $page)
+	public function notebookAction ( $tag, $page )
     {
-        if ( $page < 1 ) {
+		$page = (int) $page;
+		if ( $page < 1 ) {
 			throw $this->createNotFoundException('La page ' . $page . ' n\'existe pas.');
 		}
 		if ( $tag ) {
@@ -28,4 +29,20 @@ class NotebookController extends Controller
 			'nbPages' 	=> ceil(count($notes)/self::NB_PER_PAGE),
 		]);
     }
+	
+	public function noteAction ( $id )
+	{
+		$id = (int) $id;
+		
+		$manager = $this->get('zz_chez_zzortell.notebook.manager');
+		try {
+			$note = $manager->get($id);
+		} catch ( \InvalidArgumentException $e ) {
+			throw $this->createNotFoundException('La note ' . $id . ' n\'existe pas.');
+		}
+		
+		return $this->render('ZzChezZzortellBundle:Notebook:notebook.html.twig', [
+			'notes' 	=> [ $note ]
+		]);
+	}
 }

@@ -10,4 +10,6 @@ sont à utiliser le plus possible !
 Ne pas hésiter à mettre des sections dans des sections, etc.
 C'est simple : chaque élément méritant son `<h1>` doit être une section.
 
-Rappel : `<article>` = contenu autonome qui pourrait être cité, repris sur un autre site.
+Rappels :
+- `<article>` = contenu autonome qui pourrait être cité, repris sur un autre site.
+- `<aside>` = contenu complémentaire pouvant être enlevé.

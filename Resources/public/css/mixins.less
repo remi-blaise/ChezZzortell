@@ -41,6 +41,20 @@
 	padding-right: @padding;
 }
 
+.keyframes ( @name, @arguments ) {
+	@-webkit-keyframes @name { @arguments(); }
+	@-moz-keyframes @name { @arguments(); }
+	@-o-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation ( @anim ) {
+	-webkit-animation: 	@anim;
+	-moz-animation:    	@anim;
+	-o-animation:     	@anim;
+	animation:     		@anim;
+}
+
 .default_family
 {
 	font-family: Verdana, sans-serif;

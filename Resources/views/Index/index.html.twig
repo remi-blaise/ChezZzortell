@@ -9,7 +9,6 @@
 	{% stylesheets 'bundles/zzchezzzortell/css/index.less' filter='cssrewrite' %}
 		<link rel="stylesheet" href="{{ asset_url }}" />
 	{% endstylesheets %}
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 {% endblock %}
 
 {% block utils %}
@@ -177,25 +176,6 @@
 			</div>
 		</div>
 	</section>
-	
-	<footer>
-		<h1>{{ 'footer.historic.title' |trans }}</h1>
-		
-		<p>
-			{{ 'footer.historic.4' |trans }}
-		</p>
-		<p>
-			{{ 'footer.historic.3' |trans }}
-		</p>
-		<p>
-			{{ 'footer.historic.2' |trans }}
-		</p>
-		<p>
-			{{ 'footer.historic.1' |trans }}
-		</p>
-		<p>
-			{{ 'footer.historic.0' |trans }}
-		</p>
-	</footer>
+	{{ include ('ZzChezZzortellBundle::footer.html.twig') }}
 {% endautoescape %}
 {% endblock %}

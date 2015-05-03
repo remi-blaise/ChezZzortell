@@ -85,6 +85,30 @@
 			}
 		}
 	}
+	
+	.media
+	{
+		a
+		{
+			span{
+				color: @color_section;
+				
+				i.fa-facebook
+				{
+					position: relative;
+					top: 2px;
+					left: 2px;
+				}
+			}
+			
+			img
+			{
+				max-height: 55px;
+				.border_radius(100em);
+				vertical-align: middle;
+			}
+		}
+	}
 }
 
 .last ( @side ) {
@@ -116,6 +140,8 @@
 }
 	
 .generate_header_vertical_nav_style () {
+	.padding_height(10px);
+	
 	nav ul
 	{
 		a li
@@ -130,9 +156,24 @@
 			.last(top);
 		}
 	}
+	
+	.media
+	{
+		text-align: center;
+	}
 }
 
 .generate_header_horizontal_nav_style () {
+	text-align: center;
+	.padding_width(10px);
+	
+	nav, .media
+	{
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 10px;
+	}
+	
 	nav
 	{
 		text-align: center;
@@ -140,7 +181,6 @@
 		ul
 		{
 			display: inline-block;
-			margin-bottom: 10px;
 			
 			&:last-of-type
 			{
@@ -184,9 +224,14 @@
 	
 	nav
 	{
-		margin-top: 100px;
+		margin-top: 60px;
 		margin-left: 2vw;
 		margin-right: 4vw;
+	}
+	
+	.media
+	{
+		padding-top: 30px;
 	}
 }
 

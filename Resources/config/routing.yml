@@ -17,6 +17,5 @@ zz_chez_zz_notebook_tag:
     requirements:
         page: \d+
 zz_chez_zz_articles:
-    # path:     /articles
-    path:     /
+    path:     /articles
     defaults: { _controller: ZzChezZzortellBundle:Articles:index }

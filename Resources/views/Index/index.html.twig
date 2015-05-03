@@ -53,11 +53,43 @@
 			</div><!--
 		@white-space
 		 --><div class="author_column" >
-				<article>
+				<article id="skills" >
+					{% macro img ( figure, name, link, class ) %}
+					{% autoescape false %}
+						{% if link %}<a href="{{ link }}" >{% endif %}
+						<img src="{{ asset('bundles/zzchezzzortell/images/' ~ name ~ '.png') }}"
+							 alt="{{ ( 'author.skills.' ~ figure ~ '.alt.' ~ name ) |trans }}"
+							 title="{{ ( 'author.skills.' ~ figure ~ '.alt.' ~ name ) |trans }}"
+							 {% if class %}class="{{ class }}"{% endif %} />
+						{% if link %}</a>{% endif %}
+					{% endautoescape %}{% endmacro %}
+					{% import _self as figure %}
+					
 					<h2>{{ 'author.skills.title' |trans }}</h2>
-				</article>
-				<article>
-					<h2>{{ 'author.abilities.title' |trans }}</h2>
+					<figure>
+						<figcaption>{{ 'author.skills.languages.title' |trans }}</figcaption>
+						{{ figure.img('languages', 'html-css-js') }}
+						{{ figure.img('languages', 'php', 'http://php.net/') }}
+					</figure>
+					<figure>
+						<figcaption>{{ 'author.skills.frameworks.title' |trans }}</figcaption>
+						{{ figure.img('frameworks', 'sf', 'http://symfony.com/') }}
+					</figure>
+					<figure class="smaller" >
+						<figcaption>{{ 'author.skills.lib.title' |trans }}</figcaption>
+						{{ figure.img('lib', 'less', 'http://lesscss.org/') }}
+						{{ figure.img('lib', 'jquery', 'https://jquery.com/', 'smaller') }}
+						{{ figure.img('lib', 'phpunit', 'https://phpunit.de/') }}
+					</figure>
+					<figure class="smaller" >
+						<figcaption>{{ 'author.skills.tools.title' |trans }}</figcaption>
+						{{ figure.img('tools', 'composer', 'https://getcomposer.org/') }}
+						{{ figure.img('tools', 'git', 'http://git-scm.com/', 'smaller') }}
+					<figure class="smaller" >
+						<figcaption>{{ 'author.skills.future.title' |trans }}</figcaption>
+						{{ figure.img('future', 'angularjs', 'https://angularjs.org/', 'smaller') }}
+						{{ figure.img('future', 'bootstrap', 'http://getbootstrap.com/') }}
+					</figure>
 				</article>
 			</div>
 		</section>

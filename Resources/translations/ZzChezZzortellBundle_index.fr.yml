@@ -14,9 +14,31 @@ author:
             Si vous souhaitez attaquer le plat principal, n'hésitez pas à me contacter !
     skills:
         title:  Mes compétences
-        
-    abilities:
-        title:  Concrètement, je sais faire
+        languages:
+            title:  Je programme en :
+            alt:
+                html-css-js:    HTML & CSS & Javascript
+                php:            PHP
+        frameworks:
+            title:  J'adore :
+            alt:
+                sf: Symfony2
+        lib:
+            title:  Je maîtrise :
+            alt:
+                less:       Less
+                jquery:     jQuery
+                phpunit:    PHPUnit
+        tools:
+            title:  J'utilise :
+            alt:
+                git:        Git
+                composer:   Composer
+        future:
+            title:  Je m'initie à :
+            alt:
+                angularjs:  AngularJS
+                bootstrap:  Bootstrap
     contact:
         title:  Me contacter
         p: |

@@ -100,9 +100,9 @@ projects:
             tpe:
                 name:       TPE&nbsp;: Une ville sous-marine autonome
                 description: |
-                    Réalisée à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014, 
-                    ce fut ma première réalisation en <em>Javascript</em>. 
-                    Elle avait pour but d'illustrer notre TPE, dont la problématique était : 
+                    Réalisé à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014, 
+                    ce fut mon premier projet en <em>Javascript</em>. 
+                    Il avait pour but d'illustrer notre TPE, dont la problématique était : 
                     &laquo;&nbsp;Comment fonder une ville sous-marine entièrement 
                     autonome&nbsp;?&nbsp;&raquo;. 
                     L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de 
@@ -127,7 +127,7 @@ projects:
                     Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier 
                     projet sur le web. Le projet est resté à l'état d'ébauche.
                     <br />
-                    J'ajoute part ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des 
+                    J'ajoute par ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des 
                     niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
 
     present:

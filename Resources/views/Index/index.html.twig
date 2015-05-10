@@ -53,12 +53,12 @@
 		@white-space
 		 --><div class="author_column" >
 				<article id="skills" >
-					{% macro img ( figure, name, link, class ) %}
+					{% macro img ( name, link, class ) %}
 					{% autoescape false %}
 						{% if link %}<a href="{{ link }}" >{% endif %}
 						<img src="{{ asset('bundles/zzchezzzortell/images/' ~ name ~ '.png') }}"
-							 alt="{{ ( 'author.skills.' ~ figure ~ '.alt.' ~ name ) |trans }}"
-							 title="{{ ( 'author.skills.' ~ figure ~ '.alt.' ~ name ) |trans }}"
+							 alt="{{ ( 'author.skills.alt.' ~ name ) |trans }}"
+							 title="{{ ( 'author.skills.alt.' ~ name ) |trans }}"
 							 {% if class %}class="{{ class }}"{% endif %} />
 						{% if link %}</a>{% endif %}
 					{% endautoescape %}{% endmacro %}
@@ -66,28 +66,29 @@
 					
 					<h2>{{ 'author.skills.title' |trans }}</h2>
 					<figure>
-						<figcaption>{{ 'author.skills.languages.title' |trans }}</figcaption>
-						{{ figure.img('languages', 'html-css-js') }}
-						{{ figure.img('languages', 'php', 'http://php.net/') }}
+						<figcaption>{{ 'author.skills.languages' |trans }}</figcaption>
+						{{ figure.img('html-css-js') }}
+						{{ figure.img('php', 'http://php.net/') }}
 					</figure>
 					<figure>
-						<figcaption>{{ 'author.skills.frameworks.title' |trans }}</figcaption>
-						{{ figure.img('frameworks', 'sf', 'http://symfony.com/') }}
+						<figcaption>{{ 'author.skills.frameworks' |trans }}</figcaption>
+						{{ figure.img('sf', 'http://symfony.com/') }}
 					</figure>
 					<figure class="smaller" >
-						<figcaption>{{ 'author.skills.lib.title' |trans }}</figcaption>
-						{{ figure.img('lib', 'less', 'http://lesscss.org/') }}
-						{{ figure.img('lib', 'jquery', 'https://jquery.com/', 'smaller') }}
-						{{ figure.img('lib', 'phpunit', 'https://phpunit.de/') }}
+						<figcaption>{{ 'author.skills.lib' |trans }}</figcaption>
+						{{ figure.img('jquery', 'https://jquery.com/', 'smaller') }}
+						<br />
+						{{ figure.img('less', 'http://lesscss.org/') }}
+						{{ figure.img('bootstrap', 'http://getbootstrap.com/', 'smaller') }}
 					</figure>
 					<figure class="smaller" >
-						<figcaption>{{ 'author.skills.tools.title' |trans }}</figcaption>
-						{{ figure.img('tools', 'composer', 'https://getcomposer.org/') }}
-						{{ figure.img('tools', 'git', 'http://git-scm.com/', 'smaller') }}
+						<figcaption>{{ 'author.skills.tools' |trans }}</figcaption>
+						{{ figure.img('git', 'http://git-scm.com/', 'smaller') }}
+						{{ figure.img('composer', 'https://getcomposer.org/') }}
+						{{ figure.img('phpunit', 'https://phpunit.de/') }}
 					<figure class="smaller" >
-						<figcaption>{{ 'author.skills.future.title' |trans }}</figcaption>
-						{{ figure.img('future', 'angularjs', 'https://angularjs.org/', 'smaller') }}
-						{{ figure.img('future', 'bootstrap', 'http://getbootstrap.com/') }}
+						<figcaption>{{ 'author.skills.future' |trans }}</figcaption>
+						{{ figure.img('angularjs', 'https://angularjs.org/', 'smaller') }}
 					</figure>
 				</article>
 			</div>
@@ -130,7 +131,7 @@
 		<section>
 			{{ project.description ('sabrejunior', "http://sabrejunior-france2014.fr/", 3) }}<!-- @white-space
 		 --><figure>
-				<img src="{{ asset('bundles/zzchezzzortell/images/affiche.png') }}" 
+				<img src="{{ asset('bundles/zzchezzzortell/images/affiche.png') }}"
 					 alt="{{ 'projects.sabrejunior.poster.alt' |trans }}"
 					 class="round-corner" />
 			</figure>
@@ -158,10 +159,10 @@
 						) }}<!-- @white-space
 					 --><figure>
 							<figcaption>Aperçu</figcaption>
-							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}" 
+							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}"
 								 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
 								 class="half" />
-							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture2.png') }}" 
+							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture2.png') }}"
 								 alt="{{ 'projects.past.tetris.survey.alt' |trans }}"
 								 class="half" />
 						</figure>

@@ -1,0 +1,22 @@
+title:  Chez Zzortell !! Rémi Blaise's website, WebDeveloper.
+
+header:
+    title:
+        welcome_at:     Welcome at
+        zzortell!:      Zzortell!!
+    nav:
+        chez_zz:    Chez Zzortell
+        notebook:   Notebook
+        articles:   Articles
+        tetris:     Tetris!
+
+footer:
+    title:  Rémi Blaise, WebDeveloper
+
+media:
+    github:     Follow me on Github !
+    mail:       Send me an email
+    fb:         Join me on Facebook
+
+in_work:
+    title:  Section in work. Come back later! ;)

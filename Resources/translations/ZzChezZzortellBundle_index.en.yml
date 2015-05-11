@@ -1,0 +1,127 @@
+author:
+    title:  Rémi Blaise
+    who:
+        title:  Who am I?
+        p0: |
+            I am <u>Rémi Blaise</u>, alias <u>Zzortell</u>, <u>WebDeveloper</u>.
+        p1: |
+            My passion: design and develop sites and Web applications.
+        p2: |
+            My site presents my creations and realizations on the Web.
+            It's a collection which is going to fill step by step.
+        p3: |
+            Thus you are watching a concentrate of my route on the Web and a foretaste of my skills.
+            If you wish to attack the main course, do not hesitate to contact me!
+    skills:
+        title: My skills
+        languages:  I program in:
+        frameworks: I love:
+        lib:        I master:
+        tools:      I use:
+        future:     I'm learning:
+        alt:
+            html-css-js: 'HTML & CSS & Javascript'
+            php:        PHP
+            sf:         Symfony2
+            less:       Less
+            jquery:     jQuery
+            phpunit:    PHPUnit
+            git:        Git
+            composer:   Composer
+            angularjs:  AngularJS
+            bootstrap:  Bootstrap
+    contact:
+        title:  Contact me
+        p: |
+            You can easily contact me at:
+            <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
+            <br/>
+            <i>Do not hesitate to send me your impressions and comments! ;)</i>
+
+projects:
+    title:  My Web creations
+    chez_zz:
+        name:       My site: Chez Zzortell!!
+        tooltip:    Chez Zzortell !! Le site de Rémi Blaise, WebDeveloper.
+        description: |
+            An ideal place to show my realizations, present my route on Web
+            and expose you my passion.
+        trait1: |
+            A dynamic and modern design, of a delicious orangy color.
+            Fully <em>responsive</em>.
+        trait2: |
+            Internationalized and translated into English.
+        trait3: |
+            A publication system in Markdown easy to use.
+        trait4: |
+            Realized with <a href="http://symfony.com" >Symfony2</a>.
+    sabrejunior:
+        name:       French championship of junior Saber 2014
+        tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
+        description: |
+            Designed on the occasion of this great sportive event welcomed
+            by the saber club of Chatou, in close collaboration with my designer
+            <a href="http://www.f-berrube.fr/" >François Berrubé</a>.
+        poster.alt: Poster of the event
+        trait1: |
+            A dynamic site designed for mobile use.
+        trait2: |
+            A live online publishing of the results thanks to the implementation of a connection
+            with the event management software Lames and Engarde,
+            which constituted the main asset of the site.
+        trait3: |
+            A publication of lists of fencers and referees, as well as testimonials
+            and <i>a posteriori</i> pictures of the competition.
+    past:
+        title:      Other realizations
+        tetris:
+            name:       Tetris!
+            tooltip:    Tetris ! Par Zzortell.
+            survey.alt: Aperçu
+            description: |
+                Russian traditional puzzle game made in <em>Javascript</em>.
+                All basic features are developed: except for few aspects that remain unresolved,
+                my Tetris is equivalent to any Tetris on the web.
+                I put in it all my heart and love, enjoy!
+                <br /><i>Versions 2 and 3 are already planned, in the shorter or longer long term.</i>
+
+        archives:
+            title:      Archives
+            sub_title:  Mes premiers pas ...
+            tpe:
+                name:       'TPE&nbsp;: Une ville sous-marine autonome'
+                description: |
+                    Réalisé à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014,
+                    ce fut mon premier projet en <em>Javascript</em>.
+                    Il avait pour but d'illustrer notre TPE, dont la problématique était :
+                    &laquo;&nbsp;Comment fonder une ville sous-marine entièrement
+                    autonome&nbsp;?&nbsp;&raquo;.
+                    L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de
+                    la cité imaginée, et rendre cliquables de nombreux d'éléments de façon à ce
+                    que des explications scientifiques puissent s'afficher sur chacun d'entre
+                    eux.
+                    Il faisait partie intégrante de la notation et donc du TPE.
+                    Ce projet a été réalisé en une seule semaine dans des conditions de stress
+                    important.
+            hammer:
+                name:       Hammer 1st !
+                tooltip:    Hammer 1st ! Le guide du jeu Hammerfest. Par Zzortell.
+                description: |
+                    Guide du jeu <i>Hammerfest</i>, développé par Motion Twin.
+                    Complet, astucieux et ergonomique, il devait rassembler les plans de
+                    l'ensemble des Cavernes d'Hammerfest, recensant tous les bonus et passages
+                    secrets du jeu.
+                    Il devait accompagner le joueur durant tout son parcours, quel que soit son
+                    niveau et le chemin qu'il prend, l'aidant dans son ascension de la pyramide
+                    des scores, symbole de la hiérarchie des joueurs d'Hammerfest.
+                    <br />
+                    Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier
+                    projet sur le web. Le projet est resté à l'état d'ébauche.
+                    <br />
+                    J'ajoute par ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des
+                    niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
+
+    present:
+        title:  Projects en cours
+    future:
+        title:  Projects futurs (à l'état d'idée)

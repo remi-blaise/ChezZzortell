@@ -1,6 +1,8 @@
 zz_chez_zz_index:
-    path:     /
-    defaults: { _controller: ZzChezZzortellBundle:Index:index }
+    path:     /{_locale}
+    defaults: { _controller: ZzChezZzortellBundle:Index:index, _locale: fr }
+    requirements:
+        _locale: fr|en
 zz_chez_zz_notebook:
     path:     /notebook/{page}
     defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }

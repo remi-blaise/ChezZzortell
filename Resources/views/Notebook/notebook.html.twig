@@ -18,8 +18,9 @@
 
 {% block body %}
 {% autoescape false %}
-	{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!-- @whitespace
- --><section id="notebook" >
+{% spaceless %}
+	{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+	<section id="notebook" >
 		<h1>{{ 'title' |trans }}</h1>
 		<h2>{{ 'sub_title' |trans }}</h2>
 		
@@ -40,7 +41,7 @@
 							</time>
 							{%- endset %}
 							
-							{{ ('note.'~name) |trans({ 
+							{{ ('note.'~name) |trans({
 								'%date_tag%': date_tag
 							}) }}
 						{% endautoescape %}{% endmacro %}
@@ -75,5 +76,6 @@
 		{% endif %}
 		{{ include ('ZzChezZzortellBundle::footer.html.twig') }}
 	</section>
+{% endspaceless %}
 {% endautoescape %}
 {% endblock %}

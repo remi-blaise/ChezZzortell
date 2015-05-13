@@ -22,10 +22,12 @@
 
 {% block body %}
 {% autoescape false %}
-	{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!-- @whitespace
- --><section id="notebook" style="vertical-align: middle;" >
+{% spaceless %}
+	{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+	<section id="notebook" style="vertical-align: middle;" >
 		{{ include ('ZzChezZzortellBundle::in_work.html.twig') }}
 	{{ include ('ZzChezZzortellBundle::footer.html.twig') }}
 	</section>
+{% endspaceless %}
 {% endautoescape %}
 {% endblock %}

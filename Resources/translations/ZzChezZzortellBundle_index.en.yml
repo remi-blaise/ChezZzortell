@@ -84,44 +84,41 @@ projects:
                 my Tetris is equivalent to any Tetris on the web.
                 I put in it all my heart and love, enjoy!
                 <br /><i>Versions 2 and 3 are already planned, in the shorter or longer long term.</i>
-
         archives:
             title:      Archives
-            sub_title:  Mes premiers pas ...
+            sub_title:  My first steps ...
             tpe:
-                name:       'TPE&nbsp;: Une ville sous-marine autonome'
+                name:   Baccalaureate's TPE: <br/>An autonomous underwater city
                 description: |
-                    Réalisé à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014,
-                    ce fut mon premier projet en <em>Javascript</em>.
-                    Il avait pour but d'illustrer notre TPE, dont la problématique était :
-                    &laquo;&nbsp;Comment fonder une ville sous-marine entièrement
-                    autonome&nbsp;?&nbsp;&raquo;.
-                    L'application devait donc montrer les "plans" (c'est-à-dire des schémas) de
-                    la cité imaginée, et rendre cliquables de nombreux d'éléments de façon à ce
-                    que des explications scientifiques puissent s'afficher sur chacun d'entre
-                    eux.
-                    Il faisait partie intégrante de la notation et donc du TPE.
-                    Ce projet a été réalisé en une seule semaine dans des conditions de stress
-                    important.
+                    Made for my TPE ("Framed Practical Work", a Baccalaureate's exam) in March 2014,
+                    it was my first project in <em>Javascript</em>.
+                    It aimed at illustrating our TPE, the problematic of which was
+                    "How to build an underwater city fully autonomous."
+                    The application had to show "plans" (that is to say diagrams) of the imagined city,
+                    and making many clickable elements so that scientific explanations
+                    can be displayed about each of them.
+                    It was part of the Baccalaureate's rating and thus the TPE.
+                    This project was carried out in a single week in high stress conditions.
             hammer:
-                name:       Hammer 1st !
+                name:       Hammer 1st!
                 tooltip:    Hammer 1st ! Le guide du jeu Hammerfest. Par Zzortell.
                 description: |
-                    Guide du jeu <i>Hammerfest</i>, développé par Motion Twin.
-                    Complet, astucieux et ergonomique, il devait rassembler les plans de
-                    l'ensemble des Cavernes d'Hammerfest, recensant tous les bonus et passages
-                    secrets du jeu.
-                    Il devait accompagner le joueur durant tout son parcours, quel que soit son
-                    niveau et le chemin qu'il prend, l'aidant dans son ascension de la pyramide
-                    des scores, symbole de la hiérarchie des joueurs d'Hammerfest.
+                    Guide of the game <i>Hammerfest</i>, developed by Motion Twin.
+                    Complete, clever and ergonomic, it had to gather the maps of
+                    all the Caves of Hammerfest,
+                    listing all the bonuses and secret passages of the game.
+                    It had to accompany the player throughout his career,
+                    regardless of their level and the way that it takes,
+                    helping him in his ascent of the pyramid scores,
+                    symbol of the hierarchy of players Hammerfest.
                     <br />
-                    Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier
-                    projet sur le web. Le projet est resté à l'état d'ébauche.
+                    Leaving just my learning of the <em>HTML</em>, it was my very first project on the Web.
+                    The project remained in draft form.
                     <br />
-                    J'ajoute par ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des
-                    niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
-
+                    I add besides
+                    <a href="%hammer1st!/niveaux%" target="_bank"  >the screenshots of made levels</a>,
+                    as they would have been to the site, to give you an idea.
     present:
-        title:  Projects en cours
+        title:  Current projects
     future:
-        title:  Projects futurs (à l'état d'idée)
+        title:  Future projects (in the state of idea)

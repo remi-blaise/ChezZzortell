@@ -79,7 +79,7 @@ projects:
             tooltip:    Tetris ! Par Zzortell.
             survey.alt: Aperçu
             description: |
-                Le jeu de puzzle traditionnel russe réalisé en <em>Javascript</em>.
+                Le jeu de puzzle traditionnel russe réalisé en Javascript.
                 Toutes les fonctionnalités basiques sont développées : à part quelques aspects
                 qui restent en suspens, mon Tetris équivaut n'importe quel Tetris sur la toile.
                 J'y ai mis du c&oelig;ur et de l'amour, profitez-en !
@@ -92,7 +92,7 @@ projects:
                 name:       'TPE&nbsp;: Une ville sous-marine autonome'
                 description: |
                     Réalisé à l'occasion de mon TPE de 1<sup>ère</sup>S en mars 2014,
-                    ce fut mon premier projet en <em>Javascript</em>.
+                    ce fut mon premier projet en Javascript.
                     Il avait pour but d'illustrer notre TPE, dont la problématique était :
                     &laquo;&nbsp;Comment fonder une ville sous-marine entièrement
                     autonome&nbsp;?&nbsp;&raquo;.
@@ -101,8 +101,7 @@ projects:
                     que des explications scientifiques puissent s'afficher sur chacun d'entre
                     eux.
                     Il faisait partie intégrante de la notation et donc du TPE.
-                    Ce projet a été réalisé en une seule semaine dans des conditions de stress
-                    important.
+                    Ce projet a été réalisé en une seule semaine.
             hammer:
                 name:       Hammer 1st !
                 tooltip:    Hammer 1st ! Le guide du jeu Hammerfest. Par Zzortell.
@@ -115,13 +114,13 @@ projects:
                     niveau et le chemin qu'il prend, l'aidant dans son ascension de la pyramide
                     des scores, symbole de la hiérarchie des joueurs d'Hammerfest.
                     <br />
-                    Sortant tout juste de mon apprentissage du <i>HTML</i>, ce fut mon tout premier
+                    Sortant tout juste de mon apprentissage du HTML, ce fut mon tout premier
                     projet sur le web. Le projet est resté à l'état d'ébauche.
                     <br />
                     J'ajoute par ailleurs <a href="%hammer1st!/niveaux%" target="_bank"  >les captures des
                     niveaux</a> faits tels qu'ils auraient été sur le site, pour vous donner une idée.
 
     present:
-        title:  Projects en cours
+        title:  Projets en cours
     future:
-        title:  Projects futurs (à l'état d'idée)
+        title:  Projets futurs (à l'état d'idée)

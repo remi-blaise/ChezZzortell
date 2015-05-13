@@ -107,7 +107,7 @@
 	}
 }
 
-.last ( @side ) {
+.border_discreet ( @side ) {
 	margin-@{side}: 10px;
 	border-@{side}: solid @color_discreet 1px;
 }
@@ -147,13 +147,19 @@
 		
 		&:last-of-type
 		{
-			.last(top);
+			.border_discreet(top);
 		}
 	}
 	
 	.plus
 	{
 		text-align: center;
+		
+		.lang
+		{
+			.border_discreet(right);
+			padding-right: 10px;
+		}
 	}
 }
 
@@ -178,7 +184,7 @@
 			
 			&:last-of-type
 			{
-				.last(left);
+				.border_discreet(left);
 			}
 			
 			a li

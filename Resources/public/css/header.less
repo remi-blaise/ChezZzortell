@@ -85,6 +85,26 @@
 			}
 		}
 	}
+	
+	.plus
+	{
+		> *
+		{
+			display: inline-block;
+			vertical-align: middle;
+			
+			img
+			{
+				height:	64px;
+			}
+		}
+		
+		.lang img
+		{
+			position: relative;
+			top: 2px;
+		}
+	}
 }
 
 .last ( @side ) {
@@ -131,7 +151,7 @@
 		}
 	}
 	
-	.media
+	.plus
 	{
 		text-align: center;
 	}
@@ -141,7 +161,7 @@
 	text-align: center;
 	.padding_width(10px);
 	
-	nav, .media
+	nav, .plus
 	{
 		display: inline-block;
 		vertical-align: middle;
@@ -203,7 +223,7 @@
 		margin-right: 4vw;
 	}
 	
-	.media
+	.plus
 	{
 		.padding_height(30px);
 	}

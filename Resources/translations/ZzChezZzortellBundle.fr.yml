@@ -9,6 +9,9 @@ header:
         notebook:   Carnet
         articles:   Articles
         tetris:     Tetris !
+    lang:
+        fr: Français
+        en: English
 
 footer:
     title:  Rémi Blaise, développeur web

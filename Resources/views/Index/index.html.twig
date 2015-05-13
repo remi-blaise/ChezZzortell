@@ -21,10 +21,9 @@
 
 {% block body %}
 {% autoescape false %}
-	<div id="intro_container" >
-		{{ include ('ZzChezZzortellBundle::header.html.twig') }}<!--
-	@white-space : http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html
-	 --><section id="author">
+	<div id="intro_container" >{% spaceless %}
+		{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+		<section id="author">
 			<div class="author_column" >
 				<h1>{{ 'author.title' |trans }}</h1>
 				<article>
@@ -49,9 +48,8 @@
 						{{ 'author.contact.p' |trans }}
 					</p>
 				</article>
-			</div><!--
-		@white-space
-		 --><div class="author_column" >
+			</div>
+			<div class="author_column" >
 				<article id="skills" >
 					{% macro img ( name, link, class ) %}
 					{% autoescape false %}
@@ -97,7 +95,7 @@
 		<button id="animated_arrow" >
 			<i class="fa fa-chevron-down fa-5x" ></i>
 		</button>
-	</div>
+	{% endspaceless %}</div>
 	
 	<section id="projects" >
 		<h1>{{ 'projects.title' |trans }}</h1>

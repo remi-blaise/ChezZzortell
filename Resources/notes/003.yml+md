@@ -5,7 +5,7 @@ modifDate:      ~
 Problème des espaces indésirables de `display: inline-block`
 ===
 
-Solution :
+## Solution 1 :
 ```html
 	<div class="inline_block" ></div><!--
 @white-space
@@ -13,3 +13,13 @@ Solution :
 ```
 
 Alsacréations : [display: inline-block et les espaces indésirables](http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html)
+
+## Solution 2 :
+```twig
+{% spaceless %}
+	<div class="inline_block" ></div>
+	<div class="inline_block" ></div>
+{% endspaceless %}
+```
+
+Cf [documentation](http://twig.sensiolabs.org/doc/templates.html#whitespace-control).

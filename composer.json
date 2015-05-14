@@ -1,7 +1,7 @@
 {
     "name": "zzortell/zz-chez-zzortell-bundle",
     "type": "symfony-bundle",
-	"keywords": ["zzortell", "rémi blaise", "symfony"],
+	"keywords": ["zzortell", "remi blaise", "symfony"],
     "homepage": "https://github.com/Zzortell/ChezZzortell",
     "authors": [
         {

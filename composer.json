@@ -1,13 +1,13 @@
 {
     "name": "zzortell/zz-chez-zzortell-bundle",
     "type": "symfony-bundle",
-	"keywords": ["zzortell", "remi blaise", "symfony"],
+	"keywords": ["zzortell", "rémi blaise", "symfony"],
     "homepage": "https://github.com/Zzortell/ChezZzortell",
     "authors": [
         {
             "name": "Rémi Blaise",
             "email": "remi.blaise@gmx.fr",
-            "homepage": "http://zzortell.perso.sfr.fr"
+            "homepage": "http://php-zzortell.rhcloud.com/"
         }
     ],
     

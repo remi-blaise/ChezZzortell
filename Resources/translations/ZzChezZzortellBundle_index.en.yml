@@ -40,6 +40,9 @@ author:
 
 projects:
     title:  My Web creations
+    alt:
+        github: See on Github
+        visit:  Visit
     chez_zz:
         name:       My site: Chez Zzortell!!
         tooltip:    Chez Zzortell !! Le site de Rémi Blaise, WebDeveloper.

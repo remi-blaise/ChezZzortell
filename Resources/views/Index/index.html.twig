@@ -100,7 +100,7 @@
 	<section id="projects" >
 		<h1>{{ 'projects.title' |trans }}</h1>
 		
-			{% macro description ( project, link, nb_traits ) %}
+			{% macro description ( project, nb_traits, link, github ) %}
 			{% autoescape false %}
 				<div class="description_container" >
 					<h1>
@@ -118,16 +118,31 @@
 						{% endfor %}
 					</ul>
 					{% endif %}
+					
+					<div class="link_out" >
+						{% if github %}
+							<a href="{{ github }}" title="{{ 'projects.alt.github' |trans }}"
+							   target="blank" class="_img" >
+								<i class="fa fa-github" ></i>
+							</a>
+						{% endif %}
+						{% if link %}
+							<a href="{{ link }}" title="{{ 'projects.alt.visit' |trans }}"
+							   target="blank" class="_img" >
+								<i class="icon-go_out" ></i>
+							</a>
+						{% endif %}
+					</div>
 				</div><!-- @white-space
 		 -->{% endautoescape %}{% endmacro %}
 			{% import _self as project %}
 		
 		<section>
-			{{ project.description ('chez_zz', null, 4) }}
+			{{ project.description ('chez_zz', 4, null, 'https://github.com/Zzortell/ChezZzortell') }}
 		</section>
 		<br/>
 		<section>
-			{{ project.description ('sabrejunior', "http://sabrejunior-france2014.fr/", 3) }}<!-- @white-space
+			{{ project.description ('sabrejunior', 3, "http://sabrejunior-france2014.fr/", 'https://github.com/Zzortell/ChezZzortell') }}<!-- @white-space
 		 --><figure>
 				<img src="{{ asset('bundles/zzchezzzortell/images/affiche.png') }}"
 					 alt="{{ 'projects.sabrejunior.poster.alt' |trans }}"
@@ -140,7 +155,7 @@
 				<h2>{{ 'projects.past.title' |trans }}</h2>
 				<section>
 					{{ project.description (
-						'past.tetris', asset('bundles/zzchezzzortell/tetris/index.php')
+						'past.tetris', 0, asset('bundles/zzchezzzortell/tetris/index.php')
 					) }}
 				</section>
 				
@@ -152,9 +167,7 @@
 						<div>{{ 'projects.past.archives.sub_title' |trans }}</div>
 					</h4>
 					<section>
-						{{ project.description (
-							'past.archives.tpe'
-						) }}<!-- @white-space
+						{{ project.description ('past.archives.tpe') }}<!-- @white-space
 					 --><figure>
 							<figcaption>Aperçu</figcaption>
 							<img src="{{ asset('bundles/zzchezzzortell/images/tpe_capture1.png') }}"
@@ -167,8 +180,11 @@
 					</section>
 					<section>
 						{{ project.description (
-							'past.archives.hammer', asset('bundles/zzchezzzortell/hammer1st!/index.php')
-						) |replace({ '%hammer1st!/niveaux%': asset('bundles/zzchezzzortell/hammer1st!/niveaux/index.php') }) }}
+							'past.archives.hammer', 0,
+							asset('bundles/zzchezzzortell/hammer1st!/index.php')
+						) |replace({
+							'%hammer1st!/niveaux%': asset('bundles/zzchezzzortell/hammer1st!/niveaux/index.php')
+						}) }}
 					</section>
 				</div>
 			</div><!-- @white-space

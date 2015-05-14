@@ -55,6 +55,10 @@
 	animation:     		@anim;
 }
 
+.onfocus ( @style ) {
+	&:hover, &:active, &:focus { @style(); }
+}
+
 .default_family
 {
 	font-family: Verdana, sans-serif;

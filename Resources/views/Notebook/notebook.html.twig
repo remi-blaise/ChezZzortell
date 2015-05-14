@@ -27,10 +27,16 @@
 		{% for note in notes %}
 			<article>
 				<div class="note_metadata" >
-					<div class="tags" >
+					<div>
 						{% for tag in note.tags %}
-							<a href="{{ path('zz_chez_zz_notebook_tag', {'tag': tag}) }}" >{{ tag }}</a>
+							<a href="{{ path('zz_chez_zz_notebook_tag', {'tag': tag}) }}" class="tags" >{{ tag }}</a>
 						{% endfor %}
+						<a href="{{ path('zz_chez_zz_notebook_note', {'id': note.id}) }}" class="note_link" >
+							<span class="fa-stack" >
+								<i class="fa fa-circle fa-stack-2x" ></i>
+								<i class="fa fa-stack-1x fa-inverse" >#</i>
+							</span>
+						</a>
 					</div>
 					<div>
 						{% macro date ( name, date ) %}

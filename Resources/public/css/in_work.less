@@ -4,29 +4,27 @@ section.in_work
 	background-color: @color_section;
 	color: white;
 	
-	figure
+	.rotation, p
 	{
-		i, figcaption
-		{
-			display: inline-block;
-			vertical-align: middle;
-		}
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.rotation
+	{
+		padding: 5px;
 		
-		i
-		{
-			padding: 5px;
-			
-			.keyframes(rotation, {
-				100% {
-					transform: rotate(360deg);
-				}
-			});
-			.animation(rotation 2s infinite);
-		}
-		
-		figcaption
-		{
-			font-size: 1.5em;
-		}
+		.keyframes(rotation, {
+			100% {
+				transform: rotate(360deg);
+			}
+		});
+		.animation(rotation 2s infinite);
+	}
+	
+	p
+	{
+		font-size: 1.5em;
+		.open_sans_family;
 	}
 }

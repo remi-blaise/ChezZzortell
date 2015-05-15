@@ -55,6 +55,21 @@
 	animation:     		@anim;
 }
 
+.transform ( @func ) {
+	-ms-transform: 		@func;
+	-webkit-transform: 	@func;
+	-moz-transform:    	@func;
+	-o-transform:     	@func;
+	transform:     		@func;
+}
+
+.transition_timing_function ( @func ) {
+	-webkit-transition-timing-function: @func;
+	-moz-transition-timing-function: @func;
+	-o-transition-timing-function: @func;
+	transition-timing-function: @func;
+}
+
 .onfocus ( @style ) {
 	&:hover, &:active, &:focus { @style(); }
 }

@@ -14,12 +14,9 @@
 	"require": {
         "php": ">=5.3.3",
 		
+        "zz/zz-core-bundle": "~v1.0",
 		"oyejorge/less.php": "v1.7.0.2",
 		"erusev/parsedown": "*"
-    },
-	
-	"suggest": {
-		"coresphere/console-bundle": "dev-master"
     },
 	
     "autoload": {

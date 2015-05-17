@@ -12,9 +12,11 @@
 {% endblock %}
 
 {% block js_lib %}
+	{{ parent () }}
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 {% endblock %}
 {% block javascripts %}
+	{{ parent () }}
 	<script src="{{ asset('bundles/zzchezzzortell/js/dynamic.js') }}" type="text/javascript" ></script>
 {% endblock %}
 

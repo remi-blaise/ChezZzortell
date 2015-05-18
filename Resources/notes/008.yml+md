@@ -1,0 +1,30 @@
+tags:           [ less, assetic, symfony ]
+creationDate:   ~
+modifDate:      ~
+
+Utiliser Less avec Assetic
+===
+
+Librairie : (composer.json)
+```json
+"oyejorge/less.php": "v1.7.0.2",
+```
+
+Config d'Assetic :
+```yml
+assetic:
+	filters:
+        cssrewrite: ~
+        lessphp:
+            file: %kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php
+            apply_to: "\.less$"
+```
+
+Et voilà !
+
+Il ne reste plus qu'à insérer dans les templates :
+```twig
+{% stylesheets 'bundles/zzchezzzortell/css/index.less' filter='cssrewrite' %}
+	<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+```

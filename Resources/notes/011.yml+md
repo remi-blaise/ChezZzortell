@@ -1,0 +1,10 @@
+tags:           [ css ]
+creationDate:   ~
+modifDate:      ~
+
+[:before et :after, des pseudo-éléments qui ont du style](http://jeremie.patonnier.net/post/2010/11/22/before-et-after-des-pseudo-elements-qui-ont-du-style)
+===
+
+Article très complet.
+Technique qui permet d'ajouter des guillemets de déco autour des `<blockquote>`,
+de réaliser facilement des compteurs de lignes de codes, ...

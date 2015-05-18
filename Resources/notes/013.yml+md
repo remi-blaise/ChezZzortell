@@ -1,0 +1,30 @@
+tags:           [ css ]
+creationDate:   ~
+modifDate:      ~
+
+Couleur de soulignement, propriété à laquelle seul Mozilla a pensé...
+===
+
+`text-decoration-color`, propriété CSS3 introduite depuis Firefox 6.0 !
+Mais au niveau des autres navigateurs...
+
+<figure markdown="1" >
+	<img src="%img_folder%/notes/013_0.png"
+		 alt="Support de text-decoration-color"
+		 title=""Support de text-decoration-color"" />
+</figure>
+
+Il faut donc ruser :
+```html
+<span class="underlining" >
+	<em>...</em>
+</span>
+```
+```less
+.underlining {
+	color: orange;
+	text-decoration: underline;
+	
+	* { color: black; }
+}
+```

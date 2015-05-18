@@ -83,6 +83,12 @@
 				{% endfor %}
 			</ul>
 		{% endif %}
+		<p class="license" >
+			Copyright © 2015 Rémi Blaise <remi.blaise@gmx.fr>
+			{{ 'license' |trans |replace({
+				'%license%': '<a href="https://github.com/Zzortell/ChezZzortell/blob/master/Resources/meta/WTFPL" target="_blank" >Do What The Fuck You Want To Public License, Version 2</a>'
+			}) }}
+		</p>
 		{{ include ('ZzChezZzortellBundle::footer.html.twig') }}
 	</section>
 {% endspaceless %}

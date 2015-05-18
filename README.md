@@ -9,6 +9,7 @@ Install by Composer:
 
 ## TODO
 
+- Optimize images
 - Notebook: A list of tags, with a link to the main page.
 - Articles
 

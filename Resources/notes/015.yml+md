@@ -1,0 +1,40 @@
+tags:           [ html, http ]
+creationDate:   ~
+modifDate:      ~
+
+Rediriger les requêtes d'une page vers une autre
+===
+
+```html
+<?php
+
+$newHost = 'http://example.com/';
+
+if (isset($_SERVER['QUERY_STRING'])&&($_SERVER['QUERY_STRING']!='')) {
+	$newHost.='?'.substr($_SERVER['QUERY_STRING'],0,2048);	//Récupère les paramètres
+}
+
+header('Location: '.$newHost);	//Redirection HTTP
+header('HTTP/1.1 301 Moved Permanently');
+header('Status: 301 Moved Permanently');
+header('Content-Type: text/html; charset=UTF-8');
+
+$newHost=htmlspecialchars($newHost,ENT_QUOTES);	//Encode les caractères HTML spéciaux
+
+?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="refresh" content="0; url=<?php echo $newHost ?>" />	//Redirection HTML
+		<title>Redirection</title>
+		<meta name="robots" content="noindex" />
+	</head>
+
+	<body>
+		<p>
+			Le site est maintenant hébergé à cette adresse :
+			<br/><a href="<?php echo $newHost ?>"><?php echo $newHost ?></a>
+		</p>
+	</body>
+</html>
+```

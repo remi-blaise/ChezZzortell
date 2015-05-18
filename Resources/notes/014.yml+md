@@ -8,7 +8,7 @@ Change output dir of Assetic
 Utiliser l'option d'Assetic :
 ```yml
 assetic:
-	write_to: "%kernel.root_dir%/../web/tmp"
+	write_to: "%kernel.root_dir%/../web/assets"
 ```
 
 en combinaison d'un package Twig :
@@ -17,7 +17,7 @@ framework:
 	templating:
 		packages:
 			assetic:
-				base_urls: /tmp
+				base_urls: /assets
 ```
 
 que l'on utilise ainsi :
@@ -29,4 +29,10 @@ que l'on utilise ainsi :
 
 C'est lourd. Il est donc préférable, dans la mesure où il n'y a pas de fichiers
 communs dans `/web/css`, `/web/js`, etc., de se contenter de la configuration initiale.
-Sans compter que cela fait dépendre le bundle de l'application.
+~~Sans compter que cela fait dépendre le bundle de l'application.~~
+
+Il est apparemment également possible de préciser en prod le dossier lors du dump :
+```bash
+$ app/console --env=prod assetic:dump web/assets/
+```
+tout simplement...

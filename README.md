@@ -9,6 +9,8 @@ Install by Composer:
 
 ## TODO
 
+- Add a form to the browser warning
+  for setting a cookie to hide the browser warning (lifetime: 4 or 7 days ?)
 - Optimize images
 - Notebook: A list of tags, with a link to the main page.
 - Articles

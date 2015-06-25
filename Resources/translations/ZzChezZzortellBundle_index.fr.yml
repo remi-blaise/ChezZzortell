@@ -25,6 +25,7 @@ author:
             sf:         Symfony2
             less:       Less
             jquery:     jQuery
+            behat:      Behat
             phpunit:    PHPUnit
             git:        Git
             composer:   Composer

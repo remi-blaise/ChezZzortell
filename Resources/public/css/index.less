@@ -258,9 +258,9 @@
 				}
 			}
 			
-			p
+			> *
 			{
-				margin: 10px 0;
+				margin-top: 10px;
 			}
 			
 			p, li
@@ -287,6 +287,34 @@
 					content: "-";
 					position: absolute;
 					left: -20px;
+				}
+			}
+			
+			.link_out
+			{
+				text-align: right;
+				padding-right: 20px;
+				
+				a
+				{
+					color: @color_section;
+					
+					.onfocus({
+						color: @color_link;
+					});
+					
+					i
+					{
+						font-size: 2.5em;
+						
+					}
+					
+					img
+					{
+						height: 32px;
+						position: relative;
+						top: 3px;
+					}
 				}
 			}
 		}
@@ -325,34 +353,6 @@
 				width: 340px;
 			}
 		}
-		
-		.link_out
-		{
-			text-align: right;
-			padding-right: 20px;
-			
-			a
-			{
-				color: @color_section;
-				
-				.onfocus({
-					color: @color_link;
-				});
-				
-				i
-				{
-					font-size: 2.5em;
-					
-				}
-				
-				img
-				{
-					height: 32px;
-					position: relative;
-					top: 3px;
-				}
-			}
-		}
 	}
 	
 	.projects_column_container .projects_column
@@ -370,7 +370,6 @@
 		&:last-of-type
 		{
 			padding-left: 30px;
-			text-align: left;
 		}
 		
 		h2

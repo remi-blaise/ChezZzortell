@@ -192,6 +192,16 @@
 			</div><!-- @white-space
 		 --><div class="projects_column" >
 				<h2>{{ 'projects.present.title' |trans }}</h2>
+				<section>
+					{{ project.description (
+						'present.backupomatic', 3, null, 'https://github.com/Zzortell/Backup-O-Matic'
+					) }}
+				</section>
+				<section>
+					{{ project.description (
+						'present.pyro', 1
+					) }}
+				</section>
 				<h2>{{ 'projects.future.title' |trans }}</h2>
 				{{ include ('ZzChezZzortellBundle::in_work.html.twig') }}
 			</div>

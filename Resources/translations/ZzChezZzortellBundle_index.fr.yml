@@ -125,5 +125,25 @@ projects:
 
     present:
         title:  Projets en cours
+        backupomatic:
+            name:       Backup-O-Matic
+            description: |
+                Un outil pour gérer ses sauvegardes de manière automatisée.
+            trait1: |
+                Utilisable en ligne de commande, avec configuration par un fichier Yaml.
+            trait2: |
+                Sauvegardes dotées d'un récapitulatif et d'une configuration de restauration,
+                pour pouvoir s'y retrouver et restaurer ses fichiers.
+            trait3: |
+                Réalisé en PHP, développement piloté par le comportement avec
+                <a href="http://docs.behat.org" >Behat</a>.
+        pyro:
+            name:       Pyro
+            description: |
+                Une application web pour organiser la création communautaire de best-of
+                de web-séries.
+                Supporte le projet DansLeDoute.
+            trait1: |
+                Réalisé avec <a href="http://symfony.com" >Symfony2</a>.
     future:
         title:  Projets futurs (à l'état d'idée)

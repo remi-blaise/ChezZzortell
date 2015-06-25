@@ -123,5 +123,24 @@ projects:
                     as they would have been to the site, to give you an idea.
     present:
         title:  Current projects
+        backupomatic:
+            name:       Backup-O-Matic
+            description: |
+                A tool to manage your backups automatically.
+            trait1: |
+                Usable from the command line, with configuration by a Yaml file.
+            trait2: |
+                Backups comming with a summary and a recovery configuration,
+                in order to restore its files.
+            trait3: |
+                Realized in PHP, behavior-driven development with
+                <a href="http://docs.behat.org" >Behat</a>.
+        pyro:
+            name:       Pyro
+            description: |
+                A Web application for organizing the community creation of highlights of web series.
+                Power DansLeDoute project.
+            trait1: |
+                Realized with <a href="http://symfony.com" >Symfony2</a>.
     future:
         title:  Future projects (in the state of idea)

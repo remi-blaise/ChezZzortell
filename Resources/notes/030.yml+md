@@ -1,0 +1,21 @@
+tags:           [ css ]
+creationDate:   '2015-07-07'
+modifDate:      ~
+
+Le pseudo-élément `::selection`
+===
+
+Le pseudo-élément `::selection` permet d'appliquer des styles à la portion sélectionnée
+du texte, autrement dit au surlignement.
+
+Je n'en avais jamais entendu parlé et c'est juste génial !
+En plus, la compatibilité est top (juste un petit préfixe pour Firefox,
+ils avaient oublié de l'enlever lol) !
+
+Cf: https://developer.mozilla.org/fr/docs/Web/CSS/%3A%3Aselection
+
+PS: Un pseudo-élément est l'équivalent d'une pseudo-classe mais pour une partie spécifique
+plutôt qu'un état spécial. Ce sont des suffixes des sélecteurs, préfixés par `::`.
+Il en existe quatre autres et sont très sympathiques :
+- `:before` et `:after` de CSS2
+- `::first-letter` et `::first-line`, que l'on peut écrire également avec un simple `:`

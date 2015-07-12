@@ -78,6 +78,10 @@ projects:
             et <i>a posteriori</i> des photos de la compétition.
     past:
         title:      Autres réalisations
+        eventdispatcher:
+            name: EventDispatcher.js
+            description: |
+                Un simple event dispatcher en Javascript.
         tetris:
             name:       Tetris !
             tooltip:    Tetris ! Par Zzortell.

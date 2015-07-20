@@ -20,7 +20,7 @@ author:
         tools:      J'utilise :
         future:     Je m'initie à :
         alt:
-            html-css-js: 'HTML & CSS & Javascript'
+            html-css-js: 'HTML+CSS & Javascript'
             php:        PHP
             sf:         Symfony2
             less:       Less
@@ -31,6 +31,7 @@ author:
             composer:   Composer
             angularjs:  AngularJS
             bootstrap:  Bootstrap
+            doctrine:   Doctrine
     contact:
         title:  Me contacter
         p: |

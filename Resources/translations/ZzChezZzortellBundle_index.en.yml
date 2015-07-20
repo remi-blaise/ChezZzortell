@@ -19,17 +19,6 @@ author:
         lib:        I master:
         tools:      I use:
         future:     I'm learning:
-        alt:
-            html-css-js: 'HTML & CSS & Javascript'
-            php:        PHP
-            sf:         Symfony2
-            less:       Less
-            jquery:     jQuery
-            phpunit:    PHPUnit
-            git:        Git
-            composer:   Composer
-            angularjs:  AngularJS
-            bootstrap:  Bootstrap
     contact:
         title:  Contact me
         p: |

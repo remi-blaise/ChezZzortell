@@ -32,6 +32,9 @@ author:
             angularjs:  AngularJS
             bootstrap:  Bootstrap
             doctrine:   Doctrine
+            python:     Python
+            polymer:    Polymer
+            f3:         Fat-Free Framework
     contact:
         title:  Me contacter
         p: |

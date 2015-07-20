@@ -53,10 +53,10 @@
 			</div>
 			<div class="author_column" >
 				<article id="skills" >
-					{% macro img ( name, link, class ) %}
+					{% macro img ( name, link, class, ext = 'png' ) %}
 					{% autoescape false %}
 						{% if link %}<a href="{{ link }}" >{% endif %}
-						<img src="{{ asset('bundles/zzchezzzortell/images/' ~ name ~ '.png') }}"
+						<img src="{{ asset('bundles/zzchezzzortell/images/' ~ name ~ '.' ~ ext) }}"
 							 alt="{{ ( 'author.skills.alt.' ~ name ) |trans }}"
 							 title="{{ ( 'author.skills.alt.' ~ name ) |trans }}"
 							 {% if class %}class="{{ class }}"{% endif %} />
@@ -91,6 +91,10 @@
 					<figure class="smaller" >
 						<figcaption>{{ 'author.skills.future' |trans }}</figcaption>
 						{{ figure.img('angularjs', 'https://angularjs.org/', 'smaller') }}
+						{{ figure.img('f3', 'http://fatfreeframework.com/') }}
+						<br />
+						{{ figure.img('polymer', 'https://www.polymer-project.org/', null, 'svg') }}
+						{{ figure.img('python', 'https://www.python.org/', 'smaller') }}
 					</figure>
 				</article>
 			</div>

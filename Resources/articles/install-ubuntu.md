@@ -10,12 +10,16 @@ de faire les plus opti et les plus faciles pour une installation sans accro et u
 
 Je précise qu'il est parfaitement adapté à mon cas mais qu'il répond à mes besoins personnels.
 
+Update : Modification pour installation Ubuntu 16.0
+
 Étape préalable
 ---------------
 
 Si vous êtes sous Windows, pensez à défragmentez votre disque à l'aide du défragmenteur intégré
 (Démarrer > Tous les programmes > Accessoires > Outils Système > Défragmenteur de disque)
 si vous comptez toucher à la partition de Windows. Windows, quand même...
+
+Sous Ubuntu, utiliser gparted.
 
 Installation d'Ubuntu 14.04 LTS
 -------------------------------
@@ -32,7 +36,8 @@ mv -R * Files
 
 3) Gravez l'image sur la clé :
 - Sous Windows
-  [www.linuxliveusb.com](http://www.linuxliveusb.com/)
+  [www.linuxliveusb.com](http://www.linuxliveusb.com/) (déconseillé ?)
+  [Rufus](http://rufus.akeo.ie/?locale=fr_FR/)
 - Sous Ubuntu
   Grâce à l'excellent [USB Creator](www.linuxliveusb.com) intégré par défaut.
   Pour cela recherchez" à partir du Dash "USB" et ouvrez le "Créateur de disque de démarrage".
@@ -117,6 +122,9 @@ sudo add-apt-repository ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get install ubuntu-tweak
 ```
+! Attention, non mis à jour depuis 14.0.
+
+Pour obtenir Ubuntu Tweak sous Ubuntu 16.0, j'ai procédé [comme proposé sur le forum](http://forum.ubuntu-fr.org/viewtopic.php?pid=21501324#p21501324).
 
 À regarder en détail, et notamment :
 ### Ajustements
@@ -172,21 +180,18 @@ Par la logithèque :
 - geogebra
 
 Par des dépôts externes :
-- [Sublime Text 2](https://doc.ubuntu-fr.org/sublime-text)
-```bash
-sudo add-apt-repository ppa:webupd8team/sublime-text-2
-sudo apt-get update
-sudo apt-get install sublime-text
-```
-- [Skype](http://www.skype.com/fr/download-skype/skype-for-computer/) : version Ubuntu 12.04 (en 32 bits avec multiarch)
+- [Sublime Text](https://www.sublimetext.com/)
+- [Skype](http://www.skype.com/fr/download-skype/skype-for-computer/)
 
 Installation du serveur web
 ---------------------------
 
 Environnement [LAMP](https://doc.ubuntu-fr.org/lamp) + [phpMyAdmin](https://doc.ubuntu-fr.org/phpmyadmin)
 ```bash
-sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql php5-mcrypt php5-intl phpmyadmin
+sudo apt-get -y install apache2 php7.0 libapache2-mod-php7.0 mysql-server mysql-client php7.0-mysql php7.0-mcrypt php7.0-intl phpmyadmin
 ```
+
+Pour php7.0, j'ai suivi ce [bon tutoriel](https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/).
 
 ### Changer le répertoire web
 

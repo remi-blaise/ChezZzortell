@@ -254,6 +254,8 @@ sudo dpkg-reconfigure phpmyadmin
 3) "Erreur : Certaines fonctionnalités ayant trait aux tables reliées sont désactivées. Pour une analyse du problème, cliquez ici."
 Exécuter ce [fichier](http://tuxettechix.free.fr/docs/sql/create_table.sql) pour créer les bases nécessaires.
 
+Identifiants par défaut: dbuser=phpmyadmin, mot de passe renseigné lors de l'installation (random si non renseigné).
+
 Derniers réglages
 -----------------
 

@@ -213,6 +213,20 @@ ou [directement](http://www.cyberciti.biz/faq/unix-linux-replace-string-words-in
 sudo sed -i "s/html/localweb/g" /etc/apache2/sites-available/000-default.conf
 ```
 
+4) Activer phpMyAdmin à l'addresse http://localhost/phpmyadmin/:
+```bash
+sudo gedit /etc/apache2/apache2.conf
+```
+Ajouter à la fin du fichier :
+```
+Include /etc/phpmyadmin/apache.conf
+```
+Redémarrer Apache :
+```bash
+sudo /etc/init.d/apache2 restart
+# ou rs si les raccourics sont installés (~/.bash_aliases)
+```
+
 ### Régler l'avertissement lors du fameux `apache start` :
 ```plain
 Could not reliably determine the server's fully qualified domain name?

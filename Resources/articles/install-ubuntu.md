@@ -224,7 +224,8 @@ Include /etc/phpmyadmin/apache.conf
 Redémarrer Apache :
 ```bash
 sudo /etc/init.d/apache2 restart
-# ou rs si les raccourics sont installés (~/.bash_aliases)
+# ou si les raccourcis sont installés (~/.bash_aliases) :
+rs
 ```
 
 ### Régler l'avertissement lors du fameux `apache start` :

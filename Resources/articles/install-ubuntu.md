@@ -21,7 +21,7 @@ si vous comptez toucher à la partition de Windows. Windows, quand même...
 
 Sous Ubuntu, utiliser gparted.
 
-Installation d'Ubuntu 14.04 LTS
+Installation d'Ubuntu 16.04 LTS
 -------------------------------
 
 ### Création d'une clé USB-Live
@@ -36,7 +36,6 @@ mv -R * Files
 
 3) Gravez l'image sur la clé :
 - Sous Windows
-  [www.linuxliveusb.com](http://www.linuxliveusb.com/) (déconseillé ?)
   [Rufus](http://rufus.akeo.ie/?locale=fr_FR/)
 - Sous Ubuntu
   Grâce à l'excellent [USB Creator](www.linuxliveusb.com) intégré par défaut.

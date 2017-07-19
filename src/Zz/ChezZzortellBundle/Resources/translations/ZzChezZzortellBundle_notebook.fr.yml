@@ -1,0 +1,8 @@
+title:      Carnet de notes
+sub_title:  de mon voyage à travers le web...
+
+note:
+    creation_date:  Note publiée le %date_tag%.
+    modif_date:     Modifiée le %date_tag%.
+
+license: Toutes les notes sont publiées sous la %license%.

@@ -1,0 +1,26 @@
+zz_chez_zz_index:
+    path:     /{_locale}
+    defaults: { _controller: ZzChezZzortellBundle:Index:index, _locale: fr }
+    requirements:
+        _locale: fr|en
+zz_chez_zz_libraries:
+    path:     /libraries
+    defaults: { _controller: ZzChezZzortellBundle:Index:libraries }
+zz_chez_zz_notebook:
+    path:     /notebook/{page}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }
+    requirements:
+        page: \d+
+zz_chez_zz_notebook_note:
+    path:     /notebook/note/{id}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:note }
+    requirements:
+        id:   \d+
+zz_chez_zz_notebook_tag:
+    path:     /notebook/{tag}/{page}
+    defaults: { _controller: ZzChezZzortellBundle:Notebook:notebook, tag: null, page: 1 }
+    requirements:
+        page: \d+
+zz_chez_zz_articles:
+    path:     /articles
+    defaults: { _controller: ZzChezZzortellBundle:Articles:index }

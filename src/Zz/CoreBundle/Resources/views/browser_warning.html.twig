@@ -1,0 +1,83 @@
+{% trans_default_domain 'ZzCoreBundle_browser_warning' %}
+
+<div id="browser_warning" style="display: none;" >
+<section>
+{% autoescape false %}
+	<div class="h1" >
+		<i class="fa fa-exclamation-triangle fa-3x" ></i>
+		<h1>{{ 'outdated.title' |trans }}</h1>
+	</div>
+	<p>
+		{{ 'outdated.p' |trans }}
+	</p>
+	<p class="goto good" >
+		<i class="fa fa-arrow-right fa-2x" ></i>
+		<a href="http://outdatedbrowser.com/fr" class="goto_site" target="_blank" >
+			{{ 'goto.update' |trans }}
+		</a>
+	</p>
+	
+	<details>
+		<summary><h2>{{ 'why.title' |trans }}</h2></summary>
+		<p>
+			{{ 'why.p' |trans }}
+		</p>
+	</details>
+	
+	<details>
+		<summary><h2>{{ 'which.title' |trans }}</h2></summary>
+		<p>
+			{{ 'which.p' |trans }}
+		</p>
+		<table>
+			<caption>
+				{{ 'which.sources' |trans }}
+				<a href="http://html5test.com/" >html5test.com</a>,
+				<a href="http://www.sitepoint.com/browser-trends-january-2015-ie8-usage-triples/" >www.sitepoint.com</a>.
+			</caption>
+			<tr>
+				<th>{{ 'which.table.0.navigator' |trans }}</th>
+				<th>{{ 'which.table.0.popularity' |trans }}</th>
+				<th>{{ 'which.table.0.grade' |trans }}</th>
+			</tr>
+			{% for i in 1..5 %}
+				<tr>
+					<td>{{ ('which.table.' ~ i ~ '.navigator') |trans }}</td>
+					<td>{{ ('which.table.' ~ i ~ '.popularity') |trans }}</td>
+					{% set grade = ('which.table.' ~ i ~ '.grade') |trans %}
+					<td
+						{% if grade > 500 %}class="good"
+						{% elseif grade < 400 %}class="bad"
+						{% else %}class="medium"
+						{% endif %}
+					>{{ grade }} ({{ (grade / 555) |number_format(2, ',') }})</td>
+				</tr>
+			{% endfor %}
+		</table>
+		<p>
+			{{ 'which.chrome' |trans }}
+		</p>
+		<p>
+			{{ 'which.opera' |trans }}
+		</p>
+		<p>
+			{{ 'which.firefox' |trans }}
+		</p>
+		<p>
+			{{ 'which.ie' |trans }}
+		</p>
+		<p class="goto good" >
+			<i class="fa fa-arrow-right fa-2x" ></i>
+			<a href="http://outdatedbrowser.com/fr" class="goto_site" target="_blank" >
+				{{ 'goto.choose' |trans }}
+			</a>
+		</p>
+	</details>
+	
+	<p class="goto bad" >
+		<i class="fa fa-arrow-right fa-2x" ></i>
+		<button type="button" class="goto_site" >{{ 'goto.site' |trans }}</button>
+	</p>
+{% endautoescape %}
+</section>
+</div>

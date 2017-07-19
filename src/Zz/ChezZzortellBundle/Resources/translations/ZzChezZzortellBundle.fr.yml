@@ -1,0 +1,25 @@
+title:  Rémi Blaise, développeur web
+
+header:
+    title:
+        welcome:    Bienvenue !
+    nav:
+        chez_zz:    Portfolio
+        libraries:  Bibliothèques
+        notebook:   Carnet
+        articles:   Articles
+        tetris:     Tetris !
+    lang:
+        fr: Français
+        en: English
+
+footer:
+    title:  Rémi Blaise, développeur web
+
+media:
+    github:     Fork me on Github!
+    mail:       M'envoyer un mail
+    fb:         Me joindre sur Facebook
+
+in_work:
+    title:  Section en cours de réalisation. Repassez plus tard ! ;)

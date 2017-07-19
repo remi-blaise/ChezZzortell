@@ -1,0 +1,125 @@
+{% extends 'ZzChezZzortellBundle::layout.html.twig' %}
+
+{% trans_default_domain 'ZzChezZzortellBundle_libraries' %}
+
+{% block headers %}<meta name="viewport" content="width=552" />{% endblock %}
+
+{% block stylesheets %}
+	{{ parent () }}
+	{% stylesheets 'bundles/zzchezzzortell/css/libraries.less' filter='cssrewrite' %}
+		<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% macro description ( project, nb_traits, link, github ) %}
+{% autoescape false %}
+	<div class="description_container" >
+		<h1>
+			{% if link %}
+			<a href="{{ link }}" title="{{ ( 'projects.' ~ project ~ '.tooltip' ) |trans }}" >
+			{% endif %}
+				{{ ( 'projects.' ~ project ~ '.name' ) |trans }}
+			{% if link %}</a>{% endif %}
+		</h1>
+		<p>{{ ( 'projects.' ~ project ~ '.description' ) |trans }}</p>
+		{% if nb_traits %}
+		<ul>
+			{% for i in 1..nb_traits %}
+			<li>{{ ( 'projects.' ~ project ~ '.trait' ~ loop.index ) |trans }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+		<div class="link_out" >
+			{% if github %}
+				<a href="{{ github }}" title="{{ 'projects.alt.github' |trans }}"
+				   target="blank" class="_img" >
+					<i class="fa fa-github" ></i>
+				</a>
+			{% endif %}
+			{% if link %}
+				<a href="{{ link }}" title="{{ 'projects.alt.visit' |trans }}"
+				   target="blank" class="_img" >
+					<i class="icon-go_out" ></i>
+				</a>
+			{% endif %}
+		</div>
+	</div><!-- @white-space
+-->{% endautoescape %}{% endmacro %}
+{% import _self as project %}
+
+
+{% block body %}
+{% autoescape false %}
+{% spaceless %}
+	{{ include ('ZzChezZzortellBundle::header.html.twig') }}
+	<section id="notebook" style="vertical-align: middle;" >
+		<section id="projects">
+			<h1>Mes bibliothèques</h1>
+			<h2>Vous trouverez ici toutes les petites librairies réutilisables<br/> que j'ai été amené à réaliser au travers de différents projets. Enjoy!</h2>
+			<div class="projects_column_container" >
+				<div class="projects_column" class="past" >
+					<h2>Javascript</h2>
+					<section>
+						{{ project.description (
+							'ajaxpopup.js', 0, null, 'https://github.com/Zzortell/AjaxPopup.js'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'inline_form.js', 0, null, 'https://gist.github.com/Zzortell/4124d7ec8db4dfffdb58f28bd520060e'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'jquery.combobox.js', 0, null, 'https://gist.github.com/Zzortell/8b0c62f45e8bc41a574e6245414e19da'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'eventdispatcher.js', 0, null, 'https://github.com/Zzortell/EventDispatcher.js'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'zz.random.js', 0, null, 'https://gist.github.com/Zzortell/2a7928be83d51f4dcaee'
+						) }}
+					</section>
+				</div><!-- @white-space
+			 --><div class="projects_column" >
+			 		<h2>Python</h2>
+					<section>
+						{{ project.description (
+							'eventdispatcher.py', 0, null, 'https://github.com/Zzortell/EventDispatcher.py'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'XMLRepr.py', 0, null, 'https://gist.github.com/Zzortell/07bde13bb71c2c3ea6783281d07ea940'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'inherit_docstring.py', 0, null, 'https://gist.github.com/Zzortell/7ce81fb4813a331056e441be76914287'
+						) }}
+					</section>
+					<section>
+						{{ project.description (
+							'inject_arguments.py', 0, null, 'https://gist.github.com/Zzortell/2403054294b6312a32033b747ec0ad2c'
+						) }}
+					</section>
+
+					<h2>PHP</h2>
+					<section>
+						{{ project.description (
+							'ZzUtilsFilesAndFolders.php', 0, null, 'https://gist.github.com/Zzortell/f3ee80644e9e48a85d97#file-zzutilsfilesandfolders-php'
+						) }}
+					</section>
+				</div>
+			</div>
+		</section>
+		{{ include ('ZzChezZzortellBundle::footer.html.twig') }}
+	</section>
+{% endspaceless %}
+{% endautoescape %}
+{% endblock %}

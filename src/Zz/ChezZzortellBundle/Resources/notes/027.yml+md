@@ -1,0 +1,15 @@
+tags:           [ less ]
+creationDate:   '2015-07-04'
+modifDate:      ~
+
+Utiliser calc() avec Less
+===
+
+Utiliser la notation littérale `~"rendu littéral"` :
+
+```less
+header
+{
+	width: calc(~"75% - 160px");
+}
+```

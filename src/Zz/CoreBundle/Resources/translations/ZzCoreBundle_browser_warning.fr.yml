@@ -1,0 +1,71 @@
+goto:
+    update: Mettre à jour son navigateur.
+    choose: Choisir son navigateur.
+    site:   Continuer sur le site, quitte à se faire haïr par tous les développeurs du monde.
+
+outdated:
+    title: Votre navigateur n'est plus à jour.
+    p: |
+        Votre navigateur est vieux et périmé.
+        En dehors du fait que votre navigateur peut présenter des risques de sécurité,
+        votre navigateur peut ne pas supporter des technologies récentes utilisées par le site.
+        Certains éléments sur la page peuvent donc mal s'afficher, voire ne pas s'afficher du tout.
+
+why:
+    title: Pourquoi avoir un navigateur à jour ?
+    p: |
+        En ayant un navigateur à jour, vous profitez des technologies les plus récentes
+        et des fonctionnalités les plus évoluées utilisées par les sites du web.
+        De plus, vous aidez le web à évoluer, en faisant disparaître les navigateurs obsolètes,
+        hantises des intégrateurs web. Si vous respectez un peu notre travail, vous comprendrez
+        qu'il est important de garder constamment son navigateur à jour.
+        Bref, tout le monde y gagne !
+
+which:
+    title: Quel navigateur choisir ?
+    p: |
+        Si vous ne savez pas quel navigateur choisir,
+        sachez qu'il existe aujourd'hui 5 navigateurs prépondérants :
+    table:
+        -
+            navigator:  Navigateur
+            popularity: Popularité
+            grade:      Qualité (prise en charge technologique sur 555 critères)
+        -
+            navigator:  <strong>Google Chrome</strong>
+            popularity: 50%
+            grade:      523
+        -
+            navigator:  <strong>Opera</strong>
+            popularity: 1,4%
+            grade:      517
+        -
+            navigator:  Firefox
+            popularity: 17%
+            grade:      467
+        -
+            navigator:  Safari
+            popularity: 4,5%
+            grade:      396
+        -
+            navigator:  Internet Explorer
+            popularity: 20%
+            grade:      336
+    sources: Mai 2015, sources :
+    chrome: |
+        Je vous conseille vivement <strong>Chrome</strong>.
+        C'est très clairement le meilleur navigateur. Compatibilité, innovation, performance...
+        Croyez-moi, moi qui suis tous les jours dedans, à faire des pages web pour les navigateurs,
+        je sais de quoi je parle. En plus, il est construit sur une base opensource appelée Chromium !
+        <br/>
+        Détail non négligeable, <em>Chrome se met à jour automatiquement</em> !
+    opera: |
+        Si vous êtes googlephobe, je vous enjoins à vous tourner vers <strong>Opera</strong>.
+        C'est un excellent navigateur au niveau de la compatibilité et de la performance,
+        il partage d'ailleurs avec Google Chrome le moteur de rendu opensource Webkit
+        (même si Chrome utilise maintenant un fork de Webkit appelé Blink).
+    firefox: |
+        <strong>Firefox</strong> est également une bonne alternative, projet opensource
+        maintenu par une communauté passionnée.
+    ie: |
+        Un dernier mot ? N'utilisez pas Internet Explorer (Edge). Sous aucun prétexte.

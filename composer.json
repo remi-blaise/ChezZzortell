@@ -1,25 +1,73 @@
 {
-    "name": "zzortell/zz-chez-zzortell-bundle",
-    "type": "symfony-bundle",
-	"keywords": ["zzortell", "remi blaise", "symfony"],
-    "homepage": "https://github.com/Zzortell/ChezZzortell",
-    "authors": [
-        {
-            "name": "Rémi Blaise",
-            "email": "remi.blaise@gmx.fr",
-            "homepage": "http://php-zzortell.rhcloud.com/"
-        }
-    ],
-    
-	"require": {
-        "php": ">=5.3.3",
-		
-        "zzortell/zz-core-bundle": "~1.1",
-		"oyejorge/less.php": "v1.7.0.2",
-		"erusev/parsedown": "*"
-    },
-	
+    "name": "zz/chezzz",
+    "license": "proprietary",
+    "type": "project",
     "autoload": {
-        "psr-4": {"Zz\\ChezZzortellBundle\\": ""}
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/distribution-bundle": "^5.0.19",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "symfony/swiftmailer-bundle": "^2.3.10",
+        "symfony/symfony": "3.3.*",
+        "twig/twig": "^1.0||^2.0",
+        "oyejorge/less.php": "v1.7.0.2",
+        "erusev/parsedown": "*",
+        "whichbrowser/whichbrowser": "1.*"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": null
     }
 }

@@ -1,0 +1,13 @@
+<?php
+abstract class DbConnection
+{
+	public static function newDb () {
+		try {
+			$db = new PDO ('mysql:host=db527126022.db.1and1.com;dbname=db527126022', 'dbo527126022', 'Escrime007');
+		} catch ( Exception $e ) {
+			die ( 'Erreur : ' . $e->getMessage () );
+		}
+		
+		return $db;
+	}
+}

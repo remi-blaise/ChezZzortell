@@ -1,0 +1,107 @@
+author:
+    title:  Rémi Blaise
+    who: |
+        <h2>
+            Who am I?
+        </h2>
+        <p class="no_justify">
+            I am <strong>Rémi Blaise</strong>, <strong>Web Developer</strong>.
+        </p>
+        <h2>
+            What did I do in my life?
+        </h2>
+        <p>
+            I discovered my passion at the age of 14: designing and building web sites.
+        </p>
+        <p>
+            During my high school years, I had my first professional experience and I learned to use <strong>Symfony</strong>, a framework I fell in love with.
+        </p>
+        <p>
+            After getting my Baccalaureate degree, I studied for two years Mathematics and Physics at Lycée Pasteur in Neuilly-sur-Seine.
+            I took advantage of my holidays to do an internship at KNPLabs, renowned for their active contribution to the Symfony ecosystem. For my second year project, I realized an artificial intelligence learning to play Mario Bros by itself.
+        </p>
+        <h2>
+            What do I do now?
+        </h2>
+        <p>
+            Today, I am <strong>19 years old</strong> and I am an <strong>independent full-stack developer</strong>.
+            I develop websites and applications with Symfony.
+        </p>
+        <p>
+            Thus you are watching a concentrate of my experience and a foretaste of my skills.
+            If you wish to attack the main course, do not hesitate to contact me!
+        </p>
+    contact:
+        title:  Contact me
+        p: |
+            You can easily contact me at: <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
+
+projects:
+    title:  My experiences
+    alt:
+        github: See on Github
+        visit:  Visit
+    chez_zz:
+        name:       "My site!"
+        description: |
+            An ideal place to show my realizations, present my route on Web
+            and expose you my passion.
+        trait1: |
+            A dynamic and modern design.
+        trait2: |
+            A publication system in Markdown easy to use.
+        trait3: |
+            Realized with <a href="http://symfony.com" >Symfony2</a>.
+    sabrejunior:
+        name:       French championship of junior Saber 2014
+        tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
+        description: |
+            Designed on the occasion of this great sportive event welcomed
+            by the saber club of Chatou, in close collaboration with my designer
+            <a href="http://www.f-berrube.fr/" >François Berrubé</a>.
+        poster.alt: Poster of the event
+        trait1: |
+            A dynamic site designed for mobile use.
+        trait2: |
+            A live online publishing of the results thanks to the implementation of a connection
+            with the event management software Lames and Engarde,
+            which constituted the main asset of the site.
+        trait3: |
+            A publication of lists of fencers and referees, as well as testimonials
+            and <i>a posteriori</i> pictures of the competition.
+    altis:
+        name:   Altis Life France's Administration Interface
+        description: |
+            A nice and convenient interface for Altis Life France administrators to manage the game server's data.
+        trait1:
+            A complex permission system.
+        trait2:
+            Implementation of authentication via Steam.
+        trait3:
+            Powered by <a href="http://symfony.com" target="_blank" >Symfony 3</a>
+            and based on <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank" >AdminLTE 2</a>.
+    ia:
+        name: Artificial Intelligence Playing Mario Bros.
+        description: |
+            As part of my studies, I used an algorithmic method inspired by the theory of evolution
+            to realize this artificial intelligence learning to play Mario Bros by itself.
+        trait1: Modeling of intelligence by an artificial neural network.
+        trait2: Implementation of a genetic algorithm.
+        trait3: Written in Python.
+
+skills:
+    title: My skills
+    fullstack: Full stack Symfony developer
+    pythonist:  Master of Python
+    languages:  I program in:
+    frameworks: I love:
+    lib:        I master:
+    tools:      I use:
+    future:     I'm learning:
+    python:
+        quote: |
+            Fear is the path to the dark side.
+            <br/>Fear leads to anger.
+            <br/>Anger leads to hate.
+            <br/>Hate leads to suffering.
+            <br/>- Master Yoda

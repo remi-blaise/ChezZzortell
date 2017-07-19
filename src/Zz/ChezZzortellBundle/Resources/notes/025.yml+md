@@ -1,0 +1,10 @@
+tags:           [ symfony ]
+creationDate:   '2015-07-03'
+modifDate:      ~
+
+[Définir un form en tant que service](http://www.webtipblog.com/define-a-symfony-2-form-as-a-service/)
+===
+
+Pour avoir un form utilisable autrement que par les méthodes classiques.
+
+La documentation pour [tagger un form](http://symfony.com/doc/master/book/forms.html#defining-your-forms-as-services).

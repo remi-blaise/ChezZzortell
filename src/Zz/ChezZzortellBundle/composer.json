@@ -1,0 +1,25 @@
+{
+    "name": "zzortell/zz-chez-zzortell-bundle",
+    "type": "symfony-bundle",
+	"keywords": ["zzortell", "remi blaise", "symfony"],
+    "homepage": "https://github.com/Zzortell/ChezZzortell",
+    "authors": [
+        {
+            "name": "Rémi Blaise",
+            "email": "remi.blaise@gmx.fr",
+            "homepage": "http://php-zzortell.rhcloud.com/"
+        }
+    ],
+    
+	"require": {
+        "php": ">=5.3.3",
+		
+        "zzortell/zz-core-bundle": "~1.1",
+		"oyejorge/less.php": "v1.7.0.2",
+		"erusev/parsedown": "*"
+    },
+	
+    "autoload": {
+        "psr-4": {"Zz\\ChezZzortellBundle\\": ""}
+    }
+}

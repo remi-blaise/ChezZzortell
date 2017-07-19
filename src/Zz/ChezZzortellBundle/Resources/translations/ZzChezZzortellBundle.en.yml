@@ -1,0 +1,20 @@
+title:  Rémi Blaise, WebDeveloper.
+
+header:
+    nav:
+        chez_zz:    Portfolio
+        libraries:  Libraries
+        notebook:   Notebook
+        articles:   Articles
+        tetris:     Tetris!
+
+footer:
+    title:  Rémi Blaise, WebDeveloper
+
+media:
+    github:     Fork me on Github!
+    mail:       Send me an email
+    fb:         Join me on Facebook
+
+in_work:
+    title:  Section in work. Come back later! ;)

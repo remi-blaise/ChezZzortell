@@ -1,0 +1,13 @@
+tags:           [ less ]
+creationDate:   ~
+modifDate:      ~
+
+Nomenclature des variables en CSS
+===
+
+Toujours choisir les noms des variables en fonction de leur contexte et non de leur contenu.
+
+Par exemple : `@color_title`, `@media_full_screen`.
+
+De plus, un bon code est un code flexible mais aussi adapté, pratique.
+Les déclarations telles que `@color_bg: white;` sont donc à éviter.

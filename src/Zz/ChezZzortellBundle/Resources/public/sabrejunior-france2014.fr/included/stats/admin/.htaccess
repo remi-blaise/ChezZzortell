@@ -1,0 +1,4 @@
+AuthName "Les IP des visiteurs ne sont visibles que par les personnes autorisees. Un mot de passe est requis :"
+AuthType Basic
+AuthUserFile "/homepages/10/d522144630/htdocs/included/stats/admin/.htpasswd"
+Require valid-user

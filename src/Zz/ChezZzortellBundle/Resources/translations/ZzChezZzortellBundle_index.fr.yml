@@ -1,0 +1,133 @@
+author:
+    title:  Rémi Blaise
+    who: |
+        <h2>
+            Qui suis-je ?
+        </h2>
+        <p class="no_justify">
+            Je suis <strong>Rémi Blaise</strong>, <strong>développeur web</strong>.
+        </p>
+        <h2>
+            Quel est mon parcours ?
+        </h2>
+        <p>
+            J’ai découvert à 14 ans ma passion : concevoir et développer des sites et
+            applications web. Dès lors, je m’y suis consacré presque entièrement.
+        </p>
+        <p>
+            Lors de mes années de lycée, j’ai eu ma première expérience professionnelle
+            et j’ai appris à utiliser <strong>Symfony</strong>, un framework dont je
+            suis tombé amoureux.
+        </p>
+        <p>
+            Après avoir eu mon bac (S mention très bien), j’ai opté pour deux années de
+            prépa Mathématiques-Physique au lycée Pasteur de Neuilly-sur-Seine. J’ai
+            profité de mes vacances pour effectuer un stage chez KNPLabs, réputée pour
+            sa contribution active à l’écosystème de Symfony. Pour mon projet de
+            seconde année, j’ai réalisé une intelligence artificielle apprenant
+            d’elle-même à jouer à Mario Bros.
+        </p>
+        <h2>
+            Qu’est-ce que je fais à présent ?
+        </h2>
+        <p>
+            Aujourd’hui, j’ai <strong>19 ans</strong> et je suis <strong>développeur full-stack indépendant</strong>.
+            Je développe des sites web et applications sur Symfony (ou pas !).
+        </p>
+        <p>
+            Vous avez donc sous les yeux un concentré de mes expériences et un
+            avant-goût de mes compétences. Si vous souhaitez attaquer le plat
+            principal, n'hésitez pas à me contacter !
+        </p>
+    contact:
+        title:  Me contacter
+        p: |
+            Vous pouvez me contacter facilement à cette adresse&nbsp;:
+            <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
+
+projects:
+    title:  Mes expériences
+    alt:
+        github: Voir sur Github
+        visit:  Visiter
+    chez_zz:
+        name:       'Mon site !'
+        description: |
+            Un endroit idéal pour accueillir mes réalisations, présenter mon parcours sur le web
+            et vous exposer ma passion.
+        trait1: |
+            Un design dynamique et moderne.
+        trait2: |
+            Un système de publication en Markdown facile à utiliser.
+        trait3: |
+            Réalisé avec <a href="http://symfony.com" target="_blank" >Symfony2</a>.
+    sabrejunior:
+        name:       Championnats de France de Sabre junior 2014
+        tooltip:    Championnats de France de Sabre Juniors 2014 à Chatou - Site officiel
+        description: |
+            Conçu à l'occasion de cette grande manifestation sportive accueillie par le club de
+            sabre de Chatou, en étroite collaboration avec mon designer
+            <a href="http://www.f-berrube.fr/" >François Berrubé</a>.
+        poster.alt: Affiche de l'évènement
+        trait1: |
+            Un site dynamique conçu pour une utilisation mobile.
+        trait2: |
+            Une mise en ligne des résultats en direct grâce à
+            la mise en place d'une liaison avec les logiciels de
+            gestion de compétition Lames et Engarde, ce qui a constitué l'atout majeur du site.
+        trait3: |
+            Une publication des listes des tireurs et des arbitres, ainsi que de témoignages,
+            et <i>a posteriori</i> des photos de la compétition.
+    altis:
+        name:   Interface d’administration pour Altis Life France
+        description: |
+            Une interface agréable et pratique permettant aux administrateur de Altis Life France
+            de gérer les données du serveur de jeu.
+        trait1:
+            Un système de permission complexe.
+        trait2:
+            Mise en place d'une authentification via Steam.
+        trait3:
+            Réalisé avec <a href="http://symfony.com" target="_blank" >Symfony 3</a>
+            et basé sur <a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank" >AdminLTE 2</a>.
+    ia:
+        name: "Intelligence artificielle jouant à Mario Bros"
+        description: |
+            Dans le cadre de mon TIPE, j'ai tiré parti d'un procédé algorithmique s'inspirant
+            de la théorie de l'évolution pour réaliser cette intelligence artificielle apprenant à
+            jouer toute seule à Mario Bros.
+        trait1: Modélisation de l'intelligence par un réseau de neurones artificiels.
+        trait2: Mise en application d'un algorithme génétique.
+        trait3: Réalisée en Python.
+
+skills:
+    title:  Mes compétences
+    fullstack:  Développeur full-stack expert Symfony
+    pythonist:  Maître du Python
+    languages:  "Je programme en :"
+    frameworks: "J'adore :"
+    lib:        "Je maîtrise :"
+    tools:      "J'utilise :"
+    future:     "Je m'initie à :"
+    python:
+        quote: |
+            La peur est le chemin vers le côté obscur :
+            <br/>la peur mène à la colère, <br/>la colère mène à la haine, <br/>la haine mène à la souffrance.
+            <br/>- Maître Yoda
+    alt:
+        html-css-js: 'HTML+CSS & Javascript'
+        php:        PHP
+        sf:         Symfony2
+        less:       Less
+        jquery:     jQuery
+        behat:      Behat
+        phpunit:    PHPUnit
+        git:        Git
+        composer:   Composer
+        angularjs:  AngularJS
+        bootstrap:  Bootstrap
+        doctrine:   Doctrine
+        python:     Python
+        polymer:    Polymer
+        f3:         Fat-Free Framework
+        reactjs:    React.js

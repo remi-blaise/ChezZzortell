@@ -1,0 +1,16 @@
+tags:           [ css ]
+creationDate:   ~
+modifDate:      ~
+
+Les souris, ce fléau... `:hover` & co.
+===
+
+Plutôt que de se limiter à appliquer des styles spécifiques au survol,
+penser à les appliquer aussi au survol et au clic !
+Penser à ceux qui m'utilisent pas de souris (accessibilité...).
+
+```less
+.onfocus ( @style ) {
+	&:hover, &:active, &:focus { @style(); }
+}
+```

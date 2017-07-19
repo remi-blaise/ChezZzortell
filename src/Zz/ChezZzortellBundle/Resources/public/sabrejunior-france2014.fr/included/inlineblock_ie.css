@@ -1,0 +1,15 @@
+.inlineblock,
+header h1 #first_part_title,
+header h1 #first_part_title_dynamic,
+#bodier,
+#bodier #right_container #part3 div,
+#bodier #right_container #main_section.photos #photos_container .column,
+#bodier #right_container #main_section nav#first_nav .column,
+#bodier nav#nav_left,#bodier #section_center,#bodier nav#nav_right,
+#sponsors,
+#sponsors a img,
+footer nav#nav_footer a
+{
+	display: inline;
+	zoom: 1;
+}

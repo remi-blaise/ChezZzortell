@@ -1,0 +1,173 @@
+@import "layout.less";
+
+body
+{
+	.generate_header;
+	
+	#notebook
+	{
+		@media (min-width: @media_1) {
+			vertical-align: top;
+			width: 100% - @header_width;
+			
+		}
+		
+		> h1
+		{
+			font-size: 5em;
+			color: @color_title;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+		h2
+		{
+			text-align: center;
+		}
+		
+		article, ul.pagination
+		{
+			margin: 20px 5%;
+		}
+		
+		article
+		{
+			background-color: @color_section;
+			.border_radius (15px);
+			
+			padding: 10px 30px;
+			
+			.note_metadata
+			{
+				float: right;//
+				// width: 200px;
+				text-align: right;
+				color: @color_title;
+				
+				.tags, .note_link
+				{
+					display: inline-block;
+					vertical-align: middle;
+				}
+				
+				a.tags
+				{
+					margin: 3px;
+					padding: 5px;
+					background-color: @color_serious;
+					.border_radius (4px);
+					color: @color_discreet;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+				
+				.note_link
+				{
+					text-decoration: none;
+				}
+				
+				.date
+				{
+					font-size: 0.9em;
+					margin-left: 10px;
+				}
+			}
+			
+			.content
+			{
+				line-height: 1.2em;
+				
+				h1
+				{
+					font-size: 1.8em;
+					line-height: 1.2em;
+					margin-bottom: 5px;
+					
+					border-left: solid @color_serious 2px;
+					padding-left: 5px;
+				}
+				
+				h2
+				{
+					font-size: 1.4em;
+					// .default_family;
+					font-weight: normal;
+					text-align: left;
+				}
+				
+				p
+				{
+					font-size: 1em;
+					line-height: 1.2em;
+					text-align: justify;
+				}
+				
+				p, code, h1, h2
+				{
+					margin: 10px 0;
+				}
+				
+				ul
+				{
+					list-style-type: disc;
+					padding-left: 30px;
+				}
+				
+				code:not(.hljs)
+				{
+					background-color: #2b2b2b;
+					color: #cb7832;
+					padding: 0.18em 0.5em;
+				}
+				
+				figure
+				{
+					text-align: center;
+					
+					img
+					{
+						max-width: 100%;
+					}
+				}
+			}
+		}
+		
+		ul.pagination
+		{
+			text-align: center;
+			
+			li
+			{
+				display: inline-block;
+				.margin_width(3px);
+				
+				a
+				{
+					display: inline-block;
+					padding: 10px;
+					text-decoration: none;
+					color: @color_section;
+					border: dashed @color_section 2px;
+					.border_radius (4px);
+					font-size: 1.4em;
+				}
+				
+				&.active, &:hover, &:active
+				{
+					a
+					{
+						color: @color_discreet;
+						background-color: @color_serious;
+						border: solid @color_serious 2px;
+					}
+				}
+			}
+		}
+		
+		p.license
+		{
+			.padding_height(5px);
+			text-align: center;
+			font-style: italic;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+tags:           [ css ]
+creationDate:   ~
+modifDate:      ~
+
+Can I use `vw` and `vh` units ?
+===
+
+Yes.
+[Compatibilité](http://caniuse.com/#feat=viewport-units) :
+- IE 9+
+- `vh` : polyfill nécessaire [pour iOS Safari 7](https://gist.github.com/pburtchaell/e702f441ba9b3f76f587),
+  [exemple pratique](https://github.com/Zzortell/ChezZzortell/blob/6a58147f012f2dfa0b37fd5b2d7756dbfe329f38/Resources/public/css/polyfills/vh-ios7.less)

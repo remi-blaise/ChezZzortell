@@ -1,0 +1,36 @@
+projects:
+    alt:
+        github: Voir sur Github
+        visit:  Visiter
+    ajaxpopup.js:
+        name: AjaxPopup.js
+        description: AjaxPopup.js est un plugin jQuery qui affiche du HTML reçu via Ajax dans une popup. Pensé pour flemmards.
+    inline_form.js:
+        name: inline_form.js
+        description: Permet de rendre un élément <i>inline</i> éditable.
+    jquery.combobox.js:
+        name: jquery.combobox.js
+        description: Utilise jQueryUI pour donner à un &lt;select/&gt; des super-pouvoirs d'autocomplétition.
+    eventdispatcher.js:
+        name: EventDispatcher.js
+        description: Un simple event dispatcher en Javascript.
+    zz.random.js:
+        name: zz.random.js
+        description: Des fonctions utilitaires sur l'aléatoire.
+
+    ZzUtilsFilesAndFolders.php:
+        name: ZzUtilsFilesAndFolders.php
+        description: Une fonction utilitaire pour supprimer un dossier.
+
+    eventdispatcher.py:
+        name: EventDispatcher.py
+        description: Un event dispatcher boosté aux stéroïdes.
+    XMLRepr.py:
+        name: XMLRepr.py
+        description: Une fantastique représentation XML des objets.
+    inherit_docstring.py:
+        name: inherit_docstring.py
+        description: Une métaclasse permettant d'hériter la documentation sur mesure.
+    inject_arguments.py:
+        name: inject_arguments.py
+        description: Un décorateur injectant tous les arguments passés à une méthode en tant d'attributs de l'objet.

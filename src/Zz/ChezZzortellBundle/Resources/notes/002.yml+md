@@ -1,0 +1,10 @@
+tags:           [ html, less ]
+creationDate:   ~
+modifDate:      ~
+
+Attributs des balises `<link>` pour Less
+===
+
+```html
+<link rel="stylesheet/less" type="text/css" href="style.less" />
+```

@@ -1,0 +1,345 @@
+/* POLICES */
+
+@font-face
+{
+    font-family: Belligerent;
+    src: url('polices/belligerent-webfont.eot');
+    src: url('polices/belligerent-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/belligerent-webfont.woff') format('woff'),
+         url('polices/belligerent-webfont.ttf') format('truetype'),
+         url('polices/belligerent-webfont.svg#Belligerent-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BODY */
+
+body
+{
+	background: url('images/background.png') repeat;
+	font-family: Belligerent, 'Times New Roman', serif;
+}
+
+a, a:visited
+{
+	text-decoration: none;
+	color: blue;
+	border: none;
+}
+
+.un
+{
+	font-weight: bold;
+	color: #fff200;
+}
+
+/* HEADER */
+
+header
+{
+	background: url('images/separateur.png') repeat-x bottom, 
+		url('images/head_background.png') repeat-x top;
+	position: fixed;
+	left: 0px;
+    top: 0px;
+	height: 90px;
+	width: 100%;
+}
+
+header img
+{
+	float: left;
+	display: block;
+	height: 100%;
+}
+
+header p
+{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;	
+}
+
+.header1
+{
+	font-size: 50px;
+	font-family: Belligerent, 'Times New Roman', serif;
+	color: #ffa000;
+	display: inline-block;
+	height: 50px;
+}
+
+.header2
+{
+	font-size: 30px;
+	font-family: Belligerent, 'Times New Roman', serif;
+	display: inline-block;
+	position: absolute;
+	height: 30px;
+}
+
+/* ATTENTION & POUCE */
+
+.attention, .pouce
+{
+	display: none;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+@media (max-width: 850px)
+{
+	.attention
+	{
+		display: block;
+	}
+}
+
+@media (max-height: 650px)
+{
+	.attention
+	{
+		display: block;
+	}
+}
+
+@media (max-width: 1050px) and (min-width: 851px) and (min-height: 651px)
+{
+	.pouce
+	{
+		display: block;
+	}
+}
+
+/* NAV */
+
+nav
+{
+	clear: left;
+	position: fixed;
+	top: 150px;	
+}
+
+nav ul
+{
+	list-style-type: none;
+	padding: 0px;
+}
+
+nav ul li:first-child
+{
+	position: absolute;
+	top: 0px;	
+}
+
+nav ul li:nth-child(2)
+{
+	position: absolute;
+	top: 71px;	
+}
+
+nav ul li:nth-child(3)
+{
+	position: absolute;
+	top: 127px;
+}
+
+nav ul li:last-child
+{
+	position: absolute;
+	top: 178px;
+}
+
+/* FOOTER */
+
+footer
+{
+	background: url('images/separateur.png') repeat-x top, 
+		url('images/foot_background.jpg') repeat-x bottom;
+	position: fixed;
+	left: 0px;
+    bottom: 0px;
+	height: 90px;
+	width: 100%;
+	font-family: Belligerent, 'Times New Roman', serif;
+	z-index: 2;
+}
+
+footer aside
+{
+	float: left;
+}
+
+footer aside img
+{
+	display: block;
+	height: 97%;
+	position: absolute;
+	bottom: 0px;
+}
+
+footer aside img:first-child
+{
+	float: left;
+	left: 5px;
+	border-radius: 5px;
+}
+
+footer aside img:last-child
+{
+	left: 100px;
+}
+
+footer article
+{
+	padding: 0px;
+	position: absolute;
+	left: 195px;
+}
+
+footer article p
+{
+	margin: 0px;
+	font-size: 20px;
+}
+
+.footer3
+{
+	font: bold;
+}
+
+/* BODIER */
+
+.bodier
+{
+	position: fixed;
+	top: 90px;
+	bottom: 90px;
+	right: 0px;
+	left: 150px;
+	overflow: auto;
+}
+
+/* H1 */
+
+h1:first-child
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/* H11 */
+
+.h11
+{
+	position: absolute;
+	top: 600px;
+	left: 0px;
+}
+
+/* SECTION 1 */
+
+.section1
+{
+	position: absolute;
+	top: 80px;
+	left: 0px;
+}
+
+.section1 div
+{
+	margin-top: 2px;
+	width: 533px;
+	height: 100px;
+}
+
+.section1 div:first-child
+{
+	background: url('images/feature_01.jpg');
+	color: white;
+	border-radius: 15px;
+	text-align: right;
+	font-size: 16px;
+}
+
+.section1 div:first-child span
+{
+	position: relative;
+	top: 83px;
+	right: 10px;
+}
+
+.section1 div:nth-child(2)
+{
+	background: url('images/feature_02.jpg');
+	color: white;
+	border-radius: 15px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.section1 div:nth-child(2) span
+{
+	position: relative;
+	top: 83px;
+	left: 10px;
+}
+
+.section1 div:last-child
+{
+	background: url('images/feature_03.jpg');
+	color: white;
+	border-radius: 15px;
+	text-align: right;
+	font-size: 16px;
+}
+
+.section1 div:last-child span
+{
+	position: relative;
+	top: 83px;
+	right: 10px;
+}
+
+/* SECTION 2 */
+
+.section2
+{
+	position: absolute;
+	top: 400px;
+	left: 0px;
+	width: 533px;
+	text-align: justify;
+}
+
+
+/* SECTION 3 */
+
+.section3
+{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 533px;
+	text-align: justify;
+}
+
+
+/* SECTION 4 */
+
+.section4
+{
+	position: absolute;
+	top: 650px;
+	left: 0px;
+	width: 533px;
+	text-align: justify;
+}
+
+/* attention 450*600 */
+/* border: 4px pink solid; */
+/* url('images/foot_background.png') repeat-x bottom; */

@@ -41,9 +41,8 @@ author:
         </p>
     contact:
         title:  Me contacter
-        p: |
-            Vous pouvez me contacter facilement à cette adresse&nbsp;:
-            <a href="mailto:remi.blaise@gmx.fr" title="Rémi Blaise" >remi.blaise@gmx.fr</a>.
+        callme: Appellez-moi au
+        writetome: ou écrivez-moi à
 
 projects:
     title:  Mes expériences

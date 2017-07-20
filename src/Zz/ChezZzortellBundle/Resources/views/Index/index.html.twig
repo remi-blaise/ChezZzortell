@@ -18,6 +18,7 @@
 {% block javascripts %}
 	{{ parent () }}
 	<script src="{{ asset('bundles/zzchezzzortell/js/dynamic.js') }}" type="text/javascript" ></script>
+	<script src="{{ asset('bundles/zzchezzzortell/js/contacts.js') }}" type="text/javascript" ></script>
 {% endblock %}
 
 
@@ -34,7 +35,9 @@
 				<article id="contact" >
 					<h2>{{ 'author.contact.title' |trans }}</h2>
 					<p class="no_indent no_justify" >
-						{{ 'author.contact.p' |trans }}
+						{# {{ 'author.contact.p' |trans }} #}
+						Appellez-moi au <a id="phone"><strong class="contact"></strong></a>
+						<br />ou contactez-moi à <a id="mail"><strong></strong></a>
 					</p>
 				</article>
 			</div>

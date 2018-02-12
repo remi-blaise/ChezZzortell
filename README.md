@@ -18,6 +18,14 @@ On root, upload composer.json only (cause used to calculate [getProjectDir()](ht
 
 For debugging, upload app_dev.php.
 
+## v4.0 TODOlist
+
+[ ] Page 1: Freelance
+[ ] Page 2: Portfolio
+[ ] Browser update: display a simple alert box
+[ ] Rename Library->Opensource
+[ ] Add Linkedin link, CV?
+
 ## TODO
 
 - Add a form to the browser warning

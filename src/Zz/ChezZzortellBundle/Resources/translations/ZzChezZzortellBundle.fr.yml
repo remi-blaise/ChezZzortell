@@ -4,14 +4,12 @@ header:
     title:
         welcome:    Bienvenue !
     nav:
-        chez_zz:    Portfolio
-        libraries:  Bibliothèques
+        freelance:  Freelance
+        portfolio:  Portfolio
+        libraries:  Opensource
         notebook:   Carnet
         articles:   Articles
         tetris:     Tetris !
-    lang:
-        fr: Français
-        en: English
 
 footer:
     title:  Rémi Blaise, développeur web
@@ -20,6 +18,7 @@ media:
     github:     Fork me on Github!
     mail:       M'envoyer un mail
     fb:         Me joindre sur Facebook
+    linkedin:   Voir mon profil Linkedin
 
 in_work:
     title:  Section en cours de réalisation. Repassez plus tard ! ;)

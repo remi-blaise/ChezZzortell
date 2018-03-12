@@ -3,13 +3,17 @@
 <header>
 	<h1>
 		{{ 'header.title.welcome' |trans }}
-		{# <br/><strong>{{ 'header.title.zzortell!' |trans }}</strong> #}
 	</h1>
 	<nav>
 		<ul>
-			<a href="{{ path('zz_chez_zz_index') }}" >
-				<li {% if app.request.get('_route') == 'zz_chez_zz_index' %} class="selected" {% endif %} >
-					{{ 'header.nav.chez_zz' |trans }}
+			<a href="{{ path('zz_chez_zz_freelance') }}" >
+				<li {% if app.request.get('_route') == 'zz_chez_zz_freelance' %} class="selected" {% endif %} >
+					{{ 'header.nav.freelance' |trans }}
+				</li>
+			</a>
+			<a href="{{ path('zz_chez_zz_portfolio') }}" >
+				<li {% if app.request.get('_route') == 'zz_chez_zz_portfolio' %} class="selected" {% endif %} >
+					{{ 'header.nav.portfolio' |trans }}
 				</li>
 			</a>
 			<a href="{{ path('zz_chez_zz_libraries') }}" >
@@ -35,19 +39,6 @@
 		</ul>
 	</nav>
 	<div class="plus" >
-		{% if app.request.get('_route') == 'zz_chez_zz_index' %}
-			<div class="lang" >
-				{% for lang in [ 'fr', 'en' ] %}
-					{% if app.request.get('_locale') != lang %}
-						<a href="{{ path('zz_chez_zz_index', { '_locale': lang }) }}" class="_img"
-						   title="{{ ('header.lang.' ~ lang) |trans }}" >
-							<img src="{{ asset('bundles/zzchezzzortell/images/' ~ lang ~ '.png') }}"
-								 alt="{{ ('header.lang.' ~ lang) |trans }}" />
-						</a>
-					{% endif %}
-				{% endfor %}
-			</div>
-		{% endif %}
 		{{ include ('ZzChezZzortellBundle::media.html.twig') }}
 	</div>
 </header>

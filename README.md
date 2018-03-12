@@ -23,8 +23,9 @@ For debugging, upload app_dev.php.
 [ ] Page 1: Freelance
 [ ] Page 2: Portfolio
 [ ] Browser update: display a simple alert box
-[ ] Rename Library->Opensource
+[x] Rename Library->Opensource
 [ ] Add Linkedin link, CV?
+[x] Remove English version
 
 ## TODO
 

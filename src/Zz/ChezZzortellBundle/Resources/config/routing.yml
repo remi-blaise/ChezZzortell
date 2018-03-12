@@ -1,8 +1,9 @@
-zz_chez_zz_index:
-    path:     /{_locale}
-    defaults: { _controller: ZzChezZzortellBundle:Index:index, _locale: fr }
-    requirements:
-        _locale: fr|en
+zz_chez_zz_freelance:
+    path:     /
+    defaults: { _controller: ZzChezZzortellBundle:Index:freelance }
+zz_chez_zz_portfolio:
+    path:     /portfolio
+    defaults: { _controller: ZzChezZzortellBundle:Index:portfolio }
 zz_chez_zz_libraries:
     path:     /libraries
     defaults: { _controller: ZzChezZzortellBundle:Index:libraries }

@@ -6,6 +6,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class IndexController extends Controller
 {
+    public function freelanceAction()
+    {
+        return $this->render('ZzChezZzortellBundle:Index:freelance.html.twig');
+    }
+
+    public function portfolioAction()
+    {
+        return $this->render('ZzChezZzortellBundle:Index:portfolio.html.twig');
+    }
+
     public function indexAction()
     {
         return $this->render('ZzChezZzortellBundle:Index:index.html.twig');

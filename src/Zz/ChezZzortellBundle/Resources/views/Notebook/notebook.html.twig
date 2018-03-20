@@ -23,7 +23,7 @@
 	<section id="notebook" >
 		<h1>{{ 'title' |trans }}</h1>
 		<h2>{{ 'sub_title' |trans }}</h2>
-		
+
 		{% for note in notes %}
 			<article>
 				<div class="note_metadata" >
@@ -46,13 +46,13 @@
 								{{- date |date('d/m/y') -}}
 							</time>
 							{%- endset %}
-							
+
 							{{ ('note.'~name) |trans({
 								'%date_tag%': date_tag
 							}) }}
 						{% endautoescape %}{% endmacro %}
 						{% import _self as macros %}
-						
+
 						{% if note.creationDate %}
 							<p class="date" >{{ macros.date ( 'creation_date', note.creationDate ) }}</p>
 							{% if note.modifDate %}
@@ -63,7 +63,7 @@
 				</div>
 				<div class="content" >
 					{{ note.content|replace({
-						'%base_url%': path('zz_chez_zz_index'),
+						'%base_url%': path('zz_chez_zz_freelance'),
 						'%img_folder%': asset('bundles/zzchezzzortell/images')
 					}) }}
 				</div>

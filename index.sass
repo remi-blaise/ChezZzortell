@@ -1,0 +1,103 @@
+@import 'polices.css'
+
+html
+    color: white
+    font-family: 'Open Sans', sans-serif
+
+p, h1, h2
+    cursor: default
+
+body
+    min-width: 100vw
+    min-height: 100vh
+    margin: 0
+    background-color: #010101
+    display: flex
+    align-items: center
+    position: relative
+
+img
+    max-height: 100vh
+    max-width: 50vw
+
+main
+    flex: 1
+    text-align: center
+    font-size: 1.5em
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 40px
+
+    h1
+        font-size: 3em
+        margin: .5em 0
+
+    h2
+        margin: 0
+
+    p
+        margin-top: 3em
+        text-align: left
+
+        > *
+            vertical-align: middle
+
+        a, a:focus, a:active, a:hover
+            color: inherit
+            text-decoration: none
+
+        svg
+            margin-right: .3em
+
+#info
+    position: absolute
+    bottom: 16px
+    right: 16px
+    text-align: right
+
+    svg
+        font-size: 1.7em
+        cursor: pointer
+
+    #bulle
+        $bottom-shift: 5px
+
+        position: absolute
+        bottom: -$bottom-shift
+        right: 3* 16px
+        font-size: .9em
+        text-align: center
+        background-color: white
+        border-radius: .5em 0
+        color: #010101
+
+        display: flex
+        display: none
+        align-items: center
+
+        p
+            margin: 0
+            padding: .3em 1em
+
+        &::after
+            $size: 13px
+
+            content: ""
+            display: block
+            width: 0
+            height: 0
+            border-top: $size solid transparent
+            border-bottom: $size solid transparent
+            border-left: $size solid white
+            position: relative
+            right: 1 - $size
+
+    &:hover, &:active, &:focus
+        width: 90%
+
+        #bulle
+            display: flex
+
+
+@import 'responsive.sass'

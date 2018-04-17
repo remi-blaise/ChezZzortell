@@ -1,5 +1,8 @@
+.PHONY: build watch
+
 build:
-	sass --sourcemap=none index.sass:index.css
+	-rm build/*
+	sass --update --sourcemap=none sass:build
 
 watch:
-	sass --watch --sourcemap=none index.sass:index.css
+	sass --watch --sourcemap=none sass:build

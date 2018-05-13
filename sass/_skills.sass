@@ -1,3 +1,10 @@
+@keyframes rocket
+    from
+        transform: rotate(0)
+    to
+        transform: rotate(10turn)
+
+
 #skills
     display: flex
     justify-content: center
@@ -5,12 +12,15 @@
     position: relative
 
     .decouvrez-moi
+        $size: 350px
+
         background: url('../img/11-cercle-4.png') no-repeat
         background-size: contain
-        width: 350px
-        height: 350px
+        width: $size
+        height: $size
         display: flex
         cursor: pointer
+        position: relative
         // justify-content: center
         // align-items: center
 
@@ -25,6 +35,24 @@
             font-size: 2.1em
             font-weight: bold
             color: black
+
+        .rocket
+            position: absolute
+            font-size: 2em
+            left: 0
+            top: 0
+            transform-origin: ($size / 2) ($size / 2)
+            animation: rocket 100s infinite
+
+        .rocket2
+            $shift: 1em
+
+            position: absolute
+            font-size: 2.5em
+            left: -$shift
+            top: -$shift
+            transform-origin: calc(#{$size / 2} + #{$shift}) calc(#{$size / 2} + #{$shift})
+            animation: rocket 150s infinite
 
     .line
         position: absolute
